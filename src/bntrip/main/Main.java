@@ -7,7 +7,7 @@ package bntrip.main;
 
 /**
  *
- * @author javier
+ * @author javier y alvaro jejeje
  */
 public class Main {
     
