@@ -12,10 +12,25 @@ package bntrip.vista;
 public class ControladorLoginWindow {
  LoginWindow miVista;
  
- public ControladorLoginWindow(LoginWindow miVista){
-     this.miVista = miVista;
-     
- }
+    public ControladorLoginWindow(LoginWindow miVista){
+        this.miVista = miVista;
+    }
+    
+    public void procesaAyuda(){
+        
+    }
+    
+    public void procesaRecupera(){
+        
+    }
+    
+    public void procesaLogin(){
+        
+        
+        
+    }
+    
+ 
  
  
 }

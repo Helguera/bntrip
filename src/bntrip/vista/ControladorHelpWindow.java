@@ -3,13 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bntrip.main;
+package bntrip.vista;
 
 /**
  *
- * @author javier y alvaro
+ * @author javier
  */
-public class Main {
-    
+public class ControladorHelpWindow {
     
 }
