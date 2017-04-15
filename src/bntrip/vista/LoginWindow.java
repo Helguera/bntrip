@@ -37,11 +37,12 @@ public class LoginWindow extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(414, 380));
-        setMinimumSize(new java.awt.Dimension(414, 380));
-        setPreferredSize(new java.awt.Dimension(414, 380));
-        setResizable(false);
+        setMaximumSize(new java.awt.Dimension(600, 350));
+        setMinimumSize(new java.awt.Dimension(600, 350));
+        setPreferredSize(new java.awt.Dimension(600, 350));
         getContentPane().setLayout(new java.awt.GridLayout(2, 1));
+
+        jPanel1.setLayout(new java.awt.GridLayout(2, 1));
 
         jLabel1.setFont(new java.awt.Font("Khmer OS System", 1, 70)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
