@@ -5,6 +5,7 @@
  */
 package bntrip.vista;
 
+import bntrip.modelo.Modelo;
 import javax.swing.JFrame;
 
 /**
@@ -13,16 +14,19 @@ import javax.swing.JFrame;
  */
 public class LoginUIStateMachine {
     private JFrame currentState;
+    private Modelo miModelo;
     
-    public LoginUIStateMachine() {
-         start();
+    
+    public LoginUIStateMachine(Modelo miModelo) {
+        this.miModelo = miModelo; 
+        start();
     }
     
     public void start() {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                currentState = new LoginWindow();
+                currentState = new LoginWindow(miModelo);
                 currentState.setVisible(true);
             }
         });}

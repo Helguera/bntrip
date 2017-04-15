@@ -5,10 +5,24 @@
  */
 package bntrip.modelo;
 
+
 /**
  *
  * @author javier
  */
 public class Modelo {
+    private boolean isloged;
+    
+    public Modelo(){
+        isloged = false;
+    }
+    
+    public boolean getLoged(){
+        return isloged;
+    }
+    
+    public void setLoged(boolean b){
+        isloged = b;
+    }
     
 }

@@ -5,6 +5,8 @@
  */
 package bntrip.vista;
 
+import bntrip.modelo.Modelo;
+
 /**
  *
  * @author javier
@@ -14,10 +16,11 @@ public class HomeWindow extends javax.swing.JFrame {
     /**
      * Creates new form HomeWindow
      */
-    public HomeWindow() {
+    public HomeWindow(Modelo miModelo) {
         initComponents();
-        miControlador = new ControladorHomeWindow(this);
-
+        miControlador = new ControladorHomeWindow(this, miModelo);
+        this.setLocationRelativeTo(null);
+        
     }
     
 
@@ -135,7 +138,7 @@ public class HomeWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        miControlador.procesaLogin();
+        miControlador.procesaInicio();
     }//GEN-LAST:event_jButton1ActionPerformed
 
    

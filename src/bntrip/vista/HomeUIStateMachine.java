@@ -5,6 +5,7 @@
  */
 package bntrip.vista;
 
+import bntrip.modelo.Modelo;
 import javax.swing.JFrame;
 
 /**
@@ -14,15 +15,17 @@ import javax.swing.JFrame;
 public class HomeUIStateMachine {
     
     private JFrame currentState;
+    private Modelo miModelo;
     
-    public HomeUIStateMachine(){
+    public HomeUIStateMachine(Modelo miModelo){
+        this.miModelo = miModelo;
         start();
     }
     
     public void start(){
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                currentState = new HomeWindow();
+                currentState = new HomeWindow(miModelo);
                 currentState.setVisible(true);
             }
         });

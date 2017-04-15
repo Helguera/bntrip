@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package bntrip.main;
+import bntrip.modelo.Modelo;
 import bntrip.vista.HomeUIStateMachine;
 import bntrip.vista.LoginUIStateMachine;
 
@@ -15,10 +16,12 @@ import bntrip.vista.LoginUIStateMachine;
 public class Main {
     private static HomeUIStateMachine  homeStateMachine;
     private static LoginUIStateMachine loginStateMachine;
+    private static Modelo modelo;
     
     public static void main(String args[]) {
-        
-        homeStateMachine = new HomeUIStateMachine();
+        modelo = new Modelo();
+        if (modelo == null) System.out.println("VAYA VAYA con el main que esta graciosete...");
+        homeStateMachine = new HomeUIStateMachine(modelo);
         
     }
     
@@ -26,18 +29,24 @@ public class Main {
         return loginStateMachine;
     }
     
-     public static void loginSucceed() {
-        loginStateMachine.close();
-        homeStateMachine = new HomeUIStateMachine();
-    }
     
     public static HomeUIStateMachine getStateMachineHome() {
         return homeStateMachine;
     }
     
     public static void logout() {
+        loginStateMachine.close();
+        homeStateMachine.start();
+    }
+
+    public static void logeate() {
         homeStateMachine.close();
-        loginStateMachine.start();
+        loginStateMachine = new LoginUIStateMachine(modelo);
+    }
+    
+    public static void logeado(){
+        loginStateMachine.close();
+        homeStateMachine.start();
     }
     
     

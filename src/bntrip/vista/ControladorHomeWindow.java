@@ -5,6 +5,9 @@
  */
 package bntrip.vista;
 
+import bntrip.main.Main;
+import bntrip.modelo.Modelo;
+
 /**
  *
  * @author javier
@@ -12,14 +15,38 @@ package bntrip.vista;
 public class ControladorHomeWindow {
     
     private HomeWindow miVista;
+    private Modelo miModelo;
     
-    public ControladorHomeWindow(HomeWindow miVista){
+    public ControladorHomeWindow(HomeWindow miVista, Modelo mMo){
         this.miVista = miVista;
-        
+        if (mMo == null) System.out.println("VAYA VAYA con el constructor");
+        this.miModelo = mMo;
     }
 
-    void procesaLogin() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void procesaAyuda(){
+        
+    }
+    
+    public void procesaRecupera(){
+        
+    }
+    
+    public void procesaLogin(){
+        // Abrir ventana de inicio de sesion
+        Main.logeate();
+    }
+    
+    public void procesaInicio(){
+        if (miModelo == null) System.out.println("VAYA VAYA");
+        else if(miModelo.getLoged()==false){
+            this.procesaLogin();
+        }else{
+            //abrir vantana de usuario (reservas y lista de deseados)
+        }
+    }
+    
+    public boolean isLoged(){
+        return miModelo.getLoged();
     }
     
     
