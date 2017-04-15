@@ -18,8 +18,7 @@ public class Main {
     
     public static void main(String args[]) {
         
-        loginStateMachine = new LoginUIStateMachine();
-        //homeStateMachine = new HomeUIStateMachine();
+        homeStateMachine = new HomeUIStateMachine();
         
     }
     

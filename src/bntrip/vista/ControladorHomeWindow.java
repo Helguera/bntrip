@@ -17,6 +17,10 @@ public class ControladorHomeWindow {
         this.miVista = miVista;
         
     }
+
+    void procesaLogin() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     
