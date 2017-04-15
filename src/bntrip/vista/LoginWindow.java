@@ -30,24 +30,41 @@ public class LoginWindow extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(414, 380));
+        setMinimumSize(new java.awt.Dimension(414, 380));
+        setPreferredSize(new java.awt.Dimension(414, 380));
+        setResizable(false);
         getContentPane().setLayout(new java.awt.GridLayout(2, 1));
 
-        jPanel1.setLayout(new java.awt.GridLayout());
-
-        jLabel1.setFont(new java.awt.Font("Khmer OS System", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Khmer OS System", 1, 70)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Hola, ¿Como quieres acceder?");
+        jLabel1.setText("HOLA");
+        jLabel1.setPreferredSize(new java.awt.Dimension(203, 100));
         jPanel1.add(jLabel1);
+
+        jLabel2.setFont(new java.awt.Font("Khmer OS System", 1, 30)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("¿como quieres acceder?");
+        jLabel2.setPreferredSize(new java.awt.Dimension(353, 45));
+        jPanel1.add(jLabel2);
 
         getContentPane().add(jPanel1);
 
+        jPanel3.setMinimumSize(new java.awt.Dimension(423, 350));
+
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/google.png"))); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel3.add(jButton1);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/facebook.png"))); // NOI18N
@@ -60,6 +77,10 @@ public class LoginWindow extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -101,6 +122,7 @@ public class LoginWindow extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
