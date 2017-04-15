@@ -87,16 +87,16 @@ public class HomeWindow extends javax.swing.JFrame {
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         buttonGroup1.add(jRadioButton1);
-        jPanel5.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
+        jPanel5.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, -1, -1));
 
         buttonGroup1.add(jRadioButton2);
-        jPanel5.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, -1, -1));
+        jPanel5.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
 
         buttonGroup1.add(jRadioButton3);
-        jPanel5.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, -1, -1));
+        jPanel5.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, -1, -1));
 
         buttonGroup1.add(jRadioButton4);
-        jPanel5.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, -1, -1));
+        jPanel5.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mapa.png"))); // NOI18N
         jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 290));
