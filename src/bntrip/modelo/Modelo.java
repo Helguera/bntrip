@@ -5,6 +5,7 @@
  */
 package bntrip.modelo;
 
+import bntrip.util.Alojamiento;
 import java.util.ArrayList;
 
 /**
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 public class Modelo {
     private boolean isloged;
     private ArrayList almacen;
+    private Alojamiento alojamientoSeleccionado;
     
     public Modelo(){
         isloged = false;
@@ -31,6 +33,12 @@ public class Modelo {
     
     public void setLoged(boolean b){
         isloged = b;
+    }
+    
+
+
+    public void selectAlojamiento(Alojamiento alojamiento) {
+        alojamientoSeleccionado = alojamiento;
     }
     
     

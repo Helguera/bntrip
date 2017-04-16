@@ -7,6 +7,7 @@ package bntrip.vista;
 
 import bntrip.main.Main;
 import bntrip.modelo.Modelo;
+import bntrip.util.Alojamiento;
 
 /**
  *
@@ -51,6 +52,10 @@ public class ControladorHomeWindow {
     
     public void actualizaTipo(String tipo){
        
+    }
+    
+    public void seleccionaAlojamiento(Alojamiento alojamiento){
+        miModelo.selectAlojamiento(alojamiento);
     }
     
     

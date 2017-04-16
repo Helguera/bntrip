@@ -6,6 +6,7 @@
 package bntrip.vista;
 
 import bntrip.modelo.Modelo;
+import bntrip.util.Alojamiento;
 import java.util.Calendar;
 
 /**
@@ -170,6 +171,11 @@ public class HomeWindow extends javax.swing.JFrame {
         aloj1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj1.png"))); // NOI18N
         aloj1.setToolTipText("<html><h1>Madrid</h1><h2>78€ por noche</h2><br>Confortable habitación doble, en preciosa urbanización de Madrid, con estupendas zonas comunes (Jardines, Piscinas, Paddel,...), confortable Salón, Terraza con vistas al Mar, Cocina completa, Wifi y cercano al Bus, Taxi, así como a salidas a Autovía.<br>\n<ul>\n  <li><b>Tipo</b> : Habitacion Privada </li>\n  <li><b>Huespedes</b>: 2 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 2 </li>\n  <li><b>Valoracion</b>: ★★★★☆</li>\n</ul>\n</html>");
         aloj1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        aloj1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aloj1ActionPerformed(evt);
+            }
+        });
         jPanel2.add(aloj1);
 
         aloj2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj2.png"))); // NOI18N
@@ -224,6 +230,12 @@ public class HomeWindow extends javax.swing.JFrame {
     private void aloj2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_aloj2ActionPerformed
+
+    private void aloj1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj1ActionPerformed
+        Alojamiento a1 = new Alojamiento("Madrid", 78, "Habitacion Privada", 2);
+        a1.setImagenes("/image/room/aloj10","/image/room/aloj11","/image/room/aloj12");
+        miControlador.seleccionaAlojamiento(a1);
+    }//GEN-LAST:event_aloj1ActionPerformed
 
    
 

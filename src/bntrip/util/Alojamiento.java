@@ -15,6 +15,9 @@ public class Alojamiento {
     double precio;
     String tipoHabitacion;
     String ciudad;
+    String image1;
+    String image2;
+    String image3;
     
     public Alojamiento(String ciudad, double precio, String tipoHabitacion, int maxHuespedes){
         this.ciudad = ciudad;
@@ -36,7 +39,11 @@ public class Alojamiento {
     public int getMaxHuespedes(){
         return maxHuespedes;
     }
-    
+    public void setImagenes(String image1, String image2, String image3){
+        this.image1=image1;
+        this.image2=image2;
+        this.image3=image3;
+    }
     
     
 }
