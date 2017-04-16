@@ -34,7 +34,7 @@ public class Reserva{
         }
     }
     
-    public void setDeseado(Alojamiento alojamiento, Fechas fechas, int numHuespedes){
+    public void setReserva(Alojamiento alojamiento, Fechas fechas, int numHuespedes){
         if (alojamiento!= null & fechas!=null && numHuespedes<alojamiento.getMaxHuespedes()){
             alojamientos.add(alojamiento);
             this.fechas.add(fechas);
@@ -59,6 +59,9 @@ public class Reserva{
     public int getNumHuespedes(int index){
         if (index<huespedes.size() && index>0) return huespedes.get(index);
         else return 0;
+    }
+    public int getSize(){
+        return huespedes.size();
     }
     
     public void removeReservado(int index){

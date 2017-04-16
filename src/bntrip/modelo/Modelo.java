@@ -6,6 +6,9 @@
 package bntrip.modelo;
 
 import bntrip.util.Alojamiento;
+import bntrip.util.Deseado;
+import bntrip.util.Fechas;
+import bntrip.util.Reserva;
 import java.util.ArrayList;
 
 /**
@@ -14,17 +17,17 @@ import java.util.ArrayList;
  */
 public class Modelo {
     private boolean isloged;
-    private ArrayList almacen;
+    private Reserva almacenReserva ;
+    private Deseado almacenDeseado;
+    private Fechas fechas;
     private Alojamiento alojamientoSeleccionado;
+    private int numHuespedes;
     
     public Modelo(){
         isloged = false;
-        almacen = new ArrayList<Object>();
-        //tipo, precio, huespedes, fecha in, fecha out, ciudad
-        for (int i = 0; i < 5; i++) {
-            almacen.add(null);
-        }
-        almacen.set(1, 100); 
+        fechas = new Fechas();
+        almacenReserva = new Reserva();
+        almacenDeseado = new Deseado();
     }
     
     public boolean getLoged(){
@@ -35,11 +38,24 @@ public class Modelo {
         isloged = b;
     }
     
-
+    public Alojamiento getAlojamientoSeleccionado(){
+        return alojamientoSeleccionado;
+    }
 
     public void selectAlojamiento(Alojamiento alojamiento) {
         alojamientoSeleccionado = alojamiento;
     }
     
+    public boolean setReserva(){
+        almacenReserva.setReserva(alojamientoSeleccionado, fechas, numHuespedes);
+        return false;
+    }
+
+    public Reserva getAlmacenReserva() {
+        return almacenReserva;
+    }
     
+    public Fechas getFechas(){
+        return fechas;
+    }
 }

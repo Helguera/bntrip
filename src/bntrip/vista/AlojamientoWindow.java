@@ -5,17 +5,25 @@
  */
 package bntrip.vista;
 
+import bntrip.modelo.Modelo;
+import bntrip.util.Alojamiento;
+
 /**
  *
  * @author alvaro
  */
 public class AlojamientoWindow extends javax.swing.JFrame {
-
+    
+    private ControladorAlojamientoWindow  miControlador;
+    private Modelo miModelo;
     /**
      * Creates new form AlojamientoWindow
      */
-    public AlojamientoWindow() {
+    public AlojamientoWindow(Modelo miModelo) {
+        this.miModelo = miModelo;
+        miControlador = new ControladorAlojamientoWindow(this, miModelo);
         initComponents();
+        
     }
 
     /**
@@ -29,7 +37,7 @@ public class AlojamientoWindow extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanelImages = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
+        BotonImagen = new javax.swing.JButton();
         jPanelButtons = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -42,21 +50,21 @@ public class AlojamientoWindow extends javax.swing.JFrame {
 
         jPanelImages.setLayout(new java.awt.GridLayout(1, 1));
 
-        jButton3.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/room/aloj10.png"))); // NOI18N
-        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton3.setLabel("Clik para ver otra");
-        jButton3.setMaximumSize(new java.awt.Dimension(10000, 10000));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        BotonImagen.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
+        BotonImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/room/aloj10.png"))); // NOI18N
+        BotonImagen.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        BotonImagen.setLabel("Clik para ver otra");
+        BotonImagen.setMaximumSize(new java.awt.Dimension(10000, 10000));
+        BotonImagen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                BotonImagenActionPerformed(evt);
             }
         });
-        jPanelImages.add(jButton3);
+        jPanelImages.add(BotonImagen);
 
         jPanel1.add(jPanelImages, java.awt.BorderLayout.CENTER);
 
-        jPanelButtons.setLayout(new java.awt.GridLayout());
+        jPanelButtons.setLayout(new java.awt.GridLayout(1, 0));
 
         jButton1.setText("Reservar");
         jPanelButtons.add(jButton1);
@@ -80,49 +88,16 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void BotonImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonImagenActionPerformed
+        Alojamiento alojamiento = miControlador.getAlojamiento();
+        BotonImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource(alojamiento.getImagen())));
+    }//GEN-LAST:event_BotonImagenActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AlojamientoWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AlojamientoWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AlojamientoWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AlojamientoWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new AlojamientoWindow().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotonImagen;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelButtons;
     private javax.swing.JPanel jPanelImages;
