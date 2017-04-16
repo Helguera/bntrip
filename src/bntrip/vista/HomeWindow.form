@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.8" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
     <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
     </Component>
@@ -22,7 +22,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,46,0,0,3,16"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,116,0,0,3,22"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
@@ -59,10 +59,10 @@
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
-                    <StringItem index="0" value="Item 1"/>
-                    <StringItem index="1" value="Item 2"/>
-                    <StringItem index="2" value="Item 3"/>
-                    <StringItem index="3" value="Item 4"/>
+                    <StringItem index="0" value="Cualquiera"/>
+                    <StringItem index="1" value="Casa Entera"/>
+                    <StringItem index="2" value="Habitacion Privada"/>
+                    <StringItem index="3" value="Habitacion Compartida"/>
                   </StringArray>
                 </Property>
               </Properties>
@@ -97,10 +97,15 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroup1"/>
                 </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                    <CompoundBorder/>
+                  </Border>
+                </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="40" y="50" width="-1" height="-1"/>
+                  <AbsoluteConstraints x="140" y="210" width="-1" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -109,10 +114,15 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroup1"/>
                 </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                    <CompoundBorder/>
+                  </Border>
+                </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="210" y="90" width="-1" height="-1"/>
+                  <AbsoluteConstraints x="210" y="100" width="-1" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -121,10 +131,81 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroup1"/>
                 </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                    <CompoundBorder/>
+                  </Border>
+                </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="70" y="220" width="-1" height="-1"/>
+                  <AbsoluteConstraints x="60" y="230" width="-1" height="-1"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="jRadioButton5">
+              <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="buttonGroup1"/>
+                </Property>
+                <Property name="selected" type="boolean" value="true"/>
+                <Property name="text" type="java.lang.String" value="Cualquier CIudad"/>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="120" y="240" width="-1" height="-1"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel3">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Ubuntu" size="15" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Barcelona"/>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="190" y="80" width="-1" height="-1"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel2">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Ubuntu" size="15" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Madrid"/>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="90" y="100" width="-1" height="-1"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel4">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Ubuntu" size="15" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Cadiz"/>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="50" y="210" width="-1" height="-1"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel5">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Ubuntu" size="15" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Murcia"/>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="140" y="190" width="-1" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -132,6 +213,11 @@
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroup1"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                    <CompoundBorder/>
+                  </Border>
                 </Property>
               </Properties>
               <Constraints>
@@ -170,7 +256,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/aloj1.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value=""/>
+            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Madrid&lt;/h1&gt;&lt;h2&gt;78&#x20ac; por noche&lt;/h2&gt;&lt;br&gt;Confortable habitaci&#xf3;n doble, en preciosa urbanizaci&#xf3;n de Madrid, con estupendas zonas comunes (Jardines, Piscinas, Paddel,...), confortable Sal&#xf3;n, Terraza con vistas al Mar, Cocina completa, Wifi y cercano al Bus, Taxi, as&#xed; como a salidas a Autov&#xed;a.&lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Habitacion Privada &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 2 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 1&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 2 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2605;&#x2605;&#x2605;&#x2606;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
                 <CompoundBorder/>
@@ -183,19 +269,23 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/aloj2.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value=""/>
+            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Barcelona&lt;/h1&gt;&lt;h2&gt;200 &#x20ac; por noche&lt;/h2&gt;&lt;br&gt;Piso en zona muy ambientada, con gran oferta de restaurantes, helader&#xed;as, supermercados y establecimientos comerciales en general. Ideal para tapear y con numerosos parques alrededor.&lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Casa Entera &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 2 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 1&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 1 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2606;&#x2606;&#x2606;&#x2606;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
                 <CompoundBorder/>
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton8ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton5">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/aloj3.png"/>
             </Property>
+            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Cadiz&lt;/h1&gt;&lt;h2&gt;30 &#x20ac; por noche&lt;/h2&gt;&lt;br&gt;Apartamento de 3 habitaciones , con cocina dos ba&#xf1;os y sala de estar. Tv, Wiffi . Zona tranquila para dormir. Situado a 300 mts. de bares de tapas restaurantes, helader&#xed;as, terrazas y supermercados. Bien conectado con el centro por bus y metro. &lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Casa Entera &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 4 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 3&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 4 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2605;&#x2605;&#x2606;&#x2606;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
                 <CompoundBorder/>
@@ -208,6 +298,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/aloj4.png"/>
             </Property>
+            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Cadiz&lt;/h1&gt;&lt;h2&gt;62 &#x20ac; por noche&lt;/h2&gt;&lt;br&gt;Apartamento muy bien situado, orientado al sur, con vistas al Mar y Soleado.&#xa;Aproximadamente a 700 m. de la playa.&#xa;Paradas de autob&#xfa;s en la puerta. &lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Habitacion Privada&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 2 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 1&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 2 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2605;&#x2605;&#x2606;&#x2606;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
                 <CompoundBorder/>
@@ -220,7 +311,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/aloj5.png"/>
             </Property>
-            <Property name="actionCommand" type="java.lang.String" value=""/>
+            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Murcia&lt;/h1&gt;&lt;h2&gt;150 &#x20ac; por noche&lt;/h2&gt;&lt;br&gt;Precioso chalet con 1.700 m2: gran piscina privada, barbacoa, &#xed;ntimo jard&#xed;n y chimenea. Ideal para vacaciones. &lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Casa Completa&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 7 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 4&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 5 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
                 <CompoundBorder/>
@@ -233,6 +324,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/aloj6.png"/>
             </Property>
+            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Madrid&lt;/h1&gt;&lt;h2&gt;35 &#x20ac; por noche&lt;/h2&gt;&lt;br&gt;Se ofrece habitaci&#xf3;n doble en luminoso apartamento, Muy c&#xf3;modo y confortable.&lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Casa Compartida&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 2&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 2&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2605;&#x2605;&#x2605;&#x2606;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
                 <CompoundBorder/>
@@ -245,6 +337,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/aloj7.png"/>
             </Property>
+            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Barcelona&lt;/h1&gt;&lt;h2&gt;200 &#x20ac; por noche&lt;/h2&gt;&lt;br&gt;Piso de 3 habitaciones, a 10 minutos de Eroski y estaci&#xf3;n de autobuses. Solo para chica no fumadora. Se solicita 1 mes de fianza. Comunidad incluida,&lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Habitacion Compartida &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 1 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 1&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 1 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2605;&#x2606;&#x2606;&#x2606;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
                 <CompoundBorder/>
@@ -257,6 +350,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/aloj8.png"/>
             </Property>
+            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Murcia&lt;/h1&gt;&lt;h2&gt;30 &#x20ac; por noche&lt;/h2&gt;&lt;br&gt;Todo exterior ,habitaci&#xf3;n amplia muy luminosa,alquilo por larga temporada a estudiantes,muy cerca de la escuela de formaci&#xf3;n profesional la Rosaleda, &lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Habitacion Privada&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 1 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 1&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 1 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2605;&#x2605;&#x2606;&#x2606;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
                 <CompoundBorder/>
