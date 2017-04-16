@@ -8,9 +8,6 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="title" type="java.lang.String" value="bntrip"/>
-    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-      <Color blue="ea" green="ea" red="f9" type="rgb"/>
-    </Property>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[697, 626]"/>
     </Property>
@@ -32,7 +29,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,30,0,0,2,-71"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,114,0,0,2,-29"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
@@ -57,6 +54,11 @@
           </Layout>
           <SubComponents>
             <Container class="javax.swing.JPanel" name="jPanel6">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="e4" green="ed" red="c4" type="rgb"/>
+                </Property>
+              </Properties>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
               <SubComponents>
@@ -86,6 +88,9 @@
             </Container>
             <Component class="javax.swing.JComboBox" name="jComboBox2">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="e4" green="ed" red="c4" type="rgb"/>
+                </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
                     <StringItem index="0" value="Cualquiera"/>
@@ -103,6 +108,9 @@
             </Component>
             <Component class="javax.swing.JSlider" name="jSlider2">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="e4" green="ed" red="c4" type="rgb"/>
+                </Property>
                 <Property name="maximum" type="int" value="200"/>
                 <Property name="minorTickSpacing" type="int" value="25"/>
                 <Property name="paintLabels" type="boolean" value="true"/>
@@ -134,6 +142,9 @@
               <SubComponents>
                 <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser2">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="e4" green="ed" red="c4" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                         <TitledBorder title="Fecha Entrada"/>
@@ -143,6 +154,9 @@
                 </Component>
                 <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser3">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="e4" green="ed" red="c4" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                         <TitledBorder title="Fecha Salida"/>
@@ -155,6 +169,11 @@
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel5">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="e4" green="ed" red="c4" type="rgb"/>
+            </Property>
+          </Properties>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
             <Property name="useNullLayout" type="boolean" value="false"/>
@@ -173,7 +192,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="140" y="210" width="-1" height="-1"/>
+                  <AbsoluteConstraints x="140" y="200" width="-1" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -190,7 +209,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="210" y="100" width="-1" height="-1"/>
+                  <AbsoluteConstraints x="210" y="90" width="-1" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -207,7 +226,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="60" y="230" width="-1" height="-1"/>
+                  <AbsoluteConstraints x="60" y="220" width="-1" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -234,7 +253,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="190" y="80" width="-1" height="-1"/>
+                  <AbsoluteConstraints x="190" y="70" width="-1" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -247,7 +266,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="90" y="100" width="-1" height="-1"/>
+                  <AbsoluteConstraints x="100" y="90" width="-1" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -260,7 +279,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="50" y="210" width="-1" height="-1"/>
+                  <AbsoluteConstraints x="60" y="200" width="-1" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -273,7 +292,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="140" y="190" width="-1" height="-1"/>
+                  <AbsoluteConstraints x="140" y="180" width="-1" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -290,19 +309,22 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="110" y="120" width="-1" height="-1"/>
+                  <AbsoluteConstraints x="110" y="110" width="-1" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel1">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="e4" green="ed" red="c4" type="rgb"/>
+                </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/images/mapa.png"/>
                 </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="0" y="0" width="270" height="290"/>
+                  <AbsoluteConstraints x="0" y="0" width="290" height="270"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -313,7 +335,7 @@
     <Container class="javax.swing.JPanel" name="jPanel2">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="5f" green="d2" red="d2" type="rgb"/>
+          <Color blue="f7" green="f7" red="f4" type="rgb"/>
         </Property>
       </Properties>
       <Constraints>
@@ -329,7 +351,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/aloj1.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Madrid&lt;/h1&gt;&lt;h2&gt;78&#x20ac; por noche&lt;/h2&gt;&lt;br&gt;Confortable habitaci&#xf3;n doble, en preciosa urbanizaci&#xf3;n de Madrid, con estupendas zonas comunes (Jardines, Piscinas, Paddel,...), confortable Sal&#xf3;n, Terraza con vistas al Mar, Cocina completa, Wifi y cercano al Bus, Taxi, as&#xed; como a salidas a Autov&#xed;a.&lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Habitacion Privada &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 2 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 1&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 2 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2605;&#x2605;&#x2605;&#x2606;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
+            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;h1&gt;Madrid&lt;/h1&gt;&#xa;&lt;h2&gt;78&#x20ac; por noche&lt;/h2&gt;&#xa;&#xa;&lt;p&gt;Confortable habitaci&#xf3;n doble, en preciosa urbanizaci&#xf3;n de &lt;br&gt;&#xa;Madrid, con estupendas zonas comunes (Jardines, Piscinas, Paddel,...),&lt;br&gt;&#xa; confortable Sal&#xf3;n, Terraza con vistas al Mar, Cocina completa, Wifi y &lt;br&gt;&#xa;cercano al Bus,Taxi, as&#xed; como a salidas a Autov&#xed;a.&lt;/p&gt;&#xa;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Habitacion Privada &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 2 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 1&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 2 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2605;&#x2605;&#x2605;&#x2606;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
                 <CompoundBorder/>
@@ -345,7 +367,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/aloj2.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Barcelona&lt;/h1&gt;&lt;h2&gt;200 &#x20ac; por noche&lt;/h2&gt;&lt;br&gt;Piso en zona muy ambientada, con gran oferta de restaurantes, helader&#xed;as, supermercados y establecimientos comerciales en general. Ideal para tapear y con numerosos parques alrededor.&lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Casa Entera &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 2 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 1&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 1 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2606;&#x2606;&#x2606;&#x2606;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
+            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Barcelona&lt;/h1&gt;&#xa;&lt;h2&gt;200 &#x20ac; por noche&lt;/h2&gt;&#xa;&lt;br&gt;Piso en zona muy ambientada, con gran oferta de restaurantes,&lt;br&gt;&#xa; helader&#xed;as, supermercados y establecimientos comerciales en general.&lt;br&gt;&#xa; Ideal para tapear y con numerosos parques alrededor.&lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Casa Entera &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 2 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 1&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 1 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2606;&#x2606;&#x2606;&#x2606;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
                 <CompoundBorder/>
@@ -361,7 +383,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/aloj3.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Cadiz&lt;/h1&gt;&lt;h2&gt;30 &#x20ac; por noche&lt;/h2&gt;&lt;br&gt;Apartamento de 3 habitaciones , con cocina dos ba&#xf1;os y sala de estar. Tv, Wiffi . Zona tranquila para dormir. Situado a 300 mts. de bares de tapas restaurantes, helader&#xed;as, terrazas y supermercados. Bien conectado con el centro por bus y metro. &lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Casa Entera &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 4 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 3&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 4 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2605;&#x2605;&#x2606;&#x2606;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
+            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Cadiz&lt;/h1&gt;&lt;h2&gt;30 &#x20ac; por noche&lt;/h2&gt;&lt;br&gt;Apartamento de 3 habitaciones , con cocina dos ba&#xf1;os y sala de estar.&lt;br&gt;&#xa; Tv, Wiffi . Zona tranquila para dormir. Situado a 300 mts. de bares de tapas restaurantes, &lt;br&gt;&#xa;helader&#xed;as, terrazas y supermercados. Bien conectado con el centro por bus y metro. &lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Casa Entera &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 4 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 3&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 4 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2605;&#x2605;&#x2606;&#x2606;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
                 <CompoundBorder/>
@@ -374,7 +396,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/aloj4.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Cadiz&lt;/h1&gt;&lt;h2&gt;62 &#x20ac; por noche&lt;/h2&gt;&lt;br&gt;Apartamento muy bien situado, orientado al sur, con vistas al Mar y Soleado.&#xa;Aproximadamente a 700 m. de la playa.&#xa;Paradas de autob&#xfa;s en la puerta. &lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Habitacion Privada&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 2 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 1&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 2 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2605;&#x2605;&#x2606;&#x2606;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
+            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Cadiz&lt;/h1&gt;&lt;h2&gt;62 &#x20ac; por noche&lt;/h2&gt;&lt;br&gt;Apartamento muy bien situado, orientado al sur, con vistas al Mar y Soleado.&lt;br&gt;&#xa;Aproximadamente a 700 m. de la playa.&lt;br&gt;&#xa;Paradas de autob&#xfa;s en la puerta. &lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Habitacion Privada&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 2 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 1&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 2 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2605;&#x2605;&#x2606;&#x2606;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
                 <CompoundBorder/>
@@ -387,7 +409,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/aloj5.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Murcia&lt;/h1&gt;&lt;h2&gt;150 &#x20ac; por noche&lt;/h2&gt;&lt;br&gt;Precioso chalet con 1.700 m2: gran piscina privada, barbacoa, &#xed;ntimo jard&#xed;n y chimenea. Ideal para vacaciones. &lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Casa Completa&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 7 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 4&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 5 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
+            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Murcia&lt;/h1&gt;&lt;h2&gt;150 &#x20ac; por noche&lt;/h2&gt;&lt;br&gt;Precioso chalet con 1.700 m2: gran piscina privada, &lt;br&gt;&#xa;barbacoa, &#xed;ntimo jard&#xed;n y chimenea. Ideal para vacaciones. &lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Casa Completa&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 7 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 4&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 5 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
                 <CompoundBorder/>
@@ -413,7 +435,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/aloj7.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Barcelona&lt;/h1&gt;&lt;h2&gt;200 &#x20ac; por noche&lt;/h2&gt;&lt;br&gt;Piso de 3 habitaciones, a 10 minutos de Eroski y estaci&#xf3;n de autobuses. Solo para chica no fumadora. Se solicita 1 mes de fianza. Comunidad incluida,&lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Habitacion Compartida &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 1 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 1&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 1 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2605;&#x2606;&#x2606;&#x2606;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
+            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Barcelona&lt;/h1&gt;&lt;h2&gt;200 &#x20ac; por noche&lt;/h2&gt;&lt;br&gt;Piso de 3 habitaciones, a 10 minutos de Eroski &lt;br&gt;&#xa;y estaci&#xf3;n de autobuses.&lt;br&gt;&#xa; Solo para chica no fumadora. Se solicita 1 mes de fianza. &lt;br&gt;&#xa;Comunidad incluida.&lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Habitacion Compartida &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 1 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 1&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 1 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2605;&#x2606;&#x2606;&#x2606;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
                 <CompoundBorder/>
@@ -426,7 +448,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/aloj8.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Murcia&lt;/h1&gt;&lt;h2&gt;30 &#x20ac; por noche&lt;/h2&gt;&lt;br&gt;Todo exterior ,habitaci&#xf3;n amplia muy luminosa,alquilo por larga temporada a estudiantes,muy cerca de la escuela de formaci&#xf3;n profesional la Rosaleda, &lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Habitacion Privada&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 1 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 1&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 1 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2605;&#x2605;&#x2606;&#x2606;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
+            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Murcia&lt;/h1&gt;&lt;h2&gt;30 &#x20ac; por noche&lt;/h2&gt;&lt;br&gt;Todo exterior ,habitaci&#xf3;n amplia muy luminosa,&lt;br&gt;&#xa;alquilo por larga temporada a estudiantes,muy cerca de la escuela &lt;br&gt;&#xa;de formaci&#xf3;n profesional la Rosaleda, &lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Habitacion Privada&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 1 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 1&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 1 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2605;&#x2605;&#x2606;&#x2606;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
                 <CompoundBorder/>

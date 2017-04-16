@@ -70,13 +70,14 @@ public class HomeWindow extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("bntrip");
-        setBackground(new java.awt.Color(249, 234, 234));
         setMinimumSize(new java.awt.Dimension(697, 626));
         setPreferredSize(new java.awt.Dimension(697, 550));
 
         jPanel1.setLayout(new java.awt.GridLayout(2, 0));
 
         jPanel3.setLayout(new java.awt.GridLayout(5, 0));
+
+        jPanel6.setBackground(new java.awt.Color(196, 237, 228));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logolittle.png"))); // NOI18N
         jPanel6.add(jLabel6);
@@ -92,10 +93,12 @@ public class HomeWindow extends javax.swing.JFrame {
 
         jPanel3.add(jPanel6);
 
+        jComboBox2.setBackground(new java.awt.Color(196, 237, 228));
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Cualquiera", "Casa Entera", "Habitacion Privada", "Habitacion Compartida" }));
         jComboBox2.setBorder(javax.swing.BorderFactory.createTitledBorder("Tipo de Alojamiento"));
         jPanel3.add(jComboBox2);
 
+        jSlider2.setBackground(new java.awt.Color(196, 237, 228));
         jSlider2.setMaximum(200);
         jSlider2.setMinorTickSpacing(25);
         jSlider2.setPaintLabels(true);
@@ -110,9 +113,11 @@ public class HomeWindow extends javax.swing.JFrame {
 
         jPanel4.setLayout(new java.awt.GridLayout(1, 2));
 
+        jDateChooser2.setBackground(new java.awt.Color(196, 237, 228));
         jDateChooser2.setBorder(javax.swing.BorderFactory.createTitledBorder("Fecha Entrada"));
         jPanel4.add(jDateChooser2);
 
+        jDateChooser3.setBackground(new java.awt.Color(196, 237, 228));
         jDateChooser3.setBorder(javax.swing.BorderFactory.createTitledBorder("Fecha Salida"));
         jPanel4.add(jDateChooser3);
 
@@ -120,19 +125,20 @@ public class HomeWindow extends javax.swing.JFrame {
 
         jPanel1.add(jPanel3);
 
+        jPanel5.setBackground(new java.awt.Color(196, 237, 228));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        jPanel5.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, -1, -1));
+        jPanel5.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, -1, -1));
 
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        jPanel5.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, -1, -1));
+        jPanel5.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
 
         buttonGroup1.add(jRadioButton3);
         jRadioButton3.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        jPanel5.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, -1, -1));
+        jPanel5.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
 
         buttonGroup1.add(jRadioButton5);
         jRadioButton5.setSelected(true);
@@ -141,35 +147,36 @@ public class HomeWindow extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel3.setText("Barcelona");
-        jPanel5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, -1, -1));
+        jPanel5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 70, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel2.setText("Madrid");
-        jPanel5.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, -1, -1));
+        jPanel5.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel4.setText("Cadiz");
-        jPanel5.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, -1, -1));
+        jPanel5.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel5.setText("Murcia");
-        jPanel5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, -1, -1));
+        jPanel5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, -1, -1));
 
         buttonGroup1.add(jRadioButton4);
         jRadioButton4.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        jPanel5.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, -1, -1));
+        jPanel5.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, -1, -1));
 
+        jLabel1.setBackground(new java.awt.Color(196, 237, 228));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mapa.png"))); // NOI18N
-        jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 290));
+        jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 270));
 
         jPanel1.add(jPanel5);
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.LINE_START);
 
-        jPanel2.setBackground(new java.awt.Color(210, 210, 95));
+        jPanel2.setBackground(new java.awt.Color(244, 247, 247));
 
         aloj1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj1.png"))); // NOI18N
-        aloj1.setToolTipText("<html><h1>Madrid</h1><h2>78€ por noche</h2><br>Confortable habitación doble, en preciosa urbanización de Madrid, con estupendas zonas comunes (Jardines, Piscinas, Paddel,...), confortable Salón, Terraza con vistas al Mar, Cocina completa, Wifi y cercano al Bus, Taxi, así como a salidas a Autovía.<br>\n<ul>\n  <li><b>Tipo</b> : Habitacion Privada </li>\n  <li><b>Huespedes</b>: 2 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 2 </li>\n  <li><b>Valoracion</b>: ★★★★☆</li>\n</ul>\n</html>");
+        aloj1.setToolTipText("<html>\n<h1>Madrid</h1>\n<h2>78€ por noche</h2>\n\n<p>Confortable habitación doble, en preciosa urbanización de <br>\nMadrid, con estupendas zonas comunes (Jardines, Piscinas, Paddel,...),<br>\n confortable Salón, Terraza con vistas al Mar, Cocina completa, Wifi y <br>\ncercano al Bus,Taxi, así como a salidas a Autovía.</p>\n\n<ul>\n  <li><b>Tipo</b> : Habitacion Privada </li>\n  <li><b>Huespedes</b>: 2 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 2 </li>\n  <li><b>Valoracion</b>: ★★★★☆</li>\n</ul>\n</html>");
         aloj1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         aloj1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,7 +186,7 @@ public class HomeWindow extends javax.swing.JFrame {
         jPanel2.add(aloj1);
 
         aloj2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj2.png"))); // NOI18N
-        aloj2.setToolTipText("<html><h1>Barcelona</h1><h2>200 € por noche</h2><br>Piso en zona muy ambientada, con gran oferta de restaurantes, heladerías, supermercados y establecimientos comerciales en general. Ideal para tapear y con numerosos parques alrededor.<br>\n<ul>\n  <li><b>Tipo</b> : Casa Entera </li>\n  <li><b>Huespedes</b>: 2 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 1 </li>\n  <li><b>Valoracion</b>: ★☆☆☆☆</li>\n</ul>\n</html>");
+        aloj2.setToolTipText("<html><h1>Barcelona</h1>\n<h2>200 € por noche</h2>\n<br>Piso en zona muy ambientada, con gran oferta de restaurantes,<br>\n heladerías, supermercados y establecimientos comerciales en general.<br>\n Ideal para tapear y con numerosos parques alrededor.<br>\n<ul>\n  <li><b>Tipo</b> : Casa Entera </li>\n  <li><b>Huespedes</b>: 2 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 1 </li>\n  <li><b>Valoracion</b>: ★☆☆☆☆</li>\n</ul>\n</html>");
         aloj2.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         aloj2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -189,17 +196,17 @@ public class HomeWindow extends javax.swing.JFrame {
         jPanel2.add(aloj2);
 
         aloj3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj3.png"))); // NOI18N
-        aloj3.setToolTipText("<html><h1>Cadiz</h1><h2>30 € por noche</h2><br>Apartamento de 3 habitaciones , con cocina dos baños y sala de estar. Tv, Wiffi . Zona tranquila para dormir. Situado a 300 mts. de bares de tapas restaurantes, heladerías, terrazas y supermercados. Bien conectado con el centro por bus y metro. <br>\n<ul>\n  <li><b>Tipo</b> : Casa Entera </li>\n  <li><b>Huespedes</b>: 4 </li>\n  <li><b>Dormitorios</b>: 3</li>\n  <li><b>Camas</b>: 4 </li>\n  <li><b>Valoracion</b>: ★★★☆☆</li>\n</ul>\n</html>");
+        aloj3.setToolTipText("<html><h1>Cadiz</h1><h2>30 € por noche</h2><br>Apartamento de 3 habitaciones , con cocina dos baños y sala de estar.<br>\n Tv, Wiffi . Zona tranquila para dormir. Situado a 300 mts. de bares de tapas restaurantes, <br>\nheladerías, terrazas y supermercados. Bien conectado con el centro por bus y metro. <br>\n<ul>\n  <li><b>Tipo</b> : Casa Entera </li>\n  <li><b>Huespedes</b>: 4 </li>\n  <li><b>Dormitorios</b>: 3</li>\n  <li><b>Camas</b>: 4 </li>\n  <li><b>Valoracion</b>: ★★★☆☆</li>\n</ul>\n</html>");
         aloj3.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jPanel2.add(aloj3);
 
         aloj4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj4.png"))); // NOI18N
-        aloj4.setToolTipText("<html><h1>Cadiz</h1><h2>62 € por noche</h2><br>Apartamento muy bien situado, orientado al sur, con vistas al Mar y Soleado.\nAproximadamente a 700 m. de la playa.\nParadas de autobús en la puerta. <br>\n<ul>\n  <li><b>Tipo</b> : Habitacion Privada</li>\n  <li><b>Huespedes</b>: 2 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 2 </li>\n  <li><b>Valoracion</b>: ★★★☆☆</li>\n</ul>\n</html>");
+        aloj4.setToolTipText("<html><h1>Cadiz</h1><h2>62 € por noche</h2><br>Apartamento muy bien situado, orientado al sur, con vistas al Mar y Soleado.<br>\nAproximadamente a 700 m. de la playa.<br>\nParadas de autobús en la puerta. <br>\n<ul>\n  <li><b>Tipo</b> : Habitacion Privada</li>\n  <li><b>Huespedes</b>: 2 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 2 </li>\n  <li><b>Valoracion</b>: ★★★☆☆</li>\n</ul>\n</html>");
         aloj4.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jPanel2.add(aloj4);
 
         aloj5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj5.png"))); // NOI18N
-        aloj5.setToolTipText("<html><h1>Murcia</h1><h2>150 € por noche</h2><br>Precioso chalet con 1.700 m2: gran piscina privada, barbacoa, íntimo jardín y chimenea. Ideal para vacaciones. <br>\n<ul>\n  <li><b>Tipo</b> : Casa Completa</li>\n  <li><b>Huespedes</b>: 7 </li>\n  <li><b>Dormitorios</b>: 4</li>\n  <li><b>Camas</b>: 5 </li>\n  <li><b>Valoracion</b>: ★★★★★</li>\n</ul>\n</html>");
+        aloj5.setToolTipText("<html><h1>Murcia</h1><h2>150 € por noche</h2><br>Precioso chalet con 1.700 m2: gran piscina privada, <br>\nbarbacoa, íntimo jardín y chimenea. Ideal para vacaciones. <br>\n<ul>\n  <li><b>Tipo</b> : Casa Completa</li>\n  <li><b>Huespedes</b>: 7 </li>\n  <li><b>Dormitorios</b>: 4</li>\n  <li><b>Camas</b>: 5 </li>\n  <li><b>Valoracion</b>: ★★★★★</li>\n</ul>\n</html>");
         aloj5.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jPanel2.add(aloj5);
 
@@ -209,12 +216,12 @@ public class HomeWindow extends javax.swing.JFrame {
         jPanel2.add(aloj6);
 
         aloj7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj7.png"))); // NOI18N
-        aloj7.setToolTipText("<html><h1>Barcelona</h1><h2>200 € por noche</h2><br>Piso de 3 habitaciones, a 10 minutos de Eroski y estación de autobuses. Solo para chica no fumadora. Se solicita 1 mes de fianza. Comunidad incluida,<br>\n<ul>\n  <li><b>Tipo</b> : Habitacion Compartida </li>\n  <li><b>Huespedes</b>: 1 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 1 </li>\n  <li><b>Valoracion</b>: ★★☆☆☆</li>\n</ul>\n</html>");
+        aloj7.setToolTipText("<html><h1>Barcelona</h1><h2>200 € por noche</h2><br>Piso de 3 habitaciones, a 10 minutos de Eroski <br>\ny estación de autobuses.<br>\n Solo para chica no fumadora. Se solicita 1 mes de fianza. <br>\nComunidad incluida.<br>\n<ul>\n  <li><b>Tipo</b> : Habitacion Compartida </li>\n  <li><b>Huespedes</b>: 1 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 1 </li>\n  <li><b>Valoracion</b>: ★★☆☆☆</li>\n</ul>\n</html>");
         aloj7.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jPanel2.add(aloj7);
 
         aloj8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj8.png"))); // NOI18N
-        aloj8.setToolTipText("<html><h1>Murcia</h1><h2>30 € por noche</h2><br>Todo exterior ,habitación amplia muy luminosa,alquilo por larga temporada a estudiantes,muy cerca de la escuela de formación profesional la Rosaleda, <br>\n<ul>\n  <li><b>Tipo</b> : Habitacion Privada</li>\n  <li><b>Huespedes</b>: 1 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 1 </li>\n  <li><b>Valoracion</b>: ★★★☆☆</li>\n</ul>\n</html>");
+        aloj8.setToolTipText("<html><h1>Murcia</h1><h2>30 € por noche</h2><br>Todo exterior ,habitación amplia muy luminosa,<br>\nalquilo por larga temporada a estudiantes,muy cerca de la escuela <br>\nde formación profesional la Rosaleda, <br>\n<ul>\n  <li><b>Tipo</b> : Habitacion Privada</li>\n  <li><b>Huespedes</b>: 1 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 1 </li>\n  <li><b>Valoracion</b>: ★★★☆☆</li>\n</ul>\n</html>");
         aloj8.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jPanel2.add(aloj8);
 
