@@ -56,16 +56,19 @@ public class HomeWindow extends javax.swing.JFrame {
         jRadioButton4 = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        aloj1 = new javax.swing.JButton();
+        aloj2 = new javax.swing.JButton();
+        aloj3 = new javax.swing.JButton();
+        aloj4 = new javax.swing.JButton();
+        aloj5 = new javax.swing.JButton();
+        aloj6 = new javax.swing.JButton();
+        aloj7 = new javax.swing.JButton();
+        aloj8 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("bntrip");
+        setMinimumSize(new java.awt.Dimension(900, 620));
+        setPreferredSize(new java.awt.Dimension(900, 620));
 
         jPanel1.setLayout(new java.awt.GridLayout(2, 0));
 
@@ -81,12 +84,27 @@ public class HomeWindow extends javax.swing.JFrame {
         jPanel3.add(jButton1);
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Cualquiera", "Casa Entera", "Habitacion Privada", "Habitacion Compartida" }));
+        jComboBox2.setBorder(javax.swing.BorderFactory.createTitledBorder("Tipo de Alojamiento"));
         jPanel3.add(jComboBox2);
+
+        jSlider2.setMaximum(200);
+        jSlider2.setMinorTickSpacing(25);
+        jSlider2.setPaintLabels(true);
+        jSlider2.setPaintTicks(true);
+        jSlider2.setValue(100);
+        jSlider2.setBorder(javax.swing.BorderFactory.createTitledBorder("Precio Maximo"));
         jPanel3.add(jSlider2);
+
+        jSpinner1.setToolTipText("Numero de Huespedes");
+        jSpinner1.setBorder(javax.swing.BorderFactory.createTitledBorder("Huespedes"));
         jPanel3.add(jSpinner1);
 
         jPanel4.setLayout(new java.awt.GridLayout(1, 2));
+
+        jDateChooser2.setBorder(javax.swing.BorderFactory.createTitledBorder("Fecha Entrada"));
         jPanel4.add(jDateChooser2);
+
+        jDateChooser3.setBorder(javax.swing.BorderFactory.createTitledBorder("Fecha Salida"));
         jPanel4.add(jDateChooser3);
 
         jPanel3.add(jPanel4);
@@ -139,50 +157,50 @@ public class HomeWindow extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.LINE_START);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj1.png"))); // NOI18N
-        jButton4.setToolTipText("<html><h1>Madrid</h1><h2>78€ por noche</h2><br>Confortable habitación doble, en preciosa urbanización de Madrid, con estupendas zonas comunes (Jardines, Piscinas, Paddel,...), confortable Salón, Terraza con vistas al Mar, Cocina completa, Wifi y cercano al Bus, Taxi, así como a salidas a Autovía.<br>\n<ul>\n  <li><b>Tipo</b> : Habitacion Privada </li>\n  <li><b>Huespedes</b>: 2 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 2 </li>\n  <li><b>Valoracion</b>: ★★★★☆</li>\n</ul>\n</html>");
-        jButton4.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        jPanel2.add(jButton4);
+        aloj1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj1.png"))); // NOI18N
+        aloj1.setToolTipText("<html><h1>Madrid</h1><h2>78€ por noche</h2><br>Confortable habitación doble, en preciosa urbanización de Madrid, con estupendas zonas comunes (Jardines, Piscinas, Paddel,...), confortable Salón, Terraza con vistas al Mar, Cocina completa, Wifi y cercano al Bus, Taxi, así como a salidas a Autovía.<br>\n<ul>\n  <li><b>Tipo</b> : Habitacion Privada </li>\n  <li><b>Huespedes</b>: 2 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 2 </li>\n  <li><b>Valoracion</b>: ★★★★☆</li>\n</ul>\n</html>");
+        aloj1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        jPanel2.add(aloj1);
 
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj2.png"))); // NOI18N
-        jButton8.setToolTipText("<html><h1>Barcelona</h1><h2>200 € por noche</h2><br>Piso en zona muy ambientada, con gran oferta de restaurantes, heladerías, supermercados y establecimientos comerciales en general. Ideal para tapear y con numerosos parques alrededor.<br>\n<ul>\n  <li><b>Tipo</b> : Casa Entera </li>\n  <li><b>Huespedes</b>: 2 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 1 </li>\n  <li><b>Valoracion</b>: ★☆☆☆☆</li>\n</ul>\n</html>");
-        jButton8.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        aloj2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj2.png"))); // NOI18N
+        aloj2.setToolTipText("<html><h1>Barcelona</h1><h2>200 € por noche</h2><br>Piso en zona muy ambientada, con gran oferta de restaurantes, heladerías, supermercados y establecimientos comerciales en general. Ideal para tapear y con numerosos parques alrededor.<br>\n<ul>\n  <li><b>Tipo</b> : Casa Entera </li>\n  <li><b>Huespedes</b>: 2 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 1 </li>\n  <li><b>Valoracion</b>: ★☆☆☆☆</li>\n</ul>\n</html>");
+        aloj2.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        aloj2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                aloj2ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton8);
+        jPanel2.add(aloj2);
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj3.png"))); // NOI18N
-        jButton5.setToolTipText("<html><h1>Cadiz</h1><h2>30 € por noche</h2><br>Apartamento de 3 habitaciones , con cocina dos baños y sala de estar. Tv, Wiffi . Zona tranquila para dormir. Situado a 300 mts. de bares de tapas restaurantes, heladerías, terrazas y supermercados. Bien conectado con el centro por bus y metro. <br>\n<ul>\n  <li><b>Tipo</b> : Casa Entera </li>\n  <li><b>Huespedes</b>: 4 </li>\n  <li><b>Dormitorios</b>: 3</li>\n  <li><b>Camas</b>: 4 </li>\n  <li><b>Valoracion</b>: ★★★☆☆</li>\n</ul>\n</html>");
-        jButton5.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        jPanel2.add(jButton5);
+        aloj3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj3.png"))); // NOI18N
+        aloj3.setToolTipText("<html><h1>Cadiz</h1><h2>30 € por noche</h2><br>Apartamento de 3 habitaciones , con cocina dos baños y sala de estar. Tv, Wiffi . Zona tranquila para dormir. Situado a 300 mts. de bares de tapas restaurantes, heladerías, terrazas y supermercados. Bien conectado con el centro por bus y metro. <br>\n<ul>\n  <li><b>Tipo</b> : Casa Entera </li>\n  <li><b>Huespedes</b>: 4 </li>\n  <li><b>Dormitorios</b>: 3</li>\n  <li><b>Camas</b>: 4 </li>\n  <li><b>Valoracion</b>: ★★★☆☆</li>\n</ul>\n</html>");
+        aloj3.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        jPanel2.add(aloj3);
 
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj4.png"))); // NOI18N
-        jButton7.setToolTipText("<html><h1>Cadiz</h1><h2>62 € por noche</h2><br>Apartamento muy bien situado, orientado al sur, con vistas al Mar y Soleado.\nAproximadamente a 700 m. de la playa.\nParadas de autobús en la puerta. <br>\n<ul>\n  <li><b>Tipo</b> : Habitacion Privada</li>\n  <li><b>Huespedes</b>: 2 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 2 </li>\n  <li><b>Valoracion</b>: ★★★☆☆</li>\n</ul>\n</html>");
-        jButton7.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        jPanel2.add(jButton7);
+        aloj4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj4.png"))); // NOI18N
+        aloj4.setToolTipText("<html><h1>Cadiz</h1><h2>62 € por noche</h2><br>Apartamento muy bien situado, orientado al sur, con vistas al Mar y Soleado.\nAproximadamente a 700 m. de la playa.\nParadas de autobús en la puerta. <br>\n<ul>\n  <li><b>Tipo</b> : Habitacion Privada</li>\n  <li><b>Huespedes</b>: 2 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 2 </li>\n  <li><b>Valoracion</b>: ★★★☆☆</li>\n</ul>\n</html>");
+        aloj4.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        jPanel2.add(aloj4);
 
-        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj5.png"))); // NOI18N
-        jButton9.setToolTipText("<html><h1>Murcia</h1><h2>150 € por noche</h2><br>Precioso chalet con 1.700 m2: gran piscina privada, barbacoa, íntimo jardín y chimenea. Ideal para vacaciones. <br>\n<ul>\n  <li><b>Tipo</b> : Casa Completa</li>\n  <li><b>Huespedes</b>: 7 </li>\n  <li><b>Dormitorios</b>: 4</li>\n  <li><b>Camas</b>: 5 </li>\n  <li><b>Valoracion</b>: ★★★★★</li>\n</ul>\n</html>");
-        jButton9.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        jPanel2.add(jButton9);
+        aloj5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj5.png"))); // NOI18N
+        aloj5.setToolTipText("<html><h1>Murcia</h1><h2>150 € por noche</h2><br>Precioso chalet con 1.700 m2: gran piscina privada, barbacoa, íntimo jardín y chimenea. Ideal para vacaciones. <br>\n<ul>\n  <li><b>Tipo</b> : Casa Completa</li>\n  <li><b>Huespedes</b>: 7 </li>\n  <li><b>Dormitorios</b>: 4</li>\n  <li><b>Camas</b>: 5 </li>\n  <li><b>Valoracion</b>: ★★★★★</li>\n</ul>\n</html>");
+        aloj5.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        jPanel2.add(aloj5);
 
-        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj6.png"))); // NOI18N
-        jButton10.setToolTipText("<html><h1>Madrid</h1><h2>35 € por noche</h2><br>Se ofrece habitación doble en luminoso apartamento, Muy cómodo y confortable.<br>\n<ul>\n  <li><b>Tipo</b> : Casa Compartida</li>\n  <li><b>Huespedes</b>: 2</li>\n  <li><b>Dormitorios</b>: 2</li>\n  <li><b>Valoracion</b>: ★★★★☆</li>\n</ul>\n</html>");
-        jButton10.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        jPanel2.add(jButton10);
+        aloj6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj6.png"))); // NOI18N
+        aloj6.setToolTipText("<html><h1>Madrid</h1><h2>35 € por noche</h2><br>Se ofrece habitación doble en luminoso apartamento, Muy cómodo y confortable.<br>\n<ul>\n  <li><b>Tipo</b> : Casa Compartida</li>\n  <li><b>Huespedes</b>: 2</li>\n  <li><b>Dormitorios</b>: 2</li>\n  <li><b>Valoracion</b>: ★★★★☆</li>\n</ul>\n</html>");
+        aloj6.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        jPanel2.add(aloj6);
 
-        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj7.png"))); // NOI18N
-        jButton11.setToolTipText("<html><h1>Barcelona</h1><h2>200 € por noche</h2><br>Piso de 3 habitaciones, a 10 minutos de Eroski y estación de autobuses. Solo para chica no fumadora. Se solicita 1 mes de fianza. Comunidad incluida,<br>\n<ul>\n  <li><b>Tipo</b> : Habitacion Compartida </li>\n  <li><b>Huespedes</b>: 1 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 1 </li>\n  <li><b>Valoracion</b>: ★★☆☆☆</li>\n</ul>\n</html>");
-        jButton11.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        jPanel2.add(jButton11);
+        aloj7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj7.png"))); // NOI18N
+        aloj7.setToolTipText("<html><h1>Barcelona</h1><h2>200 € por noche</h2><br>Piso de 3 habitaciones, a 10 minutos de Eroski y estación de autobuses. Solo para chica no fumadora. Se solicita 1 mes de fianza. Comunidad incluida,<br>\n<ul>\n  <li><b>Tipo</b> : Habitacion Compartida </li>\n  <li><b>Huespedes</b>: 1 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 1 </li>\n  <li><b>Valoracion</b>: ★★☆☆☆</li>\n</ul>\n</html>");
+        aloj7.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        jPanel2.add(aloj7);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj8.png"))); // NOI18N
-        jButton2.setToolTipText("<html><h1>Murcia</h1><h2>30 € por noche</h2><br>Todo exterior ,habitación amplia muy luminosa,alquilo por larga temporada a estudiantes,muy cerca de la escuela de formación profesional la Rosaleda, <br>\n<ul>\n  <li><b>Tipo</b> : Habitacion Privada</li>\n  <li><b>Huespedes</b>: 1 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 1 </li>\n  <li><b>Valoracion</b>: ★★★☆☆</li>\n</ul>\n</html>");
-        jButton2.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        jPanel2.add(jButton2);
+        aloj8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj8.png"))); // NOI18N
+        aloj8.setToolTipText("<html><h1>Murcia</h1><h2>30 € por noche</h2><br>Todo exterior ,habitación amplia muy luminosa,alquilo por larga temporada a estudiantes,muy cerca de la escuela de formación profesional la Rosaleda, <br>\n<ul>\n  <li><b>Tipo</b> : Habitacion Privada</li>\n  <li><b>Huespedes</b>: 1 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 1 </li>\n  <li><b>Valoracion</b>: ★★★☆☆</li>\n</ul>\n</html>");
+        aloj8.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        jPanel2.add(aloj8);
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.CENTER);
 
@@ -193,23 +211,23 @@ public class HomeWindow extends javax.swing.JFrame {
         miControlador.procesaInicio();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void aloj2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_aloj2ActionPerformed
 
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton aloj1;
+    private javax.swing.JButton aloj2;
+    private javax.swing.JButton aloj3;
+    private javax.swing.JButton aloj4;
+    private javax.swing.JButton aloj5;
+    private javax.swing.JButton aloj6;
+    private javax.swing.JButton aloj7;
+    private javax.swing.JButton aloj8;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JComboBox jComboBox2;
     private com.toedter.calendar.JDateChooser jDateChooser2;
     private com.toedter.calendar.JDateChooser jDateChooser3;
