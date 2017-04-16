@@ -49,6 +49,10 @@ public class ControladorHomeWindow {
         return miModelo.getLoged();
     }
     
+    public void actualizaTipo(String tipo){
+       
+    }
+    
     
     
     
