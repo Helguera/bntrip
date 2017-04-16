@@ -14,7 +14,9 @@ import static java.lang.Integer.parseInt;
 public class Fechas {
     
     private int inicio;
+    private String inicioStr;
     private int fin;
+    private String finStr;
     
     public Fechas(){
         inicio = 0;
@@ -23,6 +25,8 @@ public class Fechas {
     
     public Fechas(String inicio, String fin){
         if (inicio!=null && fin!=null){
+            inicioStr=inicio;
+            finStr = fin;
         setInicio(inicio);
         setFinal(fin);
         } else System.out.println("OJO CUIDADO QUE UNA FECHA ES NULA!");
@@ -63,6 +67,12 @@ public class Fechas {
     public int getDiasReservados(){
         if (inicio!=0 && fin!=0) return (fin-inicio);
         else return 0;
+    }
+    public String getFechaInicio(){
+        return inicioStr;
+    }
+    public String getFechaFin(){
+        return finStr;
     }
 
 }

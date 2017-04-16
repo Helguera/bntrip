@@ -14,11 +14,16 @@ public class Alojamiento {
     int maxHuespedes;
     double precio;
     String tipoHabitacion;
+    String ciudad;
     
-    public Alojamiento(double precio, String tipoHabitacion, int maxHuespedes){
+    public Alojamiento(String ciudad, double precio, String tipoHabitacion, int maxHuespedes){
+        this.ciudad = ciudad;
         this.precio = precio;
         this.tipoHabitacion = tipoHabitacion;
         this.maxHuespedes = maxHuespedes;
+    }
+    public String getCiudad(){
+        return ciudad;
     }
     
     public double getPrecio(){
