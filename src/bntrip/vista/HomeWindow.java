@@ -53,11 +53,11 @@ public class HomeWindow extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -113,27 +113,35 @@ public class HomeWindow extends javax.swing.JFrame {
         jButton4.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jPanel2.add(jButton4);
 
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mail.png"))); // NOI18N
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj2.png"))); // NOI18N
         jButton8.setToolTipText("");
+        jButton8.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jPanel2.add(jButton8);
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/google.png"))); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj3.png"))); // NOI18N
+        jButton5.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jPanel2.add(jButton5);
 
-        jButton6.setText("jButton6");
-        jPanel2.add(jButton6);
-
-        jButton7.setText("jButton7");
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj4.png"))); // NOI18N
+        jButton7.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jPanel2.add(jButton7);
 
-        jButton9.setText("jButton9");
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj5.png"))); // NOI18N
+        jButton9.setActionCommand("");
+        jButton9.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jPanel2.add(jButton9);
 
-        jButton10.setText("jButton10");
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj6.png"))); // NOI18N
+        jButton10.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jPanel2.add(jButton10);
 
-        jButton11.setText("jButton11");
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj7.png"))); // NOI18N
+        jButton11.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jPanel2.add(jButton11);
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj8.png"))); // NOI18N
+        jButton2.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        jPanel2.add(jButton2);
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.CENTER);
 
@@ -151,9 +159,9 @@ public class HomeWindow extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
