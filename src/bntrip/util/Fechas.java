@@ -68,11 +68,17 @@ public class Fechas {
         if (inicio!=0 && fin!=0) return (fin-inicio);
         else return 0;
     }
-    public String getFechaInicio(){
+    public String getFechaInicioStr(){
         return inicioStr;
     }
-    public String getFechaFin(){
+    public String getFechaFinStr(){
         return finStr;
     }
+    public int getFechaInicio(){
+        return inicio;
+    }
 
+    public int getFechaFin(){
+        return fin;
+    }
 }

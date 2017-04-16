@@ -36,5 +36,14 @@ public class HomeUIStateMachine {
         currentState.dispose();
     }
     
+    public void alojamientoW(){
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                currentState = new AlojamientoWindow(miModelo);
+                currentState.setVisible(true);
+            }
+        });
+    }
+    
     
 }

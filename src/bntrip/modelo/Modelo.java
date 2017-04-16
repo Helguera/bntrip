@@ -46,9 +46,8 @@ public class Modelo {
         alojamientoSeleccionado = alojamiento;
     }
     
-    public boolean setReserva(){
-        almacenReserva.setReserva(alojamientoSeleccionado, fechas, numHuespedes);
-        return false;
+    public void setReserva(Alojamiento aS){
+        almacenReserva.setReserva(aS, fechas, numHuespedes);
     }
 
     public Reserva getAlmacenReserva() {
@@ -56,6 +55,11 @@ public class Modelo {
     }
     
     public Fechas getFechas(){
-        return fechas;
+        if (fechas.getFechaInicio()!=0 && fechas.getFechaFin()!=0)return fechas;
+        else return null;
+    }
+    
+    public int getNumHuespedes(){
+        return numHuespedes;
     }
 }

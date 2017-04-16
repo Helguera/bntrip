@@ -37,13 +37,17 @@ public class ControladorHomeWindow {
         Main.logeate();
     }
     
-    public void procesaInicio(){
+    public void procesaInicioSesion(){
         if (miModelo == null) System.out.println("VAYA VAYA");
         else if(miModelo.getLoged()==false){
             this.procesaLogin();
         }else{
             //abrir vantana de usuario (reservas y lista de deseados)
         }
+    }
+    
+    public void procesaAlojamientoWindow(){
+        Main.getStateMachineHome().alojamientoW();
     }
     
     public boolean isLoged(){

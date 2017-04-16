@@ -198,6 +198,11 @@ public class HomeWindow extends javax.swing.JFrame {
         aloj3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj3.png"))); // NOI18N
         aloj3.setToolTipText("<html><h1>Cadiz</h1><h2>30 € por noche</h2><br>Apartamento de 3 habitaciones , con cocina dos baños y sala de estar.<br>\n Tv, Wiffi . Zona tranquila para dormir. Situado a 300 mts. de bares de tapas restaurantes, <br>\nheladerías, terrazas y supermercados. Bien conectado con el centro por bus y metro. <br>\n<ul>\n  <li><b>Tipo</b> : Casa Entera </li>\n  <li><b>Huespedes</b>: 4 </li>\n  <li><b>Dormitorios</b>: 3</li>\n  <li><b>Camas</b>: 4 </li>\n  <li><b>Valoracion</b>: ★★★☆☆</li>\n</ul>\n</html>");
         aloj3.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        aloj3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aloj3ActionPerformed(evt);
+            }
+        });
         jPanel2.add(aloj3);
 
         aloj4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj4.png"))); // NOI18N
@@ -231,18 +236,29 @@ public class HomeWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        miControlador.procesaInicio();
+        miControlador.procesaInicioSesion();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void aloj2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj2ActionPerformed
-        // TODO add your handling code here:
+        Alojamiento a2 = new Alojamiento("a2", "Barcelona", 200, "Habitacion Privada", 2);
+        a2.setImagenes("/images/room/aloj20.png","/images/room/aloj21.png","/images/room/aloj22.png");
+        miControlador.seleccionaAlojamiento(a2);
+        miControlador.procesaAlojamientoWindow();
     }//GEN-LAST:event_aloj2ActionPerformed
 
     private void aloj1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj1ActionPerformed
-        Alojamiento a1 = new Alojamiento("Madrid", 78, "Habitacion Privada", 2);
-        a1.setImagenes("/image/room/aloj10","/image/room/aloj11","/image/room/aloj12");
+        Alojamiento a1 = new Alojamiento("a1", "Madrid", 78, "Habitacion Privada", 2);
+        a1.setImagenes("/images/room/aloj10.png","/images/room/aloj11.png","/images/room/aloj12.png");
         miControlador.seleccionaAlojamiento(a1);
+        miControlador.procesaAlojamientoWindow();
     }//GEN-LAST:event_aloj1ActionPerformed
+
+    private void aloj3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj3ActionPerformed
+        Alojamiento a3 = new Alojamiento("a3", "Cadiz", 30, "Casa Entera", 4);
+        a3.setImagenes("/images/room/aloj30.png","/images/room/aloj31.png","/images/room/aloj32.png");
+        miControlador.seleccionaAlojamiento(a3);
+        miControlador.procesaAlojamientoWindow();
+    }//GEN-LAST:event_aloj3ActionPerformed
 
    
 

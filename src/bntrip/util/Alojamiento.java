@@ -17,11 +17,14 @@ public class Alojamiento {
     double precio;
     String tipoHabitacion;
     String ciudad;
+    String nombre;
     ArrayList<String> imagenes;
     
-    public Alojamiento(String ciudad, double precio, String tipoHabitacion, int maxHuespedes){
+    public Alojamiento(String nombre, String ciudad, double precio, String tipoHabitacion, int maxHuespedes){
+        this.nombre = nombre;
         this.ciudad = ciudad;
         this.precio = precio;
+        this.imagenes = new ArrayList<String>();
         this.tipoHabitacion = tipoHabitacion;
         this.maxHuespedes = maxHuespedes;
     }
@@ -52,5 +55,8 @@ public class Alojamiento {
         return image;
     }
     
+    public String getNombre(){
+        return nombre;
+    }
     
 }

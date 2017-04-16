@@ -16,14 +16,16 @@ public class AlojamientoWindow extends javax.swing.JFrame {
     
     private ControladorAlojamientoWindow  miControlador;
     private Modelo miModelo;
+    private Alojamiento alojamiento;
     /**
      * Creates new form AlojamientoWindow
      */
     public AlojamientoWindow(Modelo miModelo) {
         this.miModelo = miModelo;
         miControlador = new ControladorAlojamientoWindow(this, miModelo);
+        alojamiento = miControlador.getAlojamiento();
         initComponents();
-        
+
     }
 
     /**
@@ -67,6 +69,11 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         jPanelButtons.setLayout(new java.awt.GridLayout(1, 0));
 
         jButton1.setText("Reservar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanelButtons.add(jButton1);
 
         jButton2.setText("Añadir a Lista de deseados");
@@ -89,9 +96,14 @@ public class AlojamientoWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonImagenActionPerformed
-        Alojamiento alojamiento = miControlador.getAlojamiento();
-        BotonImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource(alojamiento.getImagen())));
+        String ubicacion = alojamiento.getImagen();
+        System.out.print(ubicacion);
+        BotonImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource(ubicacion)));
     }//GEN-LAST:event_BotonImagenActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        System.out.println(miControlador.setReservado(alojamiento));
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
