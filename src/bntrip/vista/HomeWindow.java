@@ -67,13 +67,15 @@ public class HomeWindow extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("bntrip");
-        setMinimumSize(new java.awt.Dimension(900, 620));
-        setPreferredSize(new java.awt.Dimension(900, 620));
+        setBackground(new java.awt.Color(249, 234, 234));
+        setMinimumSize(new java.awt.Dimension(697, 626));
+        setPreferredSize(new java.awt.Dimension(697, 650));
 
         jPanel1.setLayout(new java.awt.GridLayout(2, 0));
 
         jPanel3.setLayout(new java.awt.GridLayout(5, 0));
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/profile.png"))); // NOI18N
         jButton1.setText("Iniciar Sesion");
         jButton1.setActionCommand("");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -156,6 +158,8 @@ public class HomeWindow extends javax.swing.JFrame {
         jPanel1.add(jPanel5);
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.LINE_START);
+
+        jPanel2.setBackground(new java.awt.Color(210, 210, 95));
 
         aloj1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj1.png"))); // NOI18N
         aloj1.setToolTipText("<html><h1>Madrid</h1><h2>78€ por noche</h2><br>Confortable habitación doble, en preciosa urbanización de Madrid, con estupendas zonas comunes (Jardines, Piscinas, Paddel,...), confortable Salón, Terraza con vistas al Mar, Cocina completa, Wifi y cercano al Bus, Taxi, así como a salidas a Autovía.<br>\n<ul>\n  <li><b>Tipo</b> : Habitacion Privada </li>\n  <li><b>Huespedes</b>: 2 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 2 </li>\n  <li><b>Valoracion</b>: ★★★★☆</li>\n</ul>\n</html>");
