@@ -9,7 +9,7 @@ import static java.lang.Integer.parseInt;
 
 /**
  *
- * @author alvaro
+ * @author alvaro velasco & javier helguera
  */
 public class Fechas {
     
@@ -58,6 +58,11 @@ public class Fechas {
         if (date!=null && inicio!=0 && (generaFecha(date)>=inicio)){
             fin = generaFecha(date);
         } else System.out.println("OJO CUIDADO QUE LAS FECHAS NO SON CORRECTAS!");
+    }
+    
+    public int getDiasReservados(){
+        if (inicio!=0 && fin!=0) return (fin-inicio);
+        else return 0;
     }
 
 }

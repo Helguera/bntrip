@@ -7,14 +7,31 @@ package bntrip.util;
 
 /**
  *
- * @author alvaro
+ * @author alvaro velasco & javier helguera
  */
 public class Alojamiento {
     
+    int maxHuespedes;
+    double precio;
+    String tipoHabitacion;
     
-    
-    public Alojamiento(){
-        
+    public Alojamiento(double precio, String tipoHabitacion, int maxHuespedes){
+        this.precio = precio;
+        this.tipoHabitacion = tipoHabitacion;
+        this.maxHuespedes = maxHuespedes;
     }
+    
+    public double getPrecio(){
+        return precio;
+    }
+    
+    public String getTipoHabitacion(){
+        return tipoHabitacion;
+    }
+    public int getMaxHuespedes(){
+        return maxHuespedes;
+    }
+    
+    
     
 }
