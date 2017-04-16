@@ -20,7 +20,7 @@ public class HomeWindow extends javax.swing.JFrame {
         initComponents();
         miControlador = new ControladorHomeWindow(this, miModelo);
         this.setLocationRelativeTo(null);
-        
+        jButton4.setToolTipText("Madrid\n 450€");
     }
     
 
@@ -51,8 +51,8 @@ public class HomeWindow extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
@@ -108,14 +108,17 @@ public class HomeWindow extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.LINE_START);
 
-        jButton4.setText("jButton4");
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj1.png"))); // NOI18N
+        jButton4.setToolTipText("");
+        jButton4.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jPanel2.add(jButton4);
 
-        jButton5.setText("jButton5");
-        jPanel2.add(jButton5);
-
-        jButton8.setText("jButton8");
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mail.png"))); // NOI18N
+        jButton8.setToolTipText("");
         jPanel2.add(jButton8);
+
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/google.png"))); // NOI18N
+        jPanel2.add(jButton5);
 
         jButton6.setText("jButton6");
         jPanel2.add(jButton6);
