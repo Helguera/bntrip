@@ -135,15 +135,15 @@ public class HomeWindow extends javax.swing.JFrame {
 
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        jPanel5.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, -1, -1));
+        jPanel5.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, -1, -1));
 
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        jPanel5.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
+        jPanel5.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, -1, -1));
 
         buttonGroup1.add(jRadioButton3);
         jRadioButton3.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        jPanel5.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
+        jPanel5.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, -1, -1));
 
         buttonGroup1.add(jRadioButton5);
         jRadioButton5.setSelected(true);
@@ -152,23 +152,23 @@ public class HomeWindow extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel3.setText("Barcelona");
-        jPanel5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 70, -1, -1));
+        jPanel5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel2.setText("Madrid");
-        jPanel5.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, -1, -1));
+        jPanel5.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel4.setText("Cadiz");
-        jPanel5.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, -1, -1));
+        jPanel5.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel5.setText("Murcia");
-        jPanel5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, -1, -1));
+        jPanel5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, -1, -1));
 
         buttonGroup1.add(jRadioButton4);
         jRadioButton4.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        jPanel5.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, -1, -1));
+        jPanel5.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, -1, -1));
 
         jLabel1.setBackground(new java.awt.Color(196, 237, 228));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mapa.png"))); // NOI18N
