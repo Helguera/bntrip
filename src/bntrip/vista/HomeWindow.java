@@ -310,9 +310,9 @@ public class HomeWindow extends javax.swing.JFrame {
             jPanel2.add(botones[i]);
         }
         jPanel2.repaint();
-        int aleatorio = (int) (Math.floor(Math.random()*(-2)+2));
-        System.out.println(aleatorio);
-        setSize(getSize().width+aleatorio,getSize().height+aleatorio);
+        setSize(getSize().width+1,getSize().height+1);
+        repaint();
+        setSize(getSize().width-1,getSize().height-1);
         repaint();
     }
    
