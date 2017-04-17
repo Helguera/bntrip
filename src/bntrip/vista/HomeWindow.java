@@ -76,6 +76,7 @@ public class HomeWindow extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("bntrip");
         setMinimumSize(new java.awt.Dimension(697, 626));
+        setPreferredSize(new java.awt.Dimension(735, 626));
 
         jPanel1.setLayout(new java.awt.GridLayout(2, 0));
 

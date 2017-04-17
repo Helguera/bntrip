@@ -25,7 +25,9 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         miControlador = new ControladorAlojamientoWindow(this, miModelo);
         alojamiento = miControlador.getAlojamiento();
         initComponents();
-
+        String ubicacion = alojamiento.getImagen();
+        System.out.print(ubicacion);
+        BotonImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource(ubicacion)));
     }
 
     /**
@@ -41,6 +43,10 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         jPanelImages = new javax.swing.JPanel();
         BotonImagen = new javax.swing.JButton();
         jPanelButtons = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
@@ -50,10 +56,13 @@ public class AlojamientoWindow extends javax.swing.JFrame {
 
         jPanel1.setLayout(new java.awt.BorderLayout());
 
+        jPanelImages.setBackground(new java.awt.Color(1, 1, 1));
         jPanelImages.setLayout(new java.awt.GridLayout(1, 1));
 
+        BotonImagen.setBackground(new java.awt.Color(1, 1, 1));
         BotonImagen.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
         BotonImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/room/aloj10.png"))); // NOI18N
+        BotonImagen.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         BotonImagen.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         BotonImagen.setLabel("Clik para ver otra");
         BotonImagen.setMaximumSize(new java.awt.Dimension(10000, 10000));
@@ -68,6 +77,23 @@ public class AlojamientoWindow extends javax.swing.JFrame {
 
         jPanelButtons.setLayout(new java.awt.GridLayout(1, 0));
 
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/h4.png"))); // NOI18N
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelButtons.add(jLabel1);
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/in.png"))); // NOI18N
+        jLabel4.setText("jLabel4");
+        jPanelButtons.add(jLabel4);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/out.png"))); // NOI18N
+        jLabel5.setText("jLabel5");
+        jPanelButtons.add(jLabel5);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/moneda.gif"))); // NOI18N
+        jLabel3.setText("PRECIO");
+        jPanelButtons.add(jLabel3);
+
         jButton1.setText("Reservar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,7 +102,7 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         });
         jPanelButtons.add(jButton1);
 
-        jButton2.setText("Añadir a Lista de deseados");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/deseado.png"))); // NOI18N
         jPanelButtons.add(jButton2);
 
         jPanel1.add(jPanelButtons, java.awt.BorderLayout.PAGE_START);
@@ -85,7 +111,7 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 544, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -110,6 +136,10 @@ public class AlojamientoWindow extends javax.swing.JFrame {
     private javax.swing.JButton BotonImagen;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelButtons;
     private javax.swing.JPanel jPanelImages;
