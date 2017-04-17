@@ -22,13 +22,62 @@ public class Modelo {
     private Fechas fechas;
     private Alojamiento alojamientoSeleccionado;
     private int numHuespedes;
+    private ArrayList almacen;
     
     public Modelo(){
+        almacen = new ArrayList<Object>();
+        //tipo, precio, huespedes, ciudad
+        for (int i = 0; i < 3; i++) {
+            almacen.add(null);
+        }
+        almacen.set(1, 100);
+        almacen.set(2,1);
+        
         isloged = false;
         fechas = new Fechas();
         almacenReserva = new Reserva();
         almacenDeseado = new Deseado();
     }
+    
+    public void setTipo(String tipo){
+        almacen.set(0,tipo);
+    }
+    
+    public void setPrecio(int precio){
+        almacen.set(1,precio);
+    }
+    
+    public void setHuespedes(int huespedes){
+        almacen.set(2, huespedes);
+    }
+    
+    public void setCiudad(String ciudad){
+        almacen.set(3, ciudad);
+    }
+    
+    public String getTipo(){
+        if(almacen.get(0) == null){
+            return "Cualquiera";
+        }
+        return (String) almacen.get(0);
+    }
+    
+    public int getPrecio(){
+        return (int) almacen.get(1);
+    }
+    
+    public int getHuespedes(){
+        return (int) almacen.get(2);
+    }
+    
+    public String getCiudad(){
+        if (almacen.get(3) == null){
+            return "Cualquiera";
+        }
+        return (String) almacen.get(3);
+    }
+    
+    
     
     public boolean getLoged(){
         return isloged;
