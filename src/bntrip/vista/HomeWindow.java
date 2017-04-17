@@ -8,6 +8,8 @@ package bntrip.vista;
 import bntrip.modelo.Modelo;
 import bntrip.util.Alojamiento;
 import java.util.Calendar;
+import javax.swing.SpinnerModel;
+import javax.swing.SpinnerNumberModel;
 
 /**
  *
@@ -15,13 +17,16 @@ import java.util.Calendar;
  */
 public class HomeWindow extends javax.swing.JFrame {
     private ControladorHomeWindow miControlador;
+    private SpinnerModel model;
     /**
      * Creates new form HomeWindow
      */
     public HomeWindow(Modelo miModelo) {
+        model = new SpinnerNumberModel(1, 1, 4, 1);
         initComponents();
         miControlador = new ControladorHomeWindow(this, miModelo);
         this.setLocationRelativeTo(null);
+        
         
     }
     
@@ -43,7 +48,7 @@ public class HomeWindow extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jComboBox2 = new javax.swing.JComboBox();
         jSlider2 = new javax.swing.JSlider();
-        jSpinner1 = new javax.swing.JSpinner();
+        jSpinner1 = new javax.swing.JSpinner(model);
         jPanel4 = new javax.swing.JPanel();
         jDateChooser2 = new com.toedter.calendar.JDateChooser();
         jDateChooser3 = new com.toedter.calendar.JDateChooser();
@@ -71,7 +76,6 @@ public class HomeWindow extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("bntrip");
         setMinimumSize(new java.awt.Dimension(697, 626));
-        setPreferredSize(new java.awt.Dimension(697, 550));
 
         jPanel1.setLayout(new java.awt.GridLayout(2, 0));
 
@@ -213,6 +217,11 @@ public class HomeWindow extends javax.swing.JFrame {
         aloj5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj5.png"))); // NOI18N
         aloj5.setToolTipText("<html><h1>Murcia</h1><h2>150 € por noche</h2><br>Precioso chalet con 1.700 m2: gran piscina privada, <br>\nbarbacoa, íntimo jardín y chimenea. Ideal para vacaciones. <br>\n<ul>\n  <li><b>Tipo</b> : Casa Completa</li>\n  <li><b>Huespedes</b>: 7 </li>\n  <li><b>Dormitorios</b>: 4</li>\n  <li><b>Camas</b>: 5 </li>\n  <li><b>Valoracion</b>: ★★★★★</li>\n</ul>\n</html>");
         aloj5.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        aloj5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aloj5ActionPerformed(evt);
+            }
+        });
         jPanel2.add(aloj5);
 
         aloj6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj6.png"))); // NOI18N
@@ -259,6 +268,10 @@ public class HomeWindow extends javax.swing.JFrame {
         miControlador.seleccionaAlojamiento(a3);
         miControlador.procesaAlojamientoWindow();
     }//GEN-LAST:event_aloj3ActionPerformed
+
+    private void aloj5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj5ActionPerformed
+        
+    }//GEN-LAST:event_aloj5ActionPerformed
 
    
 
