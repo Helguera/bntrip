@@ -7,7 +7,9 @@ package bntrip.vista;
 
 import bntrip.modelo.Modelo;
 import bntrip.util.Alojamiento;
+import java.awt.Component;
 import java.util.Calendar;
+import javax.swing.JButton;
 import javax.swing.SpinnerModel;
 import javax.swing.SpinnerNumberModel;
 
@@ -101,6 +103,11 @@ public class HomeWindow extends javax.swing.JFrame {
         jComboBox2.setBackground(new java.awt.Color(196, 237, 228));
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Cualquiera", "Casa Entera", "Habitacion Privada", "Habitacion Compartida" }));
         jComboBox2.setBorder(javax.swing.BorderFactory.createTitledBorder("Tipo de Alojamiento"));
+        jComboBox2.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBox2ItemStateChanged(evt);
+            }
+        });
         jPanel3.add(jComboBox2);
 
         jSlider2.setBackground(new java.awt.Color(196, 237, 228));
@@ -110,6 +117,11 @@ public class HomeWindow extends javax.swing.JFrame {
         jSlider2.setPaintTicks(true);
         jSlider2.setValue(100);
         jSlider2.setBorder(javax.swing.BorderFactory.createTitledBorder("Precio Maximo"));
+        jSlider2.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSlider2StateChanged(evt);
+            }
+        });
         jPanel3.add(jSlider2);
 
         jSpinner1.setToolTipText("Numero de Huespedes");
@@ -216,7 +228,7 @@ public class HomeWindow extends javax.swing.JFrame {
         jPanel2.add(aloj4);
 
         aloj5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj5.png"))); // NOI18N
-        aloj5.setToolTipText("<html><h1>Murcia</h1><h2>150 € por noche</h2><br>Precioso chalet con 1.700 m2: gran piscina privada, <br>\nbarbacoa, íntimo jardín y chimenea. Ideal para vacaciones. <br>\n<ul>\n  <li><b>Tipo</b> : Casa Completa</li>\n  <li><b>Huespedes</b>: 7 </li>\n  <li><b>Dormitorios</b>: 4</li>\n  <li><b>Camas</b>: 5 </li>\n  <li><b>Valoracion</b>: ★★★★★</li>\n</ul>\n</html>");
+        aloj5.setToolTipText("<html><h1>Murcia</h1><h2>150 € por noche</h2><br>Precioso chalet con 1.700 m2: gran piscina privada, <br>\nbarbacoa, íntimo jardín y chimenea. Ideal para vacaciones. <br>\n<ul>\n  <li><b>Tipo</b> : Casa Completa</li>\n  <li><b>Huespedes</b>: 3 </li>\n  <li><b>Dormitorios</b>: 3</li>\n  <li><b>Camas</b>: 5 </li>\n  <li><b>Valoracion</b>: ★★★★★</li>\n</ul>\n</html>");
         aloj5.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         aloj5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -274,6 +286,35 @@ public class HomeWindow extends javax.swing.JFrame {
         
     }//GEN-LAST:event_aloj5ActionPerformed
 
+    private void jSlider2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider2StateChanged
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jSlider2StateChanged
+
+    private void jComboBox2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox2ItemStateChanged
+        // TODO add your handling code here:
+        miControlador.actualizarTipo(jComboBox2.getSelectedItem().toString());
+    }//GEN-LAST:event_jComboBox2ItemStateChanged
+    
+    public void activaAlojamientos(int[] matriz){
+        Component [] botones = jPanel2.getComponents();
+        jPanel2.removeAll();
+        for(int i = 0; i < botones.length; i++){
+            if (botones[i].isVisible()==true && matriz[i]==0){
+                botones[i].setVisible(false);
+            }else{
+                if(botones[i].isVisible()==false && matriz[i]==1){
+                    botones[i].setVisible(true);
+                }
+            }
+            jPanel2.add(botones[i]);
+        }
+        jPanel2.repaint();
+        int aleatorio = (int) (Math.floor(Math.random()*(-2)+2));
+        System.out.println(aleatorio);
+        setSize(getSize().width+aleatorio,getSize().height+aleatorio);
+        repaint();
+    }
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

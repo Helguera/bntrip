@@ -30,7 +30,7 @@ public class Modelo {
         for (int i = 0; i < 3; i++) {
             almacen.add(null);
         }
-        almacen.set(1, 100);
+        almacen.set(1, 200);
         almacen.set(2,1);
         
         isloged = false;
