@@ -331,11 +331,14 @@ public class HomeWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_aloj2ActionPerformed
 
     private void aloj1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj1ActionPerformed
-        Alojamiento a1 = new Alojamiento("a1", "Madrid", 78, "Habitacion Privada", 2);
+        Alojamiento a1 = new Alojamiento("a1", "Madrid", 65, "Habitacion Privada", 2);
         a1.setImagenes("/images/room/aloj10.png","/images/room/aloj11.png","/images/room/aloj12.png");
         miControlador.seleccionaAlojamiento(a1);
         miControlador.procesaAlojamientoWindow();
-        miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
+        String inicio = jDateChooser2.getDate().toString();
+        String fin = jDateChooser3.getDate().toString();
+        System.out.println("HW - Inicio: "+ inicio + "\t Fin: "+ fin);
+        miControlador.setFechas(inicio, fin);
     }//GEN-LAST:event_aloj1ActionPerformed
 
     private void aloj3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj3ActionPerformed

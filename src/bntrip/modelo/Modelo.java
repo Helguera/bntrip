@@ -103,17 +103,10 @@ public class Modelo {
     }
     
     public Fechas getFechas(){
-        if (fechas.getFechaInicio()!=0 && fechas.getFechaFin()!=0)return fechas;
-        else return null;
+        return fechas;
     }
     
-    public boolean setFechas(String inicio, String fin){
-        try{
-            fechas.setInicio(inicio);
-            fechas.setFinal(fin);
-            return true;
-        }catch(Exception e){
-                return false;
-        }
+    public void setFechas(Fechas f){
+        fechas = f;
     }
 }

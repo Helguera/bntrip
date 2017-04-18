@@ -24,12 +24,17 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         this.miModelo = miModelo;
         miControlador = new ControladorAlojamientoWindow(this, miModelo);
         alojamiento = miControlador.getAlojamiento();
+
         initComponents();
-        String ubicacion = alojamiento.getImagen();
-        BotonImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource(ubicacion)));
-        System.out.println("inicio" + miControlador.getFechas().getFechaFinStr());
+        
+        // Imagen del alojamiento
+        BotonImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource(alojamiento.getImagen())));
+        // Fecha entrada-salida
         labelIN.setText(miControlador.getFechas().getFechaInicioStr());
-        labelOUT.setText(miControlador.getFechas().getFechaFinStr());
+        labelOUT.setText((miControlador.getFechas()).getFechaFinStr());
+        // Precio
+        labelPrecio.setText(Integer.toString((miControlador.getFechas()).getDiasReservados()*(int)alojamiento.getPrecio())+"€");
+
     }
 
     /**
@@ -48,7 +53,7 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         labelIN = new javax.swing.JLabel();
         labelOUT = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        labelPrecio = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
@@ -84,17 +89,19 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanelButtons.add(jLabel1);
 
+        labelIN.setFont(new java.awt.Font("Cantarell", 1, 12)); // NOI18N
         labelIN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/in.png"))); // NOI18N
-        labelIN.setText("jLabel4");
+        labelIN.setText("17/Apr");
         jPanelButtons.add(labelIN);
 
+        labelOUT.setFont(new java.awt.Font("Cantarell", 1, 12)); // NOI18N
         labelOUT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/out.png"))); // NOI18N
-        labelOUT.setText("jLabel5");
+        labelOUT.setText("17/Apr");
         jPanelButtons.add(labelOUT);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/moneda.gif"))); // NOI18N
-        jLabel3.setText("PRECIO");
-        jPanelButtons.add(jLabel3);
+        labelPrecio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/moneda.gif"))); // NOI18N
+        labelPrecio.setText("PRECIO");
+        jPanelButtons.add(labelPrecio);
 
         jButton1.setText("Reservar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -113,7 +120,7 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 544, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -137,11 +144,11 @@ public class AlojamientoWindow extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelButtons;
     private javax.swing.JPanel jPanelImages;
     private javax.swing.JLabel labelIN;
     private javax.swing.JLabel labelOUT;
+    private javax.swing.JLabel labelPrecio;
     // End of variables declaration//GEN-END:variables
 }

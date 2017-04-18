@@ -39,7 +39,6 @@ public class ControladorAlojamientoWindow {
         if (f!=null && miModelo.getHuespedes()!=0){
             System.out.println("INICIO: " + f.getFechaInicio() + "\t FIN: "+ f.getFechaFin());
             if ((miModelo.getFechas().getFechaInicio())>(miModelo.getFechas().getFechaFin())) {
-                System.out.println("NO PUEDES VOLVER ANTES DE LO QUE SALES PICHURRA!");
                 return false;
             }
             Reserva almacenReserva = miModelo.getAlmacenReserva();
@@ -64,6 +63,9 @@ public class ControladorAlojamientoWindow {
         return miModelo.getAlojamientoSeleccionado();
     }
     
+    public Fechas getFechas(){
+        Fechas f = miModelo.getFechas();
+        return f;
+    }
 
-    
 }

@@ -8,6 +8,7 @@ package bntrip.vista;
 import bntrip.main.Main;
 import bntrip.modelo.Modelo;
 import bntrip.util.Alojamiento;
+import bntrip.util.Fechas;
 
 /**
  *
@@ -22,14 +23,6 @@ public class ControladorHomeWindow {
         this.miVista = miVista;
         if (mMo == null) System.out.println("VAYA VAYA con el constructor");
         this.miModelo = mMo;
-    }
-
-    public void procesaAyuda(){
-        
-    }
-    
-    public void procesaRecupera(){
-        
     }
     
     public void procesaLogin(){
@@ -161,16 +154,10 @@ public class ControladorHomeWindow {
         }
     }
     
-    public void setFechas(String inicio, String fin){
-        miModelo.setFechas(inicio, fin);        
+    public void setFechas(String dateInicio, String dateFin){
+        Fechas f = new Fechas (dateInicio, dateFin);
+        miModelo.setFechas(f);
     }
-    
-    
-    
-    
-    
-    
-    
     
     
 }
