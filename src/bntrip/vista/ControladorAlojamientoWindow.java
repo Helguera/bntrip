@@ -35,8 +35,13 @@ public class ControladorAlojamientoWindow {
      * CON EL ALOJAMIENTO SELECCIONADO QUE YA TIENE
      */
     public boolean setReservado(Alojamiento aS){
-        
-        if (miModelo.getFechas()!=null && miModelo.getNumHuespedes()!=0){
+        Fechas f = miModelo.getFechas();
+        if (f!=null && miModelo.getHuespedes()!=0){
+            System.out.println("INICIO: " + f.getFechaInicio() + "\t FIN: "+ f.getFechaFin());
+            if ((miModelo.getFechas().getFechaInicio())>(miModelo.getFechas().getFechaFin())) {
+                System.out.println("NO PUEDES VOLVER ANTES DE LO QUE SALES PICHURRA!");
+                return false;
+            }
             Reserva almacenReserva = miModelo.getAlmacenReserva();
             for (int i = 0; i<almacenReserva.getSize(); i++){
                 Alojamiento aR = almacenReserva.getAlojamientoReservado(i);
@@ -44,8 +49,8 @@ public class ControladorAlojamientoWindow {
                 Fechas fS = miModelo.getFechas();
                 String n1 = aR.getNombre();
                 String n2 = aS.getNombre();
-                System.out.println(n1 + " " +n2);
                 if(n1.equals(n2) && ((fR.getFechaInicio()<=fS.getFechaInicio() && fR.getFechaFin()>=fS.getFechaInicio())||(fR.getFechaInicio()<=fS.getFechaFin() && fR.getFechaFin()>=fS.getFechaFin()))){
+                    System.out.println("LAS FECHAS ESTAN OCUPADAS");
                     return false;
                 }
             }
@@ -58,5 +63,7 @@ public class ControladorAlojamientoWindow {
     public Alojamiento getAlojamiento(){
         return miModelo.getAlojamientoSeleccionado();
     }
+    
+
     
 }

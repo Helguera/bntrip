@@ -26,7 +26,6 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         alojamiento = miControlador.getAlojamiento();
         initComponents();
         String ubicacion = alojamiento.getImagen();
-        System.out.print(ubicacion);
         BotonImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource(ubicacion)));
     }
 
@@ -122,9 +121,7 @@ public class AlojamientoWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonImagenActionPerformed
-        String ubicacion = alojamiento.getImagen();
-        System.out.print(ubicacion);
-        BotonImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource(ubicacion)));
+        BotonImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource(alojamiento.getImagen())));
     }//GEN-LAST:event_BotonImagenActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

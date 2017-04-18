@@ -161,7 +161,9 @@ public class ControladorHomeWindow {
         }
     }
     
-    
+    public void setFechas(String inicio, String fin){
+        miModelo.setFechas(inicio, fin);        
+    }
     
     
     

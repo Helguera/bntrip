@@ -21,7 +21,6 @@ public class Modelo {
     private Deseado almacenDeseado;
     private Fechas fechas;
     private Alojamiento alojamientoSeleccionado;
-    private int numHuespedes;
     private ArrayList almacen;
     
     public Modelo(){
@@ -96,7 +95,7 @@ public class Modelo {
     }
     
     public void setReserva(Alojamiento aS){
-        almacenReserva.setReserva(aS, fechas, numHuespedes);
+        almacenReserva.setReserva(aS, fechas, (int)almacen.get(2));
     }
 
     public Reserva getAlmacenReserva() {
@@ -108,7 +107,13 @@ public class Modelo {
         else return null;
     }
     
-    public int getNumHuespedes(){
-        return numHuespedes;
+    public boolean setFechas(String inicio, String fin){
+        try{
+            fechas.setInicio(inicio);
+            fechas.setFinal(fin);
+            return true;
+        }catch(Exception e){
+                return false;
+        }
     }
 }

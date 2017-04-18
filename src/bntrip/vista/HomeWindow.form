@@ -165,6 +165,9 @@
                       </Border>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jDateChooser2MouseClicked"/>
+                  </Events>
                 </Component>
                 <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser3">
                   <Properties>
@@ -435,6 +438,9 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="aloj4ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="aloj5">
           <Properties>
@@ -464,6 +470,9 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="aloj6ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="aloj7">
           <Properties>
@@ -477,6 +486,9 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="aloj7ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="aloj8">
           <Properties>
@@ -490,6 +502,9 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="aloj8ActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

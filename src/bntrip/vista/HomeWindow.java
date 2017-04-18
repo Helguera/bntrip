@@ -8,6 +8,7 @@ package bntrip.vista;
 import bntrip.modelo.Modelo;
 import bntrip.util.Alojamiento;
 import java.awt.Component;
+import java.util.Date;
 import java.util.Calendar;
 import javax.swing.JButton;
 import javax.swing.SpinnerModel;
@@ -142,6 +143,11 @@ public class HomeWindow extends javax.swing.JFrame {
 
         jDateChooser2.setBackground(new java.awt.Color(196, 237, 228));
         jDateChooser2.setBorder(javax.swing.BorderFactory.createTitledBorder("Fecha Entrada"));
+        jDateChooser2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jDateChooser2MouseClicked(evt);
+            }
+        });
         jPanel4.add(jDateChooser2);
 
         jDateChooser3.setBackground(new java.awt.Color(196, 237, 228));
@@ -260,6 +266,11 @@ public class HomeWindow extends javax.swing.JFrame {
         aloj4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj4.png"))); // NOI18N
         aloj4.setToolTipText("<html><h1>Cadiz</h1><h2>65 € por noche</h2><br>Apartamento muy bien situado, orientado al sur, con vistas al Mar y Soleado.<br>\nAproximadamente a 700 m. de la playa.<br>\nParadas de autobús en la puerta. <br>\n<ul>\n  <li><b>Tipo</b> : Habitacion Privada</li>\n  <li><b>Huespedes</b>: 2 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 2 </li>\n  <li><b>Valoracion</b>: ★★★☆☆</li>\n</ul>\n</html>");
         aloj4.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        aloj4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aloj4ActionPerformed(evt);
+            }
+        });
         jPanel2.add(aloj4);
 
         aloj5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj5.png"))); // NOI18N
@@ -275,16 +286,31 @@ public class HomeWindow extends javax.swing.JFrame {
         aloj6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj6.png"))); // NOI18N
         aloj6.setToolTipText("<html><h1>Madrid</h1><h2>35 € por noche</h2><br>Se ofrece habitación doble en luminoso apartamento, Muy cómodo y confortable.<br>\n<ul>\n  <li><b>Tipo</b> : Habitacion Compartida</li>\n  <li><b>Huespedes</b>: 2</li>\n  <li><b>Dormitorios</b>: 2</li>\n  <li><b>Valoracion</b>: ★★★★☆</li>\n</ul>\n</html>");
         aloj6.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        aloj6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aloj6ActionPerformed(evt);
+            }
+        });
         jPanel2.add(aloj6);
 
         aloj7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj7.png"))); // NOI18N
         aloj7.setToolTipText("<html><h1>Barcelona</h1><h2>200 € por noche</h2><br>Piso de 3 habitaciones, a 10 minutos de Eroski <br>\ny estación de autobuses.<br>\n Solo para chica no fumadora. Se solicita 1 mes de fianza. <br>\nComunidad incluida.<br>\n<ul>\n  <li><b>Tipo</b> : Habitacion Compartida </li>\n  <li><b>Huespedes</b>: 1 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 1 </li>\n  <li><b>Valoracion</b>: ★★☆☆☆</li>\n</ul>\n</html>");
         aloj7.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        aloj7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aloj7ActionPerformed(evt);
+            }
+        });
         jPanel2.add(aloj7);
 
         aloj8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj8.png"))); // NOI18N
         aloj8.setToolTipText("<html><h1>Murcia</h1><h2>30 € por noche</h2><br>Todo exterior ,habitación amplia muy luminosa,<br>\nalquilo por larga temporada a estudiantes,muy cerca de la escuela <br>\nde formación profesional la Rosaleda, <br>\n<ul>\n  <li><b>Tipo</b> : Habitacion Privada</li>\n  <li><b>Huespedes</b>: 1 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 1 </li>\n  <li><b>Valoracion</b>: ★★★☆☆</li>\n</ul>\n</html>");
         aloj8.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        aloj8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aloj8ActionPerformed(evt);
+            }
+        });
         jPanel2.add(aloj8);
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.CENTER);
@@ -301,6 +327,7 @@ public class HomeWindow extends javax.swing.JFrame {
         a2.setImagenes("/images/room/aloj20.png","/images/room/aloj21.png","/images/room/aloj22.png");
         miControlador.seleccionaAlojamiento(a2);
         miControlador.procesaAlojamientoWindow();
+        miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
     }//GEN-LAST:event_aloj2ActionPerformed
 
     private void aloj1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj1ActionPerformed
@@ -308,6 +335,7 @@ public class HomeWindow extends javax.swing.JFrame {
         a1.setImagenes("/images/room/aloj10.png","/images/room/aloj11.png","/images/room/aloj12.png");
         miControlador.seleccionaAlojamiento(a1);
         miControlador.procesaAlojamientoWindow();
+        miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
     }//GEN-LAST:event_aloj1ActionPerformed
 
     private void aloj3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj3ActionPerformed
@@ -315,10 +343,15 @@ public class HomeWindow extends javax.swing.JFrame {
         a3.setImagenes("/images/room/aloj30.png","/images/room/aloj31.png","/images/room/aloj32.png");
         miControlador.seleccionaAlojamiento(a3);
         miControlador.procesaAlojamientoWindow();
+        miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
     }//GEN-LAST:event_aloj3ActionPerformed
 
     private void aloj5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj5ActionPerformed
-        
+        Alojamiento a5 = new Alojamiento("a5", "Murcia", 150, "Casa Entera", 3);
+        a5.setImagenes("/images/room/aloj50.png","/images/room/aloj51.png","/images/room/aloj52.png");
+        miControlador.seleccionaAlojamiento(a5);
+        miControlador.procesaAlojamientoWindow();
+        miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
     }//GEN-LAST:event_aloj5ActionPerformed
 
     private void jSlider2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider2StateChanged
@@ -365,6 +398,42 @@ public class HomeWindow extends javax.swing.JFrame {
         // TODO add your handling code here:
         miControlador.actualizarTodo(jComboBox2.getSelectedItem().toString(), jSlider2.getValue(), (int)jSpinner1.getValue(), "Cualquiera");
     }//GEN-LAST:event_CualquieraMouseClicked
+
+    private void jDateChooser2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jDateChooser2MouseClicked
+    }//GEN-LAST:event_jDateChooser2MouseClicked
+
+    private void aloj4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj4ActionPerformed
+        Alojamiento a4 = new Alojamiento("a4", "Cadiz", 65, "Habitacion Privada", 2);
+        a4.setImagenes("/images/room/aloj40.png","/images/room/aloj41.png","/images/room/aloj42.png");
+        miControlador.seleccionaAlojamiento(a4);
+        miControlador.procesaAlojamientoWindow();
+        miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
+    }//GEN-LAST:event_aloj4ActionPerformed
+
+    private void aloj6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj6ActionPerformed
+        Alojamiento a6 = new Alojamiento("a6", "Madrid", 35, "Habitacion Compartida", 2);
+        a6.setImagenes("/images/room/aloj60.png","/images/room/aloj61.png","/images/room/aloj62.png");
+        miControlador.seleccionaAlojamiento(a6);
+        miControlador.procesaAlojamientoWindow();
+        miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
+    }//GEN-LAST:event_aloj6ActionPerformed
+
+    private void aloj7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj7ActionPerformed
+        Alojamiento a7 = new Alojamiento("a7", "Barcelona", 200, "Habitacion Compartida", 1);
+        a7.setImagenes("/images/room/aloj70.png","/images/room/aloj71.png","/images/room/aloj72.png");
+        miControlador.seleccionaAlojamiento(a7);
+        miControlador.procesaAlojamientoWindow();
+        miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
+    }//GEN-LAST:event_aloj7ActionPerformed
+
+    private void aloj8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj8ActionPerformed
+        Alojamiento a8 = new Alojamiento("a8", "Murcia", 30, "Habitacion Privada", 1);
+        a8.setImagenes("/images/room/aloj80.png","/images/room/aloj81.png","/images/room/aloj82.png");
+        miControlador.seleccionaAlojamiento(a8);
+        miControlador.procesaAlojamientoWindow();
+        miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
+    }//GEN-LAST:event_aloj8ActionPerformed
+    
     
     public void activaAlojamientos(int[] matriz){
         Component [] botones = jPanel2.getComponents();
@@ -372,9 +441,6 @@ public class HomeWindow extends javax.swing.JFrame {
             if(matriz[i]==1) botones[i].setVisible(false);
             jPanel2.add(botones[i]);
         }
-        
-        
-        
     }
     
     public void activaTodo(){
