@@ -27,6 +27,9 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         initComponents();
         String ubicacion = alojamiento.getImagen();
         BotonImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource(ubicacion)));
+        System.out.println("inicio" + miControlador.getFechas().getFechaFinStr());
+        labelIN.setText(miControlador.getFechas().getFechaInicioStr());
+        labelOUT.setText(miControlador.getFechas().getFechaFinStr());
     }
 
     /**
@@ -43,8 +46,8 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         BotonImagen = new javax.swing.JButton();
         jPanelButtons = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        labelIN = new javax.swing.JLabel();
+        labelOUT = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -81,13 +84,13 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanelButtons.add(jLabel1);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/in.png"))); // NOI18N
-        jLabel4.setText("jLabel4");
-        jPanelButtons.add(jLabel4);
+        labelIN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/in.png"))); // NOI18N
+        labelIN.setText("jLabel4");
+        jPanelButtons.add(labelIN);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/out.png"))); // NOI18N
-        jLabel5.setText("jLabel5");
-        jPanelButtons.add(jLabel5);
+        labelOUT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/out.png"))); // NOI18N
+        labelOUT.setText("jLabel5");
+        jPanelButtons.add(labelOUT);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/moneda.gif"))); // NOI18N
         jLabel3.setText("PRECIO");
@@ -135,10 +138,10 @@ public class AlojamientoWindow extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelButtons;
     private javax.swing.JPanel jPanelImages;
+    private javax.swing.JLabel labelIN;
+    private javax.swing.JLabel labelOUT;
     // End of variables declaration//GEN-END:variables
 }
