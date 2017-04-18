@@ -55,6 +55,7 @@ public class Main {
     
     public static void logout() {
         loginStateMachine.close();
+        homeStateMachine.close();
         homeStateMachine.start();
     }
 

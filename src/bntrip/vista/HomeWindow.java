@@ -21,6 +21,7 @@ import javax.swing.SpinnerNumberModel;
 public class HomeWindow extends javax.swing.JFrame {
     private ControladorHomeWindow miControlador;
     private SpinnerModel model;
+    private Modelo miModelo;
     /**
      * Creates new form HomeWindow
      */
@@ -29,6 +30,7 @@ public class HomeWindow extends javax.swing.JFrame {
         initComponents();
         miControlador = new ControladorHomeWindow(this, miModelo);
         this.setLocationRelativeTo(null);
+        this.miModelo = miModelo;
         
         
     }
@@ -234,7 +236,7 @@ public class HomeWindow extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(244, 247, 247));
 
         aloj1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj1.png"))); // NOI18N
-        aloj1.setToolTipText("<html>\n<h1>Madrid</h1>\n<h2>65€ por noche</h2>\n\n<p>Confortable habitación doble, en preciosa urbanización de <br>\nMadrid, con estupendas zonas comunes (Jardines, Piscinas, Paddel,...),<br>\n confortable Salón, Terraza con vistas al Mar, Cocina completa, Wifi y <br>\ncercano al Bus,Taxi, así como a salidas a Autovía.</p>\n\n<ul>\n  <li><b>Tipo</b> : Habitacion Privada </li>\n  <li><b>Huespedes</b>: 2 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 2 </li>\n  <li><b>Valoracion</b>: ★★★★☆</li>\n</ul>\n</html>");
+        aloj1.setToolTipText("<html><img src=\""+getClass().getResource("/images/aloj1.png")+"\"></html>");
         aloj1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         aloj1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -335,10 +337,13 @@ public class HomeWindow extends javax.swing.JFrame {
         a1.setImagenes("/images/room/aloj10.png","/images/room/aloj11.png","/images/room/aloj12.png");
         miControlador.seleccionaAlojamiento(a1);
         miControlador.procesaAlojamientoWindow();
+        
+        // DEJA PONER CALENDARIO NULO, HAY QUE HACER DESPUES QUE NO TE DEJE RESERVAR
+        if (jDateChooser2.getDate()!=null & jDateChooser3.getDate()!=null){
         String inicio = jDateChooser2.getDate().toString();
         String fin = jDateChooser3.getDate().toString();
         System.out.println("HW - Inicio: "+ inicio + "\t Fin: "+ fin);
-        miControlador.setFechas(inicio, fin);
+        miControlador.setFechas(inicio, fin);}
     }//GEN-LAST:event_aloj1ActionPerformed
 
     private void aloj3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj3ActionPerformed
@@ -469,6 +474,11 @@ public class HomeWindow extends javax.swing.JFrame {
         if(Barcelona.isSelected()) return "Barcelona";
         if(Madrid.isSelected()) return "Madrid";
         return "Cualquiera";
+    }
+    
+    public void abreUsuario(){
+        UserWindow ventana_usuario = new UserWindow(miModelo);
+        ventana_usuario.setVisible(true);
     }
    
 

@@ -25,6 +25,8 @@ public class ControladorHomeWindow {
         this.miModelo = mMo;
     }
     
+    
+    
     public void procesaLogin(){
         // Abrir ventana de inicio de sesion
         Main.logeate();
@@ -35,7 +37,7 @@ public class ControladorHomeWindow {
         else if(miModelo.getLoged()==false){
             this.procesaLogin();
         }else{
-            //abrir vantana de usuario (reservas y lista de deseados)
+            miVista.abreUsuario();
         }
     }
     

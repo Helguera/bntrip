@@ -383,7 +383,9 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/aloj1.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;h1&gt;Madrid&lt;/h1&gt;&#xa;&lt;h2&gt;65&#x20ac; por noche&lt;/h2&gt;&#xa;&#xa;&lt;p&gt;Confortable habitaci&#xf3;n doble, en preciosa urbanizaci&#xf3;n de &lt;br&gt;&#xa;Madrid, con estupendas zonas comunes (Jardines, Piscinas, Paddel,...),&lt;br&gt;&#xa; confortable Sal&#xf3;n, Terraza con vistas al Mar, Cocina completa, Wifi y &lt;br&gt;&#xa;cercano al Bus,Taxi, as&#xed; como a salidas a Autov&#xed;a.&lt;/p&gt;&#xa;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Habitacion Privada &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 2 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 1&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 2 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2605;&#x2605;&#x2605;&#x2606;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
+            <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="&quot;&lt;html&gt;&lt;img src=\&quot;&quot;+getClass().getResource(&quot;/images/aloj1.png&quot;)+&quot;\&quot;&gt;&lt;/html&gt;&quot;" type="code"/>
+            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
                 <CompoundBorder/>
