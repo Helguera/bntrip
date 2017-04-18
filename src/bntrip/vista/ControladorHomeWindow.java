@@ -58,23 +58,33 @@ public class ControladorHomeWindow {
         miModelo.selectAlojamiento(alojamiento);
     }
     
+    public void actualizarTodo(String tipo, int precio, int huespedes, String ciudad){
+        miVista.activaTodo();
+        actualizarTipo(tipo);
+        actualizarPrecio(precio);
+        actualizarHuespedes(huespedes);
+        actualizarCiudad(ciudad);
+        miVista.repaint_home();
+    }
+    
     public void actualizarTipo(String tipo){
         miModelo.setTipo(tipo);
+        //El 1 desactiva
         switch(tipo){
             case("Casa Entera"):
-                int [] tipo_aloj0 = {0,1,1,0,1,0,0,0};
+                int [] tipo_aloj0 = {1,0,0,1,0,1,1,1};
                 miVista.activaAlojamientos(tipo_aloj0);
                 break;
             case("Cualquiera"):
-                int [] tipo_aloj1 = {1,1,1,1,1,1,1,1};
+                int [] tipo_aloj1 = {0,0,0,0,0,0,0,0};
                 miVista.activaAlojamientos(tipo_aloj1);
                 break;
             case("Habitacion Privada"):
-                int [] tipo_aloj2 = {1,0,0,1,0,0,0,1};
+                int [] tipo_aloj2 = {0,1,1,0,1,1,1,0};
                 miVista.activaAlojamientos(tipo_aloj2);
                 break;
             case("Habitacion Compartida"):
-                int [] tipo_aloj3 = {0,0,0,0,0,1,1,0};
+                int [] tipo_aloj3 = {1,1,1,1,1,0,0,1};
                 miVista.activaAlojamientos(tipo_aloj3);
                 break;
         }
@@ -82,14 +92,73 @@ public class ControladorHomeWindow {
     
     public void actualizarPrecio(int precio){
         miModelo.setPrecio(precio);
+        if(precio<30){
+            int [] tipo_aloj0 = {1,1,1,1,1,1,1,1};
+            miVista.activaAlojamientos(tipo_aloj0); 
+        }else if(precio<=34){
+            int [] tipo_aloj1 = {1,1,0,1,1,1,1,0};
+            miVista.activaAlojamientos(tipo_aloj1);
+        }else if(precio<=64){
+            int [] tipo_aloj2 = {1,1,0,1,1,0,1,0};
+            miVista.activaAlojamientos(tipo_aloj2);
+        }else if(precio<=149){
+            int [] tipo_aloj3 = {0,1,0,0,1,0,1,0};
+            miVista.activaAlojamientos(tipo_aloj3);
+        }else if(precio<=199){
+            int [] tipo_aloj3 = {0,1,0,0,0,0,1,0};
+            miVista.activaAlojamientos(tipo_aloj3);
+        }else {
+            int [] tipo_aloj4 = {0,0,0,0,0,0,0,0};
+            miVista.activaAlojamientos(tipo_aloj4);
+        }
     }
     
     public void actualizarHuespedes(int huespedes){
         miModelo.setHuespedes(huespedes);
+        switch(huespedes){
+            case(1):
+                int [] tipo_aloj0 = {0,0,0,0,0,0,0,0};
+                miVista.activaAlojamientos(tipo_aloj0);
+                break;
+            case(2):
+                int [] tipo_aloj1 = {0,0,0,0,0,0,1,1};
+                miVista.activaAlojamientos(tipo_aloj1);
+                break;
+            case(3):
+                int [] tipo_aloj2 = {1,1,0,1,0,1,1,1};
+                miVista.activaAlojamientos(tipo_aloj2);
+                break;
+            case(4):
+                int [] tipo_aloj3 = {1,1,0,1,1,1,1,1};
+                miVista.activaAlojamientos(tipo_aloj3);
+                break;
+        }
     }
     
     public void actualizarCiudad(String ciudad){
         miModelo.setCiudad(ciudad);
+        switch(ciudad){
+            case("Madrid"):
+                int [] tipo_aloj0 = {0,1,1,1,1,0,1,1};
+                miVista.activaAlojamientos(tipo_aloj0);
+                break;
+            case("Barcelona"):
+                int [] tipo_aloj1 = {1,0,1,1,1,1,0,1};
+                miVista.activaAlojamientos(tipo_aloj1);
+                break;
+            case("Murcia"):
+                int [] tipo_aloj2 = {1,1,1,1,0,1,1,0};
+                miVista.activaAlojamientos(tipo_aloj2);
+                break;
+            case("Cadiz"):
+                int [] tipo_aloj3 = {1,1,0,0,1,1,1,1};
+                miVista.activaAlojamientos(tipo_aloj3);
+                break;
+            case("Cualquiera"):
+                int [] tipo_aloj4 = {0,0,0,0,0,0,0,0};
+                miVista.activaAlojamientos(tipo_aloj4);
+                break;
+        }
     }
     
     

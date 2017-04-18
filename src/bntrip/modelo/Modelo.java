@@ -27,7 +27,7 @@ public class Modelo {
     public Modelo(){
         almacen = new ArrayList<Object>();
         //tipo, precio, huespedes, ciudad
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             almacen.add(null);
         }
         almacen.set(1, 200);
