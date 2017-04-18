@@ -34,7 +34,8 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         labelOUT.setText((miControlador.getFechas()).getFechaFinStr());
         // Precio
         labelPrecio.setText(Integer.toString((miControlador.getFechas()).getDiasReservados()*(int)alojamiento.getPrecio())+"€");
-
+        // NUmero de huespedes
+        labelHuespedes.setIcon(new javax.swing.ImageIcon(getClass().getResource(getIconoHuesped())));
     }
 
     /**
@@ -50,7 +51,7 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         jPanelImages = new javax.swing.JPanel();
         BotonImagen = new javax.swing.JButton();
         jPanelButtons = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        labelHuespedes = new javax.swing.JLabel();
         labelIN = new javax.swing.JLabel();
         labelOUT = new javax.swing.JLabel();
         labelPrecio = new javax.swing.JLabel();
@@ -84,10 +85,10 @@ public class AlojamientoWindow extends javax.swing.JFrame {
 
         jPanelButtons.setLayout(new java.awt.GridLayout(1, 0));
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/h4.png"))); // NOI18N
-        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanelButtons.add(jLabel1);
+        labelHuespedes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHuespedes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/h4.png"))); // NOI18N
+        labelHuespedes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelButtons.add(labelHuespedes);
 
         labelIN.setFont(new java.awt.Font("Cantarell", 1, 12)); // NOI18N
         labelIN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/in.png"))); // NOI18N
@@ -143,12 +144,23 @@ public class AlojamientoWindow extends javax.swing.JFrame {
     private javax.swing.JButton BotonImagen;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelButtons;
     private javax.swing.JPanel jPanelImages;
+    private javax.swing.JLabel labelHuespedes;
     private javax.swing.JLabel labelIN;
     private javax.swing.JLabel labelOUT;
     private javax.swing.JLabel labelPrecio;
     // End of variables declaration//GEN-END:variables
+
+    private String getIconoHuesped(){
+        int numero = miModelo.getHuespedes();
+        switch (numero){
+            case 1: return ("/images/h1.png");
+            case 2: return ("/images/h2.png");
+            case 3: return ("/images/h3.png");
+            case 4: return ("/images/h4.png");
+        }return "/images/h1.png";
+    }
 }
+
