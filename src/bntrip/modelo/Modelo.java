@@ -97,7 +97,7 @@ public class Modelo {
     public void setReserva(Alojamiento aS){
         almacenReserva.setReserva(aS, fechas, (int)almacen.get(2));
     }
-
+    
     public Reserva getAlmacenReserva() {
         return almacenReserva;
     }

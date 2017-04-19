@@ -6,6 +6,8 @@
 package bntrip.vista;
 
 import bntrip.modelo.Modelo;
+import bntrip.util.Alojamiento;
+import bntrip.util.Reserva;
 
 /**
  *
@@ -39,14 +41,19 @@ public class UserWindow extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        list1 = new java.awt.List();
-        jLabel2 = new javax.swing.JLabel();
+        listaReserva = new java.awt.List();
+        labelReserva = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
-        list2 = new java.awt.List();
-        jLabel3 = new javax.swing.JLabel();
+        listaDeseado = new java.awt.List();
+        labelDeseado = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         jPanel1.setLayout(new java.awt.BorderLayout());
 
@@ -66,11 +73,17 @@ public class UserWindow extends javax.swing.JFrame {
         jPanel2.setLayout(new java.awt.GridLayout(1, 2));
 
         jPanel3.setLayout(new java.awt.BorderLayout());
-        jPanel3.add(list1, java.awt.BorderLayout.CENTER);
 
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Reservas");
-        jPanel3.add(jLabel2, java.awt.BorderLayout.PAGE_START);
+        listaReserva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listaReservaActionPerformed(evt);
+            }
+        });
+        jPanel3.add(listaReserva, java.awt.BorderLayout.CENTER);
+
+        labelReserva.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelReserva.setText("Reservas");
+        jPanel3.add(labelReserva, java.awt.BorderLayout.PAGE_START);
 
         jPanel2.add(jPanel3);
 
@@ -78,11 +91,11 @@ public class UserWindow extends javax.swing.JFrame {
 
         jButton3.setText("Eliminar Deseado");
         jPanel4.add(jButton3, java.awt.BorderLayout.PAGE_END);
-        jPanel4.add(list2, java.awt.BorderLayout.CENTER);
+        jPanel4.add(listaDeseado, java.awt.BorderLayout.CENTER);
 
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Deseados");
-        jPanel4.add(jLabel3, java.awt.BorderLayout.PAGE_START);
+        labelDeseado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelDeseado.setText("Deseados");
+        jPanel4.add(labelDeseado, java.awt.BorderLayout.PAGE_START);
 
         jPanel2.add(jPanel4);
 
@@ -97,6 +110,19 @@ public class UserWindow extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void listaReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaReservaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_listaReservaActionPerformed
+
+    /**
+     * Metodos que se ejecutan cada vez que se abre la ventana.
+     * @param evt open window
+     */
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
+        cargarReservados();
+    }//GEN-LAST:event_formWindowOpened
+
     /**
      * @param args the command line arguments
      */
@@ -106,13 +132,24 @@ public class UserWindow extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private java.awt.List list1;
-    private java.awt.List list2;
+    private javax.swing.JLabel labelDeseado;
+    private javax.swing.JLabel labelReserva;
+    private java.awt.List listaDeseado;
+    private java.awt.List listaReserva;
     // End of variables declaration//GEN-END:variables
+
+
+    private void cargarReservados(){
+        Reserva r = miControlador.getReserva();
+        for (int i=0; i<r.getSize(); i++){
+            Alojamiento a = r.getAlojamientoReservado(i);
+            int precio = r.getFechasReservadas(i).getDiasReservados()*((int)a.getPrecio());
+            listaReserva.add(r.getAlojamientoReservado(i).getCiudad() + ", " + precio + "€, " + r.getNumHuespedes(i));
+        }
+        
+    }
 }

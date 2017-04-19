@@ -82,6 +82,11 @@ public class HomeWindow extends javax.swing.JFrame {
         setTitle("bntrip");
         setMinimumSize(new java.awt.Dimension(697, 626));
         setPreferredSize(new java.awt.Dimension(735, 626));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         jPanel1.setLayout(new java.awt.GridLayout(2, 0));
 
@@ -330,6 +335,7 @@ public class HomeWindow extends javax.swing.JFrame {
         miControlador.seleccionaAlojamiento(a2);
         miControlador.procesaAlojamientoWindow();
         miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
+        //this.setVisible(false);
     }//GEN-LAST:event_aloj2ActionPerformed
 
     private void aloj1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj1ActionPerformed
@@ -344,6 +350,7 @@ public class HomeWindow extends javax.swing.JFrame {
         String fin = jDateChooser3.getDate().toString();
         System.out.println("HW - Inicio: "+ inicio + "\t Fin: "+ fin);
         miControlador.setFechas(inicio, fin);}
+        //this.setVisible(false);
     }//GEN-LAST:event_aloj1ActionPerformed
 
     private void aloj3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj3ActionPerformed
@@ -352,6 +359,7 @@ public class HomeWindow extends javax.swing.JFrame {
         miControlador.seleccionaAlojamiento(a3);
         miControlador.procesaAlojamientoWindow();
         miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
+        //this.setVisible(false);
     }//GEN-LAST:event_aloj3ActionPerformed
 
     private void aloj5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj5ActionPerformed
@@ -360,6 +368,7 @@ public class HomeWindow extends javax.swing.JFrame {
         miControlador.seleccionaAlojamiento(a5);
         miControlador.procesaAlojamientoWindow();
         miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
+        //this.setVisible(false);
     }//GEN-LAST:event_aloj5ActionPerformed
 
     private void jSlider2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider2StateChanged
@@ -416,6 +425,7 @@ public class HomeWindow extends javax.swing.JFrame {
         miControlador.seleccionaAlojamiento(a4);
         miControlador.procesaAlojamientoWindow();
         miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
+        //this.setVisible(false);
     }//GEN-LAST:event_aloj4ActionPerformed
 
     private void aloj6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj6ActionPerformed
@@ -424,6 +434,7 @@ public class HomeWindow extends javax.swing.JFrame {
         miControlador.seleccionaAlojamiento(a6);
         miControlador.procesaAlojamientoWindow();
         miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
+        //this.setVisible(false);
     }//GEN-LAST:event_aloj6ActionPerformed
 
     private void aloj7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj7ActionPerformed
@@ -432,6 +443,7 @@ public class HomeWindow extends javax.swing.JFrame {
         miControlador.seleccionaAlojamiento(a7);
         miControlador.procesaAlojamientoWindow();
         miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
+        ///this.setVisible(false);
     }//GEN-LAST:event_aloj7ActionPerformed
 
     private void aloj8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj8ActionPerformed
@@ -441,6 +453,10 @@ public class HomeWindow extends javax.swing.JFrame {
         miControlador.procesaAlojamientoWindow();
         miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
     }//GEN-LAST:event_aloj8ActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formWindowOpened
     
     
     public void activaAlojamientos(int[] matriz){

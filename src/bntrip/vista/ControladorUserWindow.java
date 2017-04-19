@@ -7,6 +7,7 @@ package bntrip.vista;
 
 import bntrip.main.Main;
 import bntrip.modelo.Modelo;
+import bntrip.util.Reserva;
 
 /**
  *
@@ -28,6 +29,14 @@ public class ControladorUserWindow {
         Main.logout();
     }
      
+     /**
+      * Devuelve una objeto Reserva, donde están guardados las reservas realizadas por ese usuario.
+      * @return 
+      */
+    public Reserva getReserva(){
+        if (miModelo.getLoged()) return miModelo.getAlmacenReserva();
+        else return new Reserva();
+    }
      
      
 }
