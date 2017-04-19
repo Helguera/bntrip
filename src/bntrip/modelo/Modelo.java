@@ -114,4 +114,11 @@ public class Modelo {
     public void setFechas(Fechas f){
         fechas = f;
     }
+    
+    public void reboot(){
+        isloged = "";
+        almacenReserva = new Reserva();
+        almacenDeseado = new Deseado();
+        fechas = new Fechas();    
+    }
 }

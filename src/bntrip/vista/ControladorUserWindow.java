@@ -25,7 +25,7 @@ public class ControladorUserWindow {
      }
      
      public void procesaLogout(){
-        miModelo.setLoged("");
+        miModelo.reboot();
         Main.logout();
     }
      
