@@ -54,11 +54,15 @@ public class ControladorHomeWindow {
     }
     
     public void actualizarTodo(String tipo, int precio, int huespedes, String ciudad){
+        miVista.eliminaEtiqueta();
         miVista.activaTodo();
         actualizarTipo(tipo);
         actualizarPrecio(precio);
         actualizarHuespedes(huespedes);
         actualizarCiudad(ciudad);
+        if(miVista.getHayAlojamientos()==false){
+            miVista.noAlojamientos();
+        }
         miVista.repaint_home();
     }
     

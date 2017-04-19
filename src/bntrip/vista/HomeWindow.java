@@ -11,6 +11,7 @@ import java.awt.Component;
 import java.util.Date;
 import java.util.Calendar;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.SpinnerModel;
 import javax.swing.SpinnerNumberModel;
 
@@ -46,6 +47,7 @@ public class HomeWindow extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
+        noresultado = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
@@ -77,6 +79,10 @@ public class HomeWindow extends javax.swing.JFrame {
         aloj6 = new javax.swing.JButton();
         aloj7 = new javax.swing.JButton();
         aloj8 = new javax.swing.JButton();
+
+        noresultado.setFont(new java.awt.Font("Ubuntu", 1, 30)); // NOI18N
+        noresultado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/lupa.png"))); // NOI18N
+        noresultado.setText("No hay resultados");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("bntrip");
@@ -496,6 +502,24 @@ public class HomeWindow extends javax.swing.JFrame {
         UserWindow ventana_usuario = new UserWindow(miModelo);
         ventana_usuario.setVisible(true);
     }
+    
+    public boolean getHayAlojamientos(){
+        Component [] botones = jPanel2.getComponents();
+        for(int i=0; i<botones.length; i++){
+            if (botones[i].isVisible()) return true;
+        }
+        return false;
+    }
+    
+    public void noAlojamientos(){
+       jPanel2.add(noresultado);
+       jPanel2.repaint();
+       repaint_home();
+    }
+    
+    public void eliminaEtiqueta(){
+        jPanel2.remove(noresultado);
+    }
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -531,5 +555,6 @@ public class HomeWindow extends javax.swing.JFrame {
     private javax.swing.JSlider jSlider2;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JPanel mapa;
+    private javax.swing.JLabel noresultado;
     // End of variables declaration//GEN-END:variables
 }
