@@ -36,5 +36,12 @@ public class LoginUIStateMachine {
        currentState.dispose();   // si se desea destruir
     }
     
-    
+    public void registroW(){
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                currentState = new RegistroWindow(miModelo);
+                currentState.setVisible(true);
+            }
+        });
+    }
 }

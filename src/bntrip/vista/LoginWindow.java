@@ -93,6 +93,11 @@ public class LoginWindow extends javax.swing.JFrame {
         getContentPane().add(PanelBotones);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/registrate.png"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
         PanelRegistrate.add(jLabel1);
 
         getContentPane().add(PanelRegistrate);
@@ -116,6 +121,10 @@ public class LoginWindow extends javax.swing.JFrame {
     private void botonCorreoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCorreoActionPerformed
         miControlador.procesaRegistro();
     }//GEN-LAST:event_botonCorreoActionPerformed
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        miControlador.procesaRegistro();
+    }//GEN-LAST:event_jLabel1MouseClicked
 
    
 
