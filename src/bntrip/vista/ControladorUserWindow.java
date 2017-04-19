@@ -34,7 +34,7 @@ public class ControladorUserWindow {
       * @return 
       */
     public Reserva getReserva(){
-        if ((miModelo.getLoged()).equals("")) return miModelo.getAlmacenReserva();
+        if (!(miModelo.getLoged()).equals("")) return miModelo.getAlmacenReserva();
         else return new Reserva();
     }
     

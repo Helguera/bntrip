@@ -43,7 +43,7 @@ public class Reserva{
     }
     /**
      * Ideal para usar a la vez que getFechasDeseadas, para obtener la fecha de ese alojamiento.
-     * @param numero
+     * @param index
      * @return 
      */
     public Alojamiento getAlojamientoReservado(int index){
