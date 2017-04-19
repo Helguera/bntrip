@@ -34,42 +34,37 @@ public class LoginWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        PanelIniciaSesion = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        PanelBotones = new javax.swing.JPanel();
         botonGoogle = new javax.swing.JButton();
         botonFb = new javax.swing.JButton();
         botonCorreo = new javax.swing.JButton();
+        PanelRegistrate = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(600, 350));
-        setMinimumSize(new java.awt.Dimension(600, 350));
-        setPreferredSize(new java.awt.Dimension(600, 350));
+        setMaximumSize(new java.awt.Dimension(350, 350));
+        setMinimumSize(new java.awt.Dimension(350, 350));
+        setPreferredSize(new java.awt.Dimension(350, 350));
+        setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 formWindowClosing(evt);
             }
         });
-        getContentPane().setLayout(new java.awt.GridLayout(2, 1));
+        getContentPane().setLayout(new java.awt.GridLayout(3, 1));
 
-        jPanel1.setLayout(new java.awt.GridLayout(2, 1));
+        PanelIniciaSesion.setLayout(new java.awt.GridLayout(1, 1));
 
-        jLabel1.setFont(new java.awt.Font("Khmer OS System", 1, 70)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("HOLA");
-        jLabel1.setPreferredSize(new java.awt.Dimension(203, 100));
-        jPanel1.add(jLabel1);
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/iniciasesion.png"))); // NOI18N
+        jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        PanelIniciaSesion.add(jLabel3);
 
-        jLabel2.setFont(new java.awt.Font("Khmer OS System", 1, 30)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("¿como quieres acceder?");
-        jLabel2.setPreferredSize(new java.awt.Dimension(353, 45));
-        jPanel1.add(jLabel2);
+        getContentPane().add(PanelIniciaSesion);
 
-        getContentPane().add(jPanel1);
-
-        jPanel3.setMinimumSize(new java.awt.Dimension(423, 350));
+        PanelBotones.setMinimumSize(new java.awt.Dimension(423, 350));
 
         botonGoogle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/google.png"))); // NOI18N
         botonGoogle.addActionListener(new java.awt.event.ActionListener() {
@@ -77,7 +72,7 @@ public class LoginWindow extends javax.swing.JFrame {
                 botonGoogleActionPerformed(evt);
             }
         });
-        jPanel3.add(botonGoogle);
+        PanelBotones.add(botonGoogle);
 
         botonFb.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/facebook.png"))); // NOI18N
         botonFb.addActionListener(new java.awt.event.ActionListener() {
@@ -85,12 +80,17 @@ public class LoginWindow extends javax.swing.JFrame {
                 botonFbActionPerformed(evt);
             }
         });
-        jPanel3.add(botonFb);
+        PanelBotones.add(botonFb);
 
         botonCorreo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mail.png"))); // NOI18N
-        jPanel3.add(botonCorreo);
+        PanelBotones.add(botonCorreo);
 
-        getContentPane().add(jPanel3);
+        getContentPane().add(PanelBotones);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/registrate.png"))); // NOI18N
+        PanelRegistrate.add(jLabel1);
+
+        getContentPane().add(PanelRegistrate);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -111,13 +111,14 @@ public class LoginWindow extends javax.swing.JFrame {
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel PanelBotones;
+    private javax.swing.JPanel PanelIniciaSesion;
+    private javax.swing.JPanel PanelRegistrate;
     private javax.swing.JButton botonCorreo;
     private javax.swing.JButton botonFb;
     private javax.swing.JButton botonGoogle;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 
 }

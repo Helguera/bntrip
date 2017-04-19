@@ -44,7 +44,7 @@ public class HomeWindow extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         noresultado = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        PanelMenu = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
@@ -66,7 +66,7 @@ public class HomeWindow extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         Madrid = new javax.swing.JRadioButton();
         foto = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        PanelAlojamientos = new javax.swing.JPanel();
         aloj1 = new javax.swing.JButton();
         aloj2 = new javax.swing.JButton();
         aloj3 = new javax.swing.JButton();
@@ -90,7 +90,7 @@ public class HomeWindow extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setLayout(new java.awt.GridLayout(2, 0));
+        PanelMenu.setLayout(new java.awt.GridLayout(2, 0));
 
         jPanel3.setLayout(new java.awt.GridLayout(5, 0));
 
@@ -169,7 +169,7 @@ public class HomeWindow extends javax.swing.JFrame {
 
         jPanel3.add(jPanel4);
 
-        jPanel1.add(jPanel3);
+        PanelMenu.add(jPanel3);
 
         mapa.setBackground(new java.awt.Color(196, 237, 228));
         mapa.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -240,11 +240,11 @@ public class HomeWindow extends javax.swing.JFrame {
         foto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mapa.png"))); // NOI18N
         mapa.add(foto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 270));
 
-        jPanel1.add(mapa);
+        PanelMenu.add(mapa);
 
-        getContentPane().add(jPanel1, java.awt.BorderLayout.LINE_START);
+        getContentPane().add(PanelMenu, java.awt.BorderLayout.LINE_START);
 
-        jPanel2.setBackground(new java.awt.Color(244, 247, 247));
+        PanelAlojamientos.setBackground(new java.awt.Color(244, 247, 247));
 
         aloj1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj1.png"))); // NOI18N
         aloj1.setToolTipText("<html><img src=\""+getClass().getResource("/images/aloj1.png")+"\"></html>");
@@ -254,7 +254,7 @@ public class HomeWindow extends javax.swing.JFrame {
                 aloj1ActionPerformed(evt);
             }
         });
-        jPanel2.add(aloj1);
+        PanelAlojamientos.add(aloj1);
 
         aloj2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj2.png"))); // NOI18N
         aloj2.setToolTipText("<html><h1>Barcelona</h1>\n<h2>200 € por noche</h2>\n<br>Piso en zona muy ambientada, con gran oferta de restaurantes,<br>\n heladerías, supermercados y establecimientos comerciales en general.<br>\n Ideal para tapear y con numerosos parques alrededor.<br>\n<ul>\n  <li><b>Tipo</b> : Casa Entera </li>\n  <li><b>Huespedes</b>: 2 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 1 </li>\n  <li><b>Valoracion</b>: ★☆☆☆☆</li>\n</ul>\n</html>");
@@ -264,7 +264,7 @@ public class HomeWindow extends javax.swing.JFrame {
                 aloj2ActionPerformed(evt);
             }
         });
-        jPanel2.add(aloj2);
+        PanelAlojamientos.add(aloj2);
 
         aloj3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj3.png"))); // NOI18N
         aloj3.setToolTipText("<html><h1>Cadiz</h1><h2>30 € por noche</h2><br>Apartamento de 3 habitaciones , con cocina dos baños y sala de estar.<br>\n Tv, Wiffi . Zona tranquila para dormir. Situado a 300 mts. de bares de tapas restaurantes, <br>\nheladerías, terrazas y supermercados. Bien conectado con el centro por bus y metro. <br>\n<ul>\n  <li><b>Tipo</b> : Casa Entera </li>\n  <li><b>Huespedes</b>: 4 </li>\n  <li><b>Dormitorios</b>: 3</li>\n  <li><b>Camas</b>: 4 </li>\n  <li><b>Valoracion</b>: ★★★☆☆</li>\n</ul>\n</html>");
@@ -274,7 +274,7 @@ public class HomeWindow extends javax.swing.JFrame {
                 aloj3ActionPerformed(evt);
             }
         });
-        jPanel2.add(aloj3);
+        PanelAlojamientos.add(aloj3);
 
         aloj4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj4.png"))); // NOI18N
         aloj4.setToolTipText("<html><h1>Cadiz</h1><h2>65 € por noche</h2><br>Apartamento muy bien situado, orientado al sur, con vistas al Mar y Soleado.<br>\nAproximadamente a 700 m. de la playa.<br>\nParadas de autobús en la puerta. <br>\n<ul>\n  <li><b>Tipo</b> : Habitacion Privada</li>\n  <li><b>Huespedes</b>: 2 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 2 </li>\n  <li><b>Valoracion</b>: ★★★☆☆</li>\n</ul>\n</html>");
@@ -284,7 +284,7 @@ public class HomeWindow extends javax.swing.JFrame {
                 aloj4ActionPerformed(evt);
             }
         });
-        jPanel2.add(aloj4);
+        PanelAlojamientos.add(aloj4);
 
         aloj5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj5.png"))); // NOI18N
         aloj5.setToolTipText("<html><h1>Murcia</h1><h2>150 € por noche</h2><br>Precioso chalet con 1.700 m2: gran piscina privada, <br>\nbarbacoa, íntimo jardín y chimenea. Ideal para vacaciones. <br>\n<ul>\n  <li><b>Tipo</b> : Casa Entera</li>\n  <li><b>Huespedes</b>: 3 </li>\n  <li><b>Dormitorios</b>: 3</li>\n  <li><b>Camas</b>: 3 </li>\n  <li><b>Valoracion</b>: ★★★★★</li>\n</ul>\n</html>");
@@ -294,7 +294,7 @@ public class HomeWindow extends javax.swing.JFrame {
                 aloj5ActionPerformed(evt);
             }
         });
-        jPanel2.add(aloj5);
+        PanelAlojamientos.add(aloj5);
 
         aloj6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj6.png"))); // NOI18N
         aloj6.setToolTipText("<html><h1>Madrid</h1><h2>35 € por noche</h2><br>Se ofrece habitación doble en luminoso apartamento, Muy cómodo y confortable.<br>\n<ul>\n  <li><b>Tipo</b> : Habitacion Compartida</li>\n  <li><b>Huespedes</b>: 2</li>\n  <li><b>Dormitorios</b>: 2</li>\n  <li><b>Valoracion</b>: ★★★★☆</li>\n</ul>\n</html>");
@@ -304,7 +304,7 @@ public class HomeWindow extends javax.swing.JFrame {
                 aloj6ActionPerformed(evt);
             }
         });
-        jPanel2.add(aloj6);
+        PanelAlojamientos.add(aloj6);
 
         aloj7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj7.png"))); // NOI18N
         aloj7.setToolTipText("<html><h1>Barcelona</h1><h2>200 € por noche</h2><br>Piso de 3 habitaciones, a 10 minutos de Eroski <br>\ny estación de autobuses.<br>\n Solo para chica no fumadora. Se solicita 1 mes de fianza. <br>\nComunidad incluida.<br>\n<ul>\n  <li><b>Tipo</b> : Habitacion Compartida </li>\n  <li><b>Huespedes</b>: 1 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 1 </li>\n  <li><b>Valoracion</b>: ★★☆☆☆</li>\n</ul>\n</html>");
@@ -314,7 +314,7 @@ public class HomeWindow extends javax.swing.JFrame {
                 aloj7ActionPerformed(evt);
             }
         });
-        jPanel2.add(aloj7);
+        PanelAlojamientos.add(aloj7);
 
         aloj8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj8.png"))); // NOI18N
         aloj8.setToolTipText("<html><h1>Murcia</h1><h2>30 € por noche</h2><br>Todo exterior ,habitación amplia muy luminosa,<br>\nalquilo por larga temporada a estudiantes,muy cerca de la escuela <br>\nde formación profesional la Rosaleda, <br>\n<ul>\n  <li><b>Tipo</b> : Habitacion Privada</li>\n  <li><b>Huespedes</b>: 1 </li>\n  <li><b>Dormitorios</b>: 1</li>\n  <li><b>Camas</b>: 1 </li>\n  <li><b>Valoracion</b>: ★★★☆☆</li>\n</ul>\n</html>");
@@ -324,9 +324,9 @@ public class HomeWindow extends javax.swing.JFrame {
                 aloj8ActionPerformed(evt);
             }
         });
-        jPanel2.add(aloj8);
+        PanelAlojamientos.add(aloj8);
 
-        getContentPane().add(jPanel2, java.awt.BorderLayout.CENTER);
+        getContentPane().add(PanelAlojamientos, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -472,24 +472,24 @@ public class HomeWindow extends javax.swing.JFrame {
     
     
     public void activaAlojamientos(int[] matriz){
-        Component [] botones = jPanel2.getComponents();
+        Component [] botones = PanelAlojamientos.getComponents();
         for(int i = 0; i < botones.length; i++){
             if(matriz[i]==1) botones[i].setVisible(false);
-            jPanel2.add(botones[i]);
+            PanelAlojamientos.add(botones[i]);
         }
     }
     
     public void activaTodo(){
-        Component [] botones = jPanel2.getComponents();
-        jPanel2.removeAll();
+        Component [] botones = PanelAlojamientos.getComponents();
+        PanelAlojamientos.removeAll();
         for(int i = 0; i < botones.length; i++){
             botones[i].setVisible(true);
-            jPanel2.add(botones[i]);
+            PanelAlojamientos.add(botones[i]);
         }
     }
     
     public void repaint_home(){
-        jPanel2.repaint();
+        PanelAlojamientos.repaint();
         setSize(getSize().width+1,getSize().height+1);
         repaint();
         setSize(getSize().width-1,getSize().height-1);
@@ -510,7 +510,7 @@ public class HomeWindow extends javax.swing.JFrame {
     }
     
     public boolean getHayAlojamientos(){
-        Component [] botones = jPanel2.getComponents();
+        Component [] botones = PanelAlojamientos.getComponents();
         for(int i=0; i<botones.length; i++){
             if (botones[i].isVisible()) return true;
         }
@@ -518,13 +518,13 @@ public class HomeWindow extends javax.swing.JFrame {
     }
     
     public void noAlojamientos(){
-       jPanel2.add(noresultado);
-       jPanel2.repaint();
+       PanelAlojamientos.add(noresultado);
+       PanelAlojamientos.repaint();
        repaint_home();
     }
     
     public void eliminaEtiqueta(){
-        jPanel2.remove(noresultado);
+        PanelAlojamientos.remove(noresultado);
     }
    
 
@@ -534,6 +534,8 @@ public class HomeWindow extends javax.swing.JFrame {
     private javax.swing.JRadioButton Cualquiera;
     private javax.swing.JRadioButton Madrid;
     private javax.swing.JRadioButton Murcia;
+    private javax.swing.JPanel PanelAlojamientos;
+    private javax.swing.JPanel PanelMenu;
     private javax.swing.JButton aloj1;
     private javax.swing.JButton aloj2;
     private javax.swing.JButton aloj3;
@@ -553,8 +555,6 @@ public class HomeWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel6;
