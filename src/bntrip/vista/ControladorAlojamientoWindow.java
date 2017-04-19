@@ -38,12 +38,12 @@ public class ControladorAlojamientoWindow {
         Fechas f = miModelo.getFechas();
         
         if (miModelo.getLoged().equals("")) {
-            System.out.println("\n\t--- DEBE INICIAR SESION! ---");
+            setImagen("/images/reserva_iniciarsesion.png/");
             return false;
         }
         
         if(f.getFechaInicio()==0 || f.getFechaFin()==0){
-            System.out.println("\n\t--- LAS FECHAS NO PUEDEN ESTAR VACÍAS ---");
+            setImagen("/images/reserva_rellenacampos.png/");
             return false;
         }
         
@@ -51,7 +51,7 @@ public class ControladorAlojamientoWindow {
             System.out.println("INICIO: " + f.getFechaInicio() + "\t FIN: "+ f.getFechaFin());
             
             if ((miModelo.getFechas().getFechaInicio())>(miModelo.getFechas().getFechaFin())) {
-                System.out.println("\n\t--- LAS FECHAS ESTÁN AL REVÉS! ---");
+                setImagen("/images/reserva_fechanovalida.png/");
                 return false;
             }
             
@@ -64,7 +64,7 @@ public class ControladorAlojamientoWindow {
                 String n2 = aS.getNombre();
                 
                 if(n1.equals(n2) && ((fR.getFechaInicio()<=fS.getFechaInicio() && fR.getFechaFin()>=fS.getFechaInicio())||(fR.getFechaInicio()<=fS.getFechaFin() && fR.getFechaFin()>=fS.getFechaFin()))){
-                    System.out.println("\n\t--- LAS FECHAS ESTAN OCUPADAS");
+                    setImagen("/images/reserva_fechaocupada.png/");
                     return false;
                 }
             }
@@ -72,12 +72,19 @@ public class ControladorAlojamientoWindow {
             miModelo.setReserva(aS);
             return true;
         }
+        setImagen("/images/reserva_rellenacampos.png/");
         return false;
     }
+    
+    private void setImagen(String url){
+        miVista.setImagenAlojamiento(url);
+    }
+    
     
     public Alojamiento getAlojamiento(){
         return miModelo.getAlojamientoSeleccionado();
     }
+    
     
     public Fechas getFechas(){
         Fechas f = miModelo.getFechas();

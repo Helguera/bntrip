@@ -134,12 +134,15 @@ public class AlojamientoWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonImagenActionPerformed
-        BotonImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource(alojamiento.getImagen())));
+        setImagenAlojamiento(alojamiento.getImagen());
+        BotonImagen.setText("Click para ver mas fotos");
     }//GEN-LAST:event_BotonImagenActionPerformed
 
     
     private void ButtonReservarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonReservarActionPerformed
-        System.out.println(miControlador.setReservado(alojamiento));
+    //System.out.println("Patatuelas");
+        Boolean b = miControlador.setReservado(alojamiento);
+    //System.out.println("chaskis");
     }//GEN-LAST:event_ButtonReservarActionPerformed
 
 
@@ -164,6 +167,11 @@ public class AlojamientoWindow extends javax.swing.JFrame {
             case 3: return ("/images/h3.png");
             case 4: return ("/images/h4.png");
         }return "/images/h1.png";
+    }
+    
+    public void setImagenAlojamiento(String str){
+        BotonImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource(str)));
+        BotonImagen.setText("");
     }
 }
 
