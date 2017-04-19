@@ -46,7 +46,7 @@ public class LoginUIStateMachine {
     }
     
     public void help() {
-       currentState.setVisible(false); // si se desea ocultar
+       //currentState.setVisible(false); // si se desea ocultar
        currentState.dispose();   // si se desea destruir
        
        //transición

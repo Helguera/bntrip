@@ -13,7 +13,7 @@ import bntrip.modelo.Modelo;
  */
 public class RegistroWindow extends javax.swing.JFrame {
 
-    
+    private ControladorRegistroWindow miControlador;
     private Modelo miModelo;
     /**
      * Creates new form RegistroWindow
@@ -22,6 +22,7 @@ public class RegistroWindow extends javax.swing.JFrame {
         this.miModelo = miModelo;
         initComponents();
         this.setLocationRelativeTo(null);
+        miControlador = new ControladorRegistroWindow(this, miModelo);
     }
 
     @SuppressWarnings("unchecked")
@@ -51,10 +52,14 @@ public class RegistroWindow extends javax.swing.JFrame {
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jButton2 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Accede a BnTrip");
         setPreferredSize(new java.awt.Dimension(700, 450));
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
         getContentPane().setLayout(new java.awt.GridLayout(2, 1));
 
         jPanel1.setLayout(new java.awt.BorderLayout());
@@ -153,6 +158,11 @@ public class RegistroWindow extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        // TODO add your handling code here:
+        miControlador.procesaCancelar();
+    }//GEN-LAST:event_formWindowClosing
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
