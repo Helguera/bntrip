@@ -44,4 +44,18 @@ public class LoginUIStateMachine {
             }
         });
     }
+    
+    public void help() {
+       currentState.setVisible(false); // si se desea ocultar
+       currentState.dispose();   // si se desea destruir
+       
+       //transición
+       java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                currentState = new RegistroWindow(miModelo);
+                currentState.setVisible(true);
+            }
+        });
+       
+   }
 }

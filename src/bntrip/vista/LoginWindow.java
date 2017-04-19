@@ -39,14 +39,13 @@ public class LoginWindow extends javax.swing.JFrame {
         PanelBotones = new javax.swing.JPanel();
         botonGoogle = new javax.swing.JButton();
         botonFb = new javax.swing.JButton();
-        botonCorreo = new javax.swing.JButton();
         PanelRegistrate = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(350, 350));
         setMinimumSize(new java.awt.Dimension(350, 350));
-        setPreferredSize(new java.awt.Dimension(350, 350));
+        setPreferredSize(new java.awt.Dimension(450, 350));
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -64,7 +63,7 @@ public class LoginWindow extends javax.swing.JFrame {
 
         getContentPane().add(PanelIniciaSesion);
 
-        PanelBotones.setMinimumSize(new java.awt.Dimension(423, 350));
+        PanelBotones.setMinimumSize(new java.awt.Dimension(450, 350));
 
         botonGoogle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/google.png"))); // NOI18N
         botonGoogle.addActionListener(new java.awt.event.ActionListener() {
@@ -81,14 +80,6 @@ public class LoginWindow extends javax.swing.JFrame {
             }
         });
         PanelBotones.add(botonFb);
-
-        botonCorreo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mail.png"))); // NOI18N
-        botonCorreo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonCorreoActionPerformed(evt);
-            }
-        });
-        PanelBotones.add(botonCorreo);
 
         getContentPane().add(PanelBotones);
 
@@ -118,10 +109,6 @@ public class LoginWindow extends javax.swing.JFrame {
         miControlador.procesaLogout();
     }//GEN-LAST:event_formWindowClosing
 
-    private void botonCorreoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCorreoActionPerformed
-        miControlador.procesaRegistro();
-    }//GEN-LAST:event_botonCorreoActionPerformed
-
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         miControlador.procesaRegistro();
     }//GEN-LAST:event_jLabel1MouseClicked
@@ -132,7 +119,6 @@ public class LoginWindow extends javax.swing.JFrame {
     private javax.swing.JPanel PanelBotones;
     private javax.swing.JPanel PanelIniciaSesion;
     private javax.swing.JPanel PanelRegistrate;
-    private javax.swing.JButton botonCorreo;
     private javax.swing.JButton botonFb;
     private javax.swing.JButton botonGoogle;
     private javax.swing.JLabel jLabel1;

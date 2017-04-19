@@ -33,7 +33,8 @@ public class ControladorLoginWindow {
     }
     
     public void procesaRegistro(){
-        Main.getStateMachineLogin().registroW();
+        //Main.getStateMachineLogin().registroW();
+        Main.getStateMachineLogin().help();
     }
     /**
     public void procesaInicio(){
@@ -56,6 +57,8 @@ public class ControladorLoginWindow {
     public void procesaLogout(){
         Main.logout();
     }
+    
+    
  
  
  
