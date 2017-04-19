@@ -66,6 +66,11 @@ public class Modelo {
     }
     
     public int getHuespedes(){
+        System.out.println((int)almacen.get(2));
+        System.out.print("EASIFONIDFONS");
+        if((int)almacen.get(2)==0){
+            return 1;
+        }
         return (int) almacen.get(2);
     }
     

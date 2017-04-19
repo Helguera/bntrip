@@ -26,6 +26,7 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         alojamiento = miControlador.getAlojamiento();
 
         initComponents();
+        this.setLocationRelativeTo(null);
         
         // Imagen del alojamiento
         BotonImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource(alojamiento.getImagen())));
@@ -36,6 +37,7 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         labelPrecio.setText(Integer.toString((miControlador.getFechas()).getDiasReservados()*(int)alojamiento.getPrecio())+"€");
         // NUmero de huespedes
         labelHuespedes.setIcon(new javax.swing.ImageIcon(getClass().getResource(getIconoHuesped())));
+        setTitle(alojamiento.getCiudad()+" - "+alojamiento.getTipoHabitacion());
     }
 
     /**

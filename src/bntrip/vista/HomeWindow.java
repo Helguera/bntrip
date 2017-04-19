@@ -8,10 +8,6 @@ package bntrip.vista;
 import bntrip.modelo.Modelo;
 import bntrip.util.Alojamiento;
 import java.awt.Component;
-import java.util.Date;
-import java.util.Calendar;
-import javax.swing.JButton;
-import javax.swing.JLabel;
 import javax.swing.SpinnerModel;
 import javax.swing.SpinnerNumberModel;
 
@@ -340,7 +336,9 @@ public class HomeWindow extends javax.swing.JFrame {
         a2.setImagenes("/images/room/aloj20.png","/images/room/aloj21.png","/images/room/aloj22.png");
         miControlador.seleccionaAlojamiento(a2);
         miControlador.procesaAlojamientoWindow();
+        if (jDateChooser2.getDate()!=null & jDateChooser3.getDate()!=null){
         miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
+        }
         //this.setVisible(false);
     }//GEN-LAST:event_aloj2ActionPerformed
 
@@ -352,11 +350,8 @@ public class HomeWindow extends javax.swing.JFrame {
         
         // DEJA PONER CALENDARIO NULO, HAY QUE HACER DESPUES QUE NO TE DEJE RESERVAR
         if (jDateChooser2.getDate()!=null & jDateChooser3.getDate()!=null){
-        String inicio = jDateChooser2.getDate().toString();
-        String fin = jDateChooser3.getDate().toString();
-        System.out.println("HW - Inicio: "+ inicio + "\t Fin: "+ fin);
-        miControlador.setFechas(inicio, fin);}
-        //this.setVisible(false);
+        miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
+        }
     }//GEN-LAST:event_aloj1ActionPerformed
 
     private void aloj3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj3ActionPerformed
@@ -364,8 +359,9 @@ public class HomeWindow extends javax.swing.JFrame {
         a3.setImagenes("/images/room/aloj30.png","/images/room/aloj31.png","/images/room/aloj32.png");
         miControlador.seleccionaAlojamiento(a3);
         miControlador.procesaAlojamientoWindow();
+        if (jDateChooser2.getDate()!=null & jDateChooser3.getDate()!=null){
         miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
-        //this.setVisible(false);
+        }
     }//GEN-LAST:event_aloj3ActionPerformed
 
     private void aloj5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj5ActionPerformed
@@ -373,8 +369,9 @@ public class HomeWindow extends javax.swing.JFrame {
         a5.setImagenes("/images/room/aloj50.png","/images/room/aloj51.png","/images/room/aloj52.png");
         miControlador.seleccionaAlojamiento(a5);
         miControlador.procesaAlojamientoWindow();
+        if (jDateChooser2.getDate()!=null & jDateChooser3.getDate()!=null){
         miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
-        //this.setVisible(false);
+        }
     }//GEN-LAST:event_aloj5ActionPerformed
 
     private void jSlider2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider2StateChanged
@@ -430,8 +427,9 @@ public class HomeWindow extends javax.swing.JFrame {
         a4.setImagenes("/images/room/aloj40.png","/images/room/aloj41.png","/images/room/aloj42.png");
         miControlador.seleccionaAlojamiento(a4);
         miControlador.procesaAlojamientoWindow();
+        if (jDateChooser2.getDate()!=null & jDateChooser3.getDate()!=null){
         miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
-        //this.setVisible(false);
+        }
     }//GEN-LAST:event_aloj4ActionPerformed
 
     private void aloj6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj6ActionPerformed
@@ -439,8 +437,9 @@ public class HomeWindow extends javax.swing.JFrame {
         a6.setImagenes("/images/room/aloj60.png","/images/room/aloj61.png","/images/room/aloj62.png");
         miControlador.seleccionaAlojamiento(a6);
         miControlador.procesaAlojamientoWindow();
+        if (jDateChooser2.getDate()!=null & jDateChooser3.getDate()!=null){
         miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
-        //this.setVisible(false);
+        }
     }//GEN-LAST:event_aloj6ActionPerformed
 
     private void aloj7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj7ActionPerformed
@@ -448,8 +447,9 @@ public class HomeWindow extends javax.swing.JFrame {
         a7.setImagenes("/images/room/aloj70.png","/images/room/aloj71.png","/images/room/aloj72.png");
         miControlador.seleccionaAlojamiento(a7);
         miControlador.procesaAlojamientoWindow();
+        if (jDateChooser2.getDate()!=null & jDateChooser3.getDate()!=null){
         miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
-        ///this.setVisible(false);
+        }
     }//GEN-LAST:event_aloj7ActionPerformed
 
     private void aloj8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj8ActionPerformed
@@ -457,7 +457,9 @@ public class HomeWindow extends javax.swing.JFrame {
         a8.setImagenes("/images/room/aloj80.png","/images/room/aloj81.png","/images/room/aloj82.png");
         miControlador.seleccionaAlojamiento(a8);
         miControlador.procesaAlojamientoWindow();
+        if (jDateChooser2.getDate()!=null & jDateChooser3.getDate()!=null){
         miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
+        }
     }//GEN-LAST:event_aloj8ActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened

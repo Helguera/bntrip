@@ -49,12 +49,16 @@ public class UserWindow extends javax.swing.JFrame {
         labelDeseado = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Area de Usuario");
+        setBackground(new java.awt.Color(196, 237, 228));
+        setMinimumSize(new java.awt.Dimension(300, 300));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
             }
         });
 
+        jPanel1.setBackground(new java.awt.Color(196, 237, 228));
         jPanel1.setLayout(new java.awt.BorderLayout());
 
         jButton1.setText("Log Out");
@@ -65,15 +69,19 @@ public class UserWindow extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1, java.awt.BorderLayout.LINE_END);
 
+        jLabel1.setBackground(new java.awt.Color(196, 237, 228));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/profile.png"))); // NOI18N
         jPanel1.add(jLabel1, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_START);
 
+        jPanel2.setBackground(new java.awt.Color(196, 237, 228));
         jPanel2.setLayout(new java.awt.GridLayout(1, 2));
 
+        jPanel3.setBackground(new java.awt.Color(196, 237, 228));
         jPanel3.setLayout(new java.awt.BorderLayout());
 
+        listaReserva.setBackground(new java.awt.Color(244, 247, 247));
         listaReserva.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 listaReservaActionPerformed(evt);
@@ -81,18 +89,23 @@ public class UserWindow extends javax.swing.JFrame {
         });
         jPanel3.add(listaReserva, java.awt.BorderLayout.CENTER);
 
+        labelReserva.setBackground(new java.awt.Color(196, 237, 228));
         labelReserva.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelReserva.setText("Reservas");
         jPanel3.add(labelReserva, java.awt.BorderLayout.PAGE_START);
 
         jPanel2.add(jPanel3);
 
+        jPanel4.setBackground(new java.awt.Color(196, 237, 228));
         jPanel4.setLayout(new java.awt.BorderLayout());
 
         jButton3.setText("Eliminar Deseado");
         jPanel4.add(jButton3, java.awt.BorderLayout.PAGE_END);
+
+        listaDeseado.setBackground(new java.awt.Color(244, 247, 247));
         jPanel4.add(listaDeseado, java.awt.BorderLayout.CENTER);
 
+        labelDeseado.setBackground(new java.awt.Color(196, 237, 228));
         labelDeseado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelDeseado.setText("Deseados");
         jPanel4.add(labelDeseado, java.awt.BorderLayout.PAGE_START);

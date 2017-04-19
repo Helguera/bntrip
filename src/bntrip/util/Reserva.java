@@ -27,7 +27,7 @@ public class Reserva{
         alojamientos    =   new ArrayList<Alojamiento>();
         this.fechas =   new ArrayList<Fechas>();
         huespedes   =   new ArrayList<Integer>();
-        if (alojamiento!= null & fechas!=null && numHuespedes<alojamiento.getMaxHuespedes()){
+        if (alojamiento!= null & fechas!=null && numHuespedes<=alojamiento.getMaxHuespedes()){
             alojamientos.add(alojamiento);
             this.fechas.add(fechas);
             huespedes.add(numHuespedes);
@@ -35,7 +35,7 @@ public class Reserva{
     }
     
     public void setReserva(Alojamiento alojamiento, Fechas fechas, int numHuespedes){
-        if (alojamiento!= null & fechas!=null && numHuespedes<alojamiento.getMaxHuespedes()){
+        if (alojamiento!= null & fechas!=null && numHuespedes<=alojamiento.getMaxHuespedes()){
             alojamientos.add(alojamiento);
             this.fechas.add(fechas);
             huespedes.add(numHuespedes);
@@ -57,7 +57,7 @@ public class Reserva{
     }
     
     public int getNumHuespedes(int index){
-        if (index<huespedes.size() && index>0) return huespedes.get(index);
+        if (index<=huespedes.size() && index>=0) return huespedes.get(index);
         else return 0;
     }
     public int getSize(){
