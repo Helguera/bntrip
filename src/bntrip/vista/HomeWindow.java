@@ -28,8 +28,6 @@ public class HomeWindow extends javax.swing.JFrame {
         miControlador = new ControladorHomeWindow(this, miModelo);
         this.setLocationRelativeTo(null);
         this.miModelo = miModelo;
-        
-        
     }
     
 
@@ -340,7 +338,9 @@ public class HomeWindow extends javax.swing.JFrame {
         a2.setImagenes("/images/room/aloj20.png","/images/room/aloj21.png","/images/room/aloj22.png");
         miControlador.seleccionaAlojamiento(a2);
         miControlador.procesaAlojamientoWindow();
-        if (jDateChooser2.getDate()!=null & jDateChooser3.getDate()!=null){
+        
+        
+        if (jDateChooser2.getDate()!=null && jDateChooser3.getDate()!=null){
         miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
         }
         //this.setVisible(false);

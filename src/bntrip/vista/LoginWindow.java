@@ -83,6 +83,11 @@ public class LoginWindow extends javax.swing.JFrame {
         PanelBotones.add(botonFb);
 
         botonCorreo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mail.png"))); // NOI18N
+        botonCorreo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonCorreoActionPerformed(evt);
+            }
+        });
         PanelBotones.add(botonCorreo);
 
         getContentPane().add(PanelBotones);
@@ -107,6 +112,10 @@ public class LoginWindow extends javax.swing.JFrame {
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         miControlador.procesaLogout();
     }//GEN-LAST:event_formWindowClosing
+
+    private void botonCorreoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCorreoActionPerformed
+        miControlador.procesaRegistro();
+    }//GEN-LAST:event_botonCorreoActionPerformed
 
    
 

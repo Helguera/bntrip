@@ -57,8 +57,8 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         labelIN = new javax.swing.JLabel();
         labelOUT = new javax.swing.JLabel();
         labelPrecio = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        ButtonReservar = new javax.swing.JButton();
+        ButtonDeseado = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(410, 340));
@@ -106,16 +106,16 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         labelPrecio.setText("PRECIO");
         jPanelButtons.add(labelPrecio);
 
-        jButton1.setText("Reservar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ButtonReservar.setText("Reservar");
+        ButtonReservar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ButtonReservarActionPerformed(evt);
             }
         });
-        jPanelButtons.add(jButton1);
+        jPanelButtons.add(ButtonReservar);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/deseado.png"))); // NOI18N
-        jPanelButtons.add(jButton2);
+        ButtonDeseado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/deseado.png"))); // NOI18N
+        jPanelButtons.add(ButtonDeseado);
 
         jPanel1.add(jPanelButtons, java.awt.BorderLayout.PAGE_START);
 
@@ -137,15 +137,16 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         BotonImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource(alojamiento.getImagen())));
     }//GEN-LAST:event_BotonImagenActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    
+    private void ButtonReservarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonReservarActionPerformed
         System.out.println(miControlador.setReservado(alojamiento));
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_ButtonReservarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonImagen;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton ButtonDeseado;
+    private javax.swing.JButton ButtonReservar;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelButtons;
     private javax.swing.JPanel jPanelImages;

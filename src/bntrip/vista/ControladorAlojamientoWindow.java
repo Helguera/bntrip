@@ -16,10 +16,9 @@ import java.util.ArrayList;
  * @author alvaro
  */
 public class ControladorAlojamientoWindow {
+    
     private AlojamientoWindow miVista;
     private Modelo miModelo;
-    
-
 
     public ControladorAlojamientoWindow(AlojamientoWindow miVista, Modelo miModelo) {
         this.miVista = miVista;
@@ -35,12 +34,27 @@ public class ControladorAlojamientoWindow {
      * CON EL ALOJAMIENTO SELECCIONADO QUE YA TIENE
      */
     public boolean setReservado(Alojamiento aS){
+        
         Fechas f = miModelo.getFechas();
+        
+        if (miModelo.getLoged().equals("")) {
+            System.out.println("\n\t--- DEBE INICIAR SESION! ---");
+            return false;
+        }
+        
+        if(f.getFechaInicio()==0 || f.getFechaFin()==0){
+            System.out.println("\n\t--- LAS FECHAS NO PUEDEN ESTAR VACÍAS ---");
+            return false;
+        }
+        
         if (f!=null && miModelo.getHuespedes()!=0){
             System.out.println("INICIO: " + f.getFechaInicio() + "\t FIN: "+ f.getFechaFin());
+            
             if ((miModelo.getFechas().getFechaInicio())>(miModelo.getFechas().getFechaFin())) {
+                System.out.println("\n\t--- LAS FECHAS ESTÁN AL REVÉS! ---");
                 return false;
             }
+            
             Reserva almacenReserva = miModelo.getAlmacenReserva();
             for (int i = 0; i<almacenReserva.getSize(); i++){
                 Alojamiento aR = almacenReserva.getAlojamientoReservado(i);
@@ -48,11 +62,13 @@ public class ControladorAlojamientoWindow {
                 Fechas fS = miModelo.getFechas();
                 String n1 = aR.getNombre();
                 String n2 = aS.getNombre();
+                
                 if(n1.equals(n2) && ((fR.getFechaInicio()<=fS.getFechaInicio() && fR.getFechaFin()>=fS.getFechaInicio())||(fR.getFechaInicio()<=fS.getFechaFin() && fR.getFechaFin()>=fS.getFechaFin()))){
-                    System.out.println("LAS FECHAS ESTAN OCUPADAS");
+                    System.out.println("\n\t--- LAS FECHAS ESTAN OCUPADAS");
                     return false;
                 }
             }
+            
             miModelo.setReserva(aS);
             return true;
         }

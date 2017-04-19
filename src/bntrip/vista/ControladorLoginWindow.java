@@ -32,13 +32,17 @@ public class ControladorLoginWindow {
         Main.logeate();
     }
     
+    public void procesaRegistro(){
+        
+    }
+    /**
     public void procesaInicio(){
         if(miModelo.getLoged().equals("")){
             this.procesaLogin();
         }else{
             //abrir vantana de usuario
         }
-    }
+    }**/
     
     public String isLoged(){
         return miModelo.getLoged();
