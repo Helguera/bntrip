@@ -25,7 +25,7 @@ public class ControladorUserWindow {
      }
      
      public void procesaLogout(){
-        miModelo.setLoged(false);
+        miModelo.setLoged("");
         Main.logout();
     }
      
@@ -34,8 +34,21 @@ public class ControladorUserWindow {
       * @return 
       */
     public Reserva getReserva(){
-        if (miModelo.getLoged()) return miModelo.getAlmacenReserva();
+        if ((miModelo.getLoged()).equals("")) return miModelo.getAlmacenReserva();
         else return new Reserva();
+    }
+    
+    public String getIconoPerfil(){
+        switch(miModelo.getLoged()){
+            case "Google":  return ("/images/icono_google.png/");
+            case "Facebook":return ("/images/icono_fb.png/");
+            case "Correo":  return ("/images/icono_correo.png");
+        }
+        return "/images/profile.png";
+    }
+    
+    public String getLoged(){
+        return miModelo.getLoged();
     }
      
      

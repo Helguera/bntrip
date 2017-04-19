@@ -16,7 +16,7 @@ import java.util.ArrayList;
  * @author javier
  */
 public class Modelo {
-    private boolean isloged;
+    private String isloged;
     private Reserva almacenReserva ;
     private Deseado almacenDeseado;
     private Fechas fechas;
@@ -32,7 +32,7 @@ public class Modelo {
         almacen.set(1, 200);
         almacen.set(2,1);
         
-        isloged = false;
+        isloged = "";
         fechas = new Fechas();
         almacenReserva = new Reserva();
         almacenDeseado = new Deseado();
@@ -83,12 +83,12 @@ public class Modelo {
     
     
     
-    public boolean getLoged(){
+    public String getLoged(){
         return isloged;
     }
     
-    public void setLoged(boolean b){
-        isloged = b;
+    public void setLoged(String str){
+        isloged = str;
     }
     
     public Alojamiento getAlojamientoSeleccionado(){

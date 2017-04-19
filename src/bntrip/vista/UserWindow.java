@@ -38,7 +38,7 @@ public class UserWindow extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        labelConexion = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         listaReserva = new java.awt.List();
@@ -69,9 +69,9 @@ public class UserWindow extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1, java.awt.BorderLayout.LINE_END);
 
-        jLabel1.setBackground(new java.awt.Color(196, 237, 228));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/profile.png"))); // NOI18N
-        jPanel1.add(jLabel1, java.awt.BorderLayout.CENTER);
+        labelConexion.setBackground(new java.awt.Color(196, 237, 228));
+        labelConexion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/profile.png"))); // NOI18N
+        jPanel1.add(labelConexion, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_START);
 
@@ -134,6 +134,8 @@ public class UserWindow extends javax.swing.JFrame {
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
         cargarReservados();
+        labelConexion.setIcon(new javax.swing.ImageIcon(getClass().getResource(miControlador.getIconoPerfil())));
+        labelConexion.setText("Conectado con " + miControlador.getLoged());
     }//GEN-LAST:event_formWindowOpened
 
     /**
@@ -144,11 +146,11 @@ public class UserWindow extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JLabel labelConexion;
     private javax.swing.JLabel labelDeseado;
     private javax.swing.JLabel labelReserva;
     private java.awt.List listaDeseado;
@@ -162,7 +164,6 @@ public class UserWindow extends javax.swing.JFrame {
             Alojamiento a = r.getAlojamientoReservado(i);
             int precio = r.getFechasReservadas(i).getDiasReservados()*((int)a.getPrecio());
             listaReserva.add(r.getAlojamientoReservado(i).getCiudad() + ", " + precio + "€, " + r.getNumHuespedes(i));
-        }
-        
+        } 
     }
 }

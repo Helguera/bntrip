@@ -33,19 +33,19 @@ public class ControladorLoginWindow {
     }
     
     public void procesaInicio(){
-        if(!miModelo.getLoged()){
+        if(miModelo.getLoged().equals("")){
             this.procesaLogin();
         }else{
             //abrir vantana de usuario
         }
     }
     
-    public boolean isLoged(){
+    public String isLoged(){
         return miModelo.getLoged();
     }
     
-    public void setLogeado(boolean b){
-        miModelo.setLoged(b);
+    public void setLogeado(String str){
+        miModelo.setLoged(str);
         Main.logeado();
     } 
     

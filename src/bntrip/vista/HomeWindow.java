@@ -126,12 +126,16 @@ public class HomeWindow extends javax.swing.JFrame {
         jPanel3.add(jComboBox2);
 
         jSlider2.setBackground(new java.awt.Color(196, 237, 228));
+        jSlider2.setFont(new java.awt.Font("Bitstream Charter", 1, 10)); // NOI18N
         jSlider2.setMaximum(200);
         jSlider2.setMinorTickSpacing(25);
         jSlider2.setPaintLabels(true);
         jSlider2.setPaintTicks(true);
         jSlider2.setValue(200);
         jSlider2.setBorder(javax.swing.BorderFactory.createTitledBorder("Precio Maximo"));
+        jSlider2.setMaximumSize(new java.awt.Dimension(32767, 40));
+        jSlider2.setMinimumSize(new java.awt.Dimension(42, 40));
+        jSlider2.setPreferredSize(new java.awt.Dimension(210, 40));
         jSlider2.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jSlider2StateChanged(evt);

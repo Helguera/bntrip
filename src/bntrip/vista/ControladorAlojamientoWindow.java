@@ -26,7 +26,7 @@ public class ControladorAlojamientoWindow {
         this.miModelo = miModelo;
     }
     
-    public boolean isLoged(){
+    public String isLoged(){
         return miModelo.getLoged();
     }
     

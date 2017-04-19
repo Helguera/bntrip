@@ -34,18 +34,15 @@ public class ControladorHomeWindow {
     
     public void procesaInicioSesion(){
         if (miModelo == null) System.out.println("VAYA VAYA");
-        else if(miModelo.getLoged()==false){
-            this.procesaLogin();
-        }else{
-            miVista.abreUsuario();
-        }
+        else if(miModelo.getLoged().equals("")) this.procesaLogin();
+        else miVista.abreUsuario();
     }
     
     public void procesaAlojamientoWindow(){
         Main.getStateMachineHome().alojamientoW();
     }
     
-    public boolean isLoged(){
+    public String isLoged(){
         return miModelo.getLoged();
     }
     
@@ -88,6 +85,8 @@ public class ControladorHomeWindow {
                 break;
         }
     }
+    
+
     
     public void actualizarPrecio(int precio){
         miModelo.setPrecio(precio);

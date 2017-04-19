@@ -38,9 +38,9 @@ public class LoginWindow extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        botonGoogle = new javax.swing.JButton();
+        botonFb = new javax.swing.JButton();
+        botonCorreo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(600, 350));
@@ -71,39 +71,38 @@ public class LoginWindow extends javax.swing.JFrame {
 
         jPanel3.setMinimumSize(new java.awt.Dimension(423, 350));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/google.png"))); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        botonGoogle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/google.png"))); // NOI18N
+        botonGoogle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                botonGoogleActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton1);
+        jPanel3.add(botonGoogle);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/facebook.png"))); // NOI18N
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        botonFb.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/facebook.png"))); // NOI18N
+        botonFb.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                botonFbActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton2);
+        jPanel3.add(botonFb);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mail.png"))); // NOI18N
-        jPanel3.add(jButton3);
+        botonCorreo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mail.png"))); // NOI18N
+        jPanel3.add(botonCorreo);
 
         getContentPane().add(jPanel3);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        miControlador.setLogeado(true);
+    private void botonGoogleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGoogleActionPerformed
+        miControlador.setLogeado("Google");
         
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_botonGoogleActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        miControlador.setLogeado(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void botonFbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonFbActionPerformed
+        miControlador.setLogeado("Facebook");
+    }//GEN-LAST:event_botonFbActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         miControlador.procesaLogout();
@@ -112,12 +111,13 @@ public class LoginWindow extends javax.swing.JFrame {
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton botonCorreo;
+    private javax.swing.JButton botonFb;
+    private javax.swing.JButton botonGoogle;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
+
 }
