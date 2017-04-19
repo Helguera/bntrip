@@ -410,7 +410,7 @@
               <Image iconType="3" name="/images/aloj1.png"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="&quot;&lt;html&gt;&lt;img src=\&quot;&quot;+getClass().getResource(&quot;/images/aloj1.png&quot;)+&quot;\&quot;&gt;&lt;/html&gt;&quot;" type="code"/>
+              <Connection code="&quot;&lt;html&gt;&lt;img src=\&quot;&quot;+getClass().getResource(&quot;/images/Tips/tip1.png&quot;)+&quot;\&quot;&gt;&lt;/html&gt;&quot;" type="code"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
@@ -427,7 +427,9 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/aloj2.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Barcelona&lt;/h1&gt;&#xa;&lt;h2&gt;200 &#x20ac; por noche&lt;/h2&gt;&#xa;&lt;br&gt;Piso en zona muy ambientada, con gran oferta de restaurantes,&lt;br&gt;&#xa; helader&#xed;as, supermercados y establecimientos comerciales en general.&lt;br&gt;&#xa; Ideal para tapear y con numerosos parques alrededor.&lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Casa Entera &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 2 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 1&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 1 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2606;&#x2606;&#x2606;&#x2606;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
+            <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="&quot;&lt;html&gt;&lt;img src=\&quot;&quot;+getClass().getResource(&quot;/images/Tips/tip2.png&quot;)+&quot;\&quot;&gt;&lt;/html&gt;&quot;" type="code"/>
+            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
                 <CompoundBorder/>
@@ -443,7 +445,9 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/aloj3.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Cadiz&lt;/h1&gt;&lt;h2&gt;30 &#x20ac; por noche&lt;/h2&gt;&lt;br&gt;Apartamento de 3 habitaciones , con cocina dos ba&#xf1;os y sala de estar.&lt;br&gt;&#xa; Tv, Wiffi . Zona tranquila para dormir. Situado a 300 mts. de bares de tapas restaurantes, &lt;br&gt;&#xa;helader&#xed;as, terrazas y supermercados. Bien conectado con el centro por bus y metro. &lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Casa Entera &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 4 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 3&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 4 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2605;&#x2605;&#x2606;&#x2606;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
+            <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="&quot;&lt;html&gt;&lt;img src=\&quot;&quot;+getClass().getResource(&quot;/images/Tips/tip3.png&quot;)+&quot;\&quot;&gt;&lt;/html&gt;&quot;" type="code"/>
+            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
                 <CompoundBorder/>
@@ -459,7 +463,9 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/aloj4.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Cadiz&lt;/h1&gt;&lt;h2&gt;65 &#x20ac; por noche&lt;/h2&gt;&lt;br&gt;Apartamento muy bien situado, orientado al sur, con vistas al Mar y Soleado.&lt;br&gt;&#xa;Aproximadamente a 700 m. de la playa.&lt;br&gt;&#xa;Paradas de autob&#xfa;s en la puerta. &lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Habitacion Privada&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 2 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 1&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 2 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2605;&#x2605;&#x2606;&#x2606;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
+            <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="&quot;&lt;html&gt;&lt;img src=\&quot;&quot;+getClass().getResource(&quot;/images/Tips/tip4.png&quot;)+&quot;\&quot;&gt;&lt;/html&gt;&quot;" type="code"/>
+            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
                 <CompoundBorder/>
@@ -475,7 +481,9 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/aloj5.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Murcia&lt;/h1&gt;&lt;h2&gt;150 &#x20ac; por noche&lt;/h2&gt;&lt;br&gt;Precioso chalet con 1.700 m2: gran piscina privada, &lt;br&gt;&#xa;barbacoa, &#xed;ntimo jard&#xed;n y chimenea. Ideal para vacaciones. &lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Casa Entera&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 3 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 3&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 3 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
+            <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="&quot;&lt;html&gt;&lt;img src=\&quot;&quot;+getClass().getResource(&quot;/images/Tips/tip5.png&quot;)+&quot;\&quot;&gt;&lt;/html&gt;&quot;" type="code"/>
+            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
                 <CompoundBorder/>
@@ -491,7 +499,9 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/aloj6.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Madrid&lt;/h1&gt;&lt;h2&gt;35 &#x20ac; por noche&lt;/h2&gt;&lt;br&gt;Se ofrece habitaci&#xf3;n doble en luminoso apartamento, Muy c&#xf3;modo y confortable.&lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Habitacion Compartida&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 2&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 2&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2605;&#x2605;&#x2605;&#x2606;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
+            <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="&quot;&lt;html&gt;&lt;img src=\&quot;&quot;+getClass().getResource(&quot;/images/Tips/tip6.png&quot;)+&quot;\&quot;&gt;&lt;/html&gt;&quot;" type="code"/>
+            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
                 <CompoundBorder/>
@@ -507,7 +517,9 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/aloj7.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Barcelona&lt;/h1&gt;&lt;h2&gt;200 &#x20ac; por noche&lt;/h2&gt;&lt;br&gt;Piso de 3 habitaciones, a 10 minutos de Eroski &lt;br&gt;&#xa;y estaci&#xf3;n de autobuses.&lt;br&gt;&#xa; Solo para chica no fumadora. Se solicita 1 mes de fianza. &lt;br&gt;&#xa;Comunidad incluida.&lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Habitacion Compartida &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 1 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 1&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 1 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2605;&#x2606;&#x2606;&#x2606;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
+            <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="&quot;&lt;html&gt;&lt;img src=\&quot;&quot;+getClass().getResource(&quot;/images/Tips/tip7.png&quot;)+&quot;\&quot;&gt;&lt;/html&gt;&quot;" type="code"/>
+            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
                 <CompoundBorder/>
@@ -523,7 +535,9 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/aloj8.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&lt;h1&gt;Murcia&lt;/h1&gt;&lt;h2&gt;30 &#x20ac; por noche&lt;/h2&gt;&lt;br&gt;Todo exterior ,habitaci&#xf3;n amplia muy luminosa,&lt;br&gt;&#xa;alquilo por larga temporada a estudiantes,muy cerca de la escuela &lt;br&gt;&#xa;de formaci&#xf3;n profesional la Rosaleda, &lt;br&gt;&#xa;&lt;ul&gt;&#xa;  &lt;li&gt;&lt;b&gt;Tipo&lt;/b&gt; : Habitacion Privada&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Huespedes&lt;/b&gt;: 1 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Dormitorios&lt;/b&gt;: 1&lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Camas&lt;/b&gt;: 1 &lt;/li&gt;&#xa;  &lt;li&gt;&lt;b&gt;Valoracion&lt;/b&gt;: &#x2605;&#x2605;&#x2605;&#x2606;&#x2606;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
+            <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="&quot;&lt;html&gt;&lt;img src=\&quot;&quot;+getClass().getResource(&quot;/images/Tips/tip8.png&quot;)+&quot;\&quot;&gt;&lt;/html&gt;&quot;" type="code"/>
+            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
                 <CompoundBorder/>
