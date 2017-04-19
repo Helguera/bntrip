@@ -169,6 +169,11 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         }return "/images/h1.png";
     }
     
+    public void setImagenReserva(String str){
+        ButtonReservar.setIcon(new javax.swing.ImageIcon(getClass().getResource(str)));
+        ButtonReservar.setText("");
+    }
+    
     public void setImagenAlojamiento(String str){
         BotonImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource(str)));
         BotonImagen.setText("");

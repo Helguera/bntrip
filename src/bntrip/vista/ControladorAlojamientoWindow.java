@@ -38,12 +38,12 @@ public class ControladorAlojamientoWindow {
         Fechas f = miModelo.getFechas();
         
         if (miModelo.getLoged().equals("")) {
-            setImagen("/images/reserva_iniciarsesion.png/");
+            setImagenBoton("/images/reserva_iniciarsesion.png/");
             return false;
         }
         
         if(f.getFechaInicio()==0 || f.getFechaFin()==0){
-            setImagen("/images/reserva_rellenacampos.png/");
+            setImagenBoton("/images/reserva_rellenacampos.png/");
             return false;
         }
         
@@ -51,7 +51,7 @@ public class ControladorAlojamientoWindow {
             System.out.println("INICIO: " + f.getFechaInicio() + "\t FIN: "+ f.getFechaFin());
             
             if ((miModelo.getFechas().getFechaInicio())>(miModelo.getFechas().getFechaFin())) {
-                setImagen("/images/reserva_fechanovalida.png/");
+                setImagenBoton("/images/reserva_fechanovalida.png/");
                 return false;
             }
             
@@ -64,19 +64,21 @@ public class ControladorAlojamientoWindow {
                 String n2 = aS.getNombre();
                 
                 if(n1.equals(n2) && ((fR.getFechaInicio()<=fS.getFechaInicio() && fR.getFechaFin()>=fS.getFechaInicio())||(fR.getFechaInicio()<=fS.getFechaFin() && fR.getFechaFin()>=fS.getFechaFin()))){
-                    setImagen("/images/reserva_fechaocupada.png/");
+                    setImagenBoton("/images/reserva_fechaocupada.png/");
                     return false;
                 }
             }
             
             miModelo.setReserva(aS);
+            miVista.setImagenReserva("/images/reserva_ok.png");
+            
             return true;
         }
-        setImagen("/images/reserva_rellenacampos.png/");
+        setImagenBoton("/images/reserva_rellenacampos.png/");
         return false;
     }
     
-    private void setImagen(String url){
+    private void setImagenBoton(String url){
         miVista.setImagenAlojamiento(url);
     }
     
