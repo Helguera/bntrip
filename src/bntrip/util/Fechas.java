@@ -6,6 +6,7 @@
 package bntrip.util;
 
 import static java.lang.Integer.parseInt;
+import java.util.Date;
 
 /**
  *
@@ -19,10 +20,26 @@ public class Fechas {
     private int fin;
     private String finStr;
     private String finStr_Date;
+    private String birthday;
     
     public Fechas(){
         inicio = 0;
         fin = 0;
+    }
+    
+    /**
+     * @param date (JCalendar.getDate().toString())
+     */
+    public void setBirthday(String date){
+        birthday = date2String(date);
+    }
+    
+    /**
+     * Devuelve dd/mm/aa
+     * @return 
+     */
+    public String getBirthdayStr(){
+        return birthday;
     }
     
     public Fechas(String dateInicio, String dateFin){
@@ -81,7 +98,7 @@ public class Fechas {
     }
     
     /**
-     * Devuelve la fecha de inicio estilo dd/mm/aa.
+     * Devuelve la fecha de inicio estilo dd/mm.
      * @return String
      */
     public String getFechaInicioStr(){
@@ -89,7 +106,7 @@ public class Fechas {
     }
     
     /**
-     * Devuelve la fecha de fin estilo dd/mm/aa.
+     * Devuelve la fecha de fin estilo dd/mm.
      * @return String
      */
     public String getFechaFinStr(){
@@ -105,7 +122,7 @@ public class Fechas {
     }
     
     /**
-     * Convierte la fecha al estilo dd/mm/aa.
+     * Convierte la fecha al estilo dd/mm.
      * @param Fecha estilo Date (String largo).
      * @return "dd/mm/aa".
      */
