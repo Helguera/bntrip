@@ -106,6 +106,11 @@ public class UserWindow extends javax.swing.JFrame {
         jPanel4.setLayout(new java.awt.BorderLayout());
 
         jButton3.setText("Eliminar Deseado");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         jPanel4.add(jButton3, java.awt.BorderLayout.PAGE_END);
 
         listaDeseado.setBackground(new java.awt.Color(244, 247, 247));
@@ -161,6 +166,12 @@ public class UserWindow extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_labelConexionMouseWheelMoved
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        miControlador.removeDeseado(listaDeseado);
+        listaDeseado.removeAll();
+        cargarDeseados();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -181,25 +192,10 @@ public class UserWindow extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
     
     private void cargarDeseados(){
-        Deseado d = miControlador.getDeseado();
-        for (int i=0; i<d.getSize(); i++){
-            Alojamiento a = d.getAlojamientoDeseado(i); 
-            int dias = d.getFechasDeseada(i).getDiasReservados();
-            int precio = dias*((int)a.getPrecio());
-            String fechaEntrada = d.getFechasDeseada(i).getFechaInicioStr();
-            String fechaFin = d.getFechasDeseada(i).getFechaFinStr();
-            if (dias==1) listaDeseado.add(d.getAlojamientoDeseado(i).getCiudad() + ", " + precio + "€, " + d.getFechasDeseada(i).getDiasReservados() + " dia.");
-            else listaDeseado.add(d.getAlojamientoDeseado(i).getCiudad() + ", " + precio + "€, " + d.getFechasDeseada(i).getDiasReservados() + " dias.");
-        } 
+        miControlador.cargarListaDeseados(listaDeseado);    
     }
 
     private void cargarReservados(){
-        Reserva r = miControlador.getReserva();
-        for (int i=0; i<r.getSize(); i++){
-            Alojamiento a = r.getAlojamientoReservado(i);
-            int precio = r.getFechasReservadas(i).getDiasReservados()*((int)a.getPrecio());
-            if (r.getNumHuespedes(i)==1) listaReserva.add(r.getAlojamientoReservado(i).getCiudad() + ", " + precio + "€, " + r.getNumHuespedes(i) + " BnTripero");
-            else listaReserva.add(r.getAlojamientoReservado(i).getCiudad() + ", " + precio + "€, " + r.getNumHuespedes(i) + " BnTriperos");
-        } 
+        miControlador.cargarListaReservados(listaReserva);
     }
 }

@@ -59,6 +59,11 @@ public class Deseado {
         }
     }
     
+    public void removeDeseado(int index){
+        deseados.remove(index);
+        fechas.remove(index);
+    }
+    
     public int getSize(){
         return deseados.size();
     }
