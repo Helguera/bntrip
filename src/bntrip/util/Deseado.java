@@ -59,5 +59,9 @@ public class Deseado {
         }
     }
     
+    public int getSize(){
+        return deseados.size();
+    }
+    
     
 }

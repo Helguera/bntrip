@@ -110,6 +110,15 @@ public class Modelo {
         return almacenReserva;
     }
     
+    public void setDeseado(Alojamiento aS){
+        almacenDeseado.setDeseado(aS, fechas);
+    }
+    
+    
+    public Deseado getAlmacenDeseado(){
+        return almacenDeseado;
+    }
+    
     public Fechas getFechas(){
         return fechas;
     }

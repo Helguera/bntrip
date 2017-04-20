@@ -7,6 +7,7 @@ package bntrip.vista;
 
 import bntrip.modelo.Modelo;
 import bntrip.util.Alojamiento;
+import bntrip.util.Deseado;
 import bntrip.util.Fechas;
 import bntrip.util.Reserva;
 import java.util.ArrayList;
@@ -77,6 +78,40 @@ public class ControladorAlojamientoWindow {
         setImagenBoton("/images/reserva_rellenacampos.png/");
         return false;
     }
+    
+    
+    public boolean setDeseado(Alojamiento aS){
+        Fechas f = miModelo.getFechas();
+        
+        if (miModelo.getLoged().equals("")){
+            setImagenBoton("/images/reserva_iniciarsesion.png/");
+            return false;
+        }else if(f.getFechaInicio()==0 || f.getFechaFin()==0){
+                setImagenBoton("/images/reserva_fechanovalida.png/");
+                return false;
+        } else if ((miModelo.getFechas().getFechaInicio())>(miModelo.getFechas().getFechaFin())) {
+                setImagenBoton("/images/reserva_fechanovalida.png/");
+                return false;
+        }
+        
+        Deseado almacenDeseado = miModelo.getAlmacenDeseado();
+        for (int i = 0; i<almacenDeseado.getSize(); i++){
+            Alojamiento aR = almacenDeseado.getAlojamientoDeseado(i);
+            String n1 = aR.getNombre();
+            String n2 = aS.getNombre();       
+            if(n1.equals(n2)){
+                // Ya esta en la lista de deseados
+                // Posible opcion de borrar de deseado desde aqui
+                return false;
+            }
+        }
+            
+        miModelo.setDeseado(aS);
+        miVista.setImagenDeseado("/images/deseado_ok.png");
+            
+        return true;    
+    }
+    
     
     private void setImagenBoton(String url){
         miVista.setImagenAlojamiento(url);

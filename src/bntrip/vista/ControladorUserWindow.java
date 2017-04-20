@@ -7,6 +7,7 @@ package bntrip.vista;
 
 import bntrip.main.Main;
 import bntrip.modelo.Modelo;
+import bntrip.util.Deseado;
 import bntrip.util.Reserva;
 
 /**
@@ -36,6 +37,11 @@ public class ControladorUserWindow {
     public Reserva getReserva(){
         if (!(miModelo.getLoged()).equals("")) return miModelo.getAlmacenReserva();
         else return new Reserva();
+    }
+    
+    public Deseado getDeseado(){
+        if (!(miModelo.getLoged()).equals("")) return miModelo.getAlmacenDeseado();
+        else return new Deseado();
     }
     
     public String getIconoPerfil(){

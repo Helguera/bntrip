@@ -11,8 +11,10 @@ import bntrip.vista.LoginWindow;
 
 
 /**
- *
- * @author javier y alvaro
+ * Practica 2 - Interaccion Persona Computadora
+ * @date 2017 April
+ * @author  Helguera Lopez, Javier   - javhelg
+ *          Velasco Gil, Alvaro      - alvvela
  */
 public class Main {
     private static HomeUIStateMachine  homeStateMachine;
