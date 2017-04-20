@@ -68,6 +68,7 @@ public class Main {
     
     public static void logeado(){
         loginStateMachine.close();
+        homeStateMachine.close();
         homeStateMachine.start();
     }
     

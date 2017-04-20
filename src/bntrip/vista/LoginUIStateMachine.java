@@ -32,7 +32,7 @@ public class LoginUIStateMachine {
         });}
     
     public void close() {
-       currentState.setVisible(false); // si se desea ocultar
+       //currentState.setVisible(false); // si se desea ocultar
        currentState.dispose();   // si se desea destruir
     }
     

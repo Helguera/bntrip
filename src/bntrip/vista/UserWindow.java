@@ -53,6 +53,7 @@ public class UserWindow extends javax.swing.JFrame {
         setTitle("Area de Usuario");
         setBackground(new java.awt.Color(196, 237, 228));
         setMinimumSize(new java.awt.Dimension(300, 300));
+        setPreferredSize(new java.awt.Dimension(400, 200));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);

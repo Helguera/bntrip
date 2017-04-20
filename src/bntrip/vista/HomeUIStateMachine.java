@@ -32,7 +32,7 @@ public class HomeUIStateMachine {
     }
     
     public void close(){
-        currentState.setVisible(false);
+        //currentState.setVisible(false);
         currentState.dispose();
     }
     
