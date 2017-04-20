@@ -17,6 +17,7 @@ import java.util.ArrayList;
  * @author javier
  */
 public class Modelo {
+    private String email;
     private String isloged;
     private Reserva almacenReserva ;
     private Deseado almacenDeseado;
@@ -127,4 +128,16 @@ public class Modelo {
     public void setUsuario(User usuario){
         this.usuario=usuario;
     }
+    
+    public User getUsuario(){
+        return usuario;
+    }
+    
+    public void setEmail(String email){
+        this.email = email;
+    }
+    
+    public String getEmail(){
+        return email;
+    }    
 }

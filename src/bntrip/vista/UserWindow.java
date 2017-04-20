@@ -71,6 +71,11 @@ public class UserWindow extends javax.swing.JFrame {
 
         labelConexion.setBackground(new java.awt.Color(196, 237, 228));
         labelConexion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/profile.png"))); // NOI18N
+        labelConexion.addMouseWheelListener(new java.awt.event.MouseWheelListener() {
+            public void mouseWheelMoved(java.awt.event.MouseWheelEvent evt) {
+                labelConexionMouseWheelMoved(evt);
+            }
+        });
         jPanel1.add(labelConexion, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_START);
@@ -134,8 +139,23 @@ public class UserWindow extends javax.swing.JFrame {
         // TODO add your handling code here:
         cargarReservados();
         labelConexion.setIcon(new javax.swing.ImageIcon(getClass().getResource(miControlador.getIconoPerfil())));
-        labelConexion.setText("Conectado con " + miControlador.getLoged());
+        if(miControlador.getLoged().equals("Correo")){
+            try{
+                labelConexion.setText(miModelo.getEmail()); 
+                labelConexion.setText(miModelo.getUsuario().getEmail());
+            }catch(Exception g){}
+            try{ 
+               labelConexion.setText(miModelo.getUsuario().getEmail());
+               labelConexion.setText(miModelo.getEmail());
+            }catch(Exception l){}
+            
+        }else labelConexion.setText("Conectado con " + miControlador.getLoged());
+        
     }//GEN-LAST:event_formWindowOpened
+
+    private void labelConexionMouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_labelConexionMouseWheelMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_labelConexionMouseWheelMoved
 
     /**
      * @param args the command line arguments

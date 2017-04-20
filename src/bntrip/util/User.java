@@ -35,6 +35,10 @@ public class User{
         if (user.equals(name) && (this.password).equals(password)) return true;
         else return false;
     }
+    
+    public String getEmail(){
+        return email;
+    }
    
     
 }

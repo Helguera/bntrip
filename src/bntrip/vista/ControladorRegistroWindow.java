@@ -75,6 +75,7 @@ public class ControladorRegistroWindow {
         int posicion;
         if(users.contains(usuario)){
             if(this.pass.get(users.indexOf(usuario)).equals(pass)){
+                miModelo.setEmail(usuario);
                 miModelo.setLoged("Correo");
                 Main.logeado();
             }else miVista.setRecoveryLabelText("Error, ¿no recuerda su contraseña?");
