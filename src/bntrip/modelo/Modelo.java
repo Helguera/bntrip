@@ -9,6 +9,7 @@ import bntrip.util.Alojamiento;
 import bntrip.util.Deseado;
 import bntrip.util.Fechas;
 import bntrip.util.Reserva;
+import bntrip.util.User;
 import java.util.ArrayList;
 
 /**
@@ -22,6 +23,7 @@ public class Modelo {
     private Fechas fechas;
     private Alojamiento alojamientoSeleccionado;
     private ArrayList almacen;
+    private User usuario;
     
     public Modelo(){
         almacen = new ArrayList<Object>();
@@ -120,5 +122,9 @@ public class Modelo {
         almacenReserva = new Reserva();
         almacenDeseado = new Deseado();
         fechas = new Fechas();    
+    }
+    
+    public void setUsuario(User usuario){
+        this.usuario=usuario;
     }
 }

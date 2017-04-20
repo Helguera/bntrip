@@ -83,10 +83,16 @@ public class LoginWindow extends javax.swing.JFrame {
 
         getContentPane().add(PanelBotones);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/registrate.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/registrate_verde.png"))); // NOI18N
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel1MouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel1MouseEntered(evt);
             }
         });
         PanelRegistrate.add(jLabel1);
@@ -112,6 +118,16 @@ public class LoginWindow extends javax.swing.JFrame {
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         miControlador.procesaRegistro();
     }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void jLabel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseEntered
+        // TODO add your handling code here:
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/registrate_verde2.png")));
+    }//GEN-LAST:event_jLabel1MouseEntered
+
+    private void jLabel1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseExited
+        // TODO add your handling code here:
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/registrate_verde.png")));
+    }//GEN-LAST:event_jLabel1MouseExited
 
    
 

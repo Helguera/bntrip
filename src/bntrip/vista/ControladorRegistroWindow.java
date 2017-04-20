@@ -7,6 +7,7 @@ package bntrip.vista;
 
 import bntrip.main.Main;
 import bntrip.modelo.Modelo;
+import bntrip.util.User;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -48,13 +49,17 @@ public class ControladorRegistroWindow {
             int i = 1;
 
 		while ((linea = br.readLine()) != null) {
-                        System.out.println(linea);
 			if(par(i)){
-                            users.add(linea);
-                        }else pass.add(linea);
+                            pass.add(linea);
+                        }else users.add(linea);
                         i++;
 		}
         }catch(Exception e){
+            try{
+                FileWriter fw = new FileWriter(fichero);
+            }catch(Exception f){
+                
+            }
             
         }
     }
@@ -71,8 +76,31 @@ public class ControladorRegistroWindow {
         if(users.contains(usuario)){
             if(this.pass.get(users.indexOf(usuario)).equals(pass)){
                 miModelo.setLoged("Correo");
-            }
+                Main.logeado();
+            }else miVista.setRecoveryLabelText("Error, ¿no recuerda su contraseña?");
         }else miVista.setRecoveryLabelText("Error, ¿no recuerda su contraseña?");
+    }
+    
+    public void procesaRegistro (String nombre, String apellidos, String nif, String email, String pass, String sexo){
+        User usuario = new User(nombre, apellidos, nif, sexo, email, pass);
+        miModelo.setUsuario(usuario);
+        users.add(email);
+        this.pass.add(pass);
+        guarda_datos();
+        miModelo.setLoged("Correo");
+        Main.logeado();
+    }
+    
+    public void guarda_datos(){
+        try{
+            FileWriter fw = new FileWriter(fichero);
+            for(int i = 0; i<users.size(); i++){
+                fw.write(users.get(i)+"\n");
+                fw.write(pass.get(i)+"\n");
+            }
+            fw.close();
+        }catch(Exception w){  
+        }
     }
     
     

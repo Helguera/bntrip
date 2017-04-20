@@ -12,16 +12,19 @@ package bntrip.util;
 public class User{
     
     private String name;
+    private String apellidos;
     private String nif;
     private String gender;
-    private String birthday;
+    private String email;
     private String password;
     
-    public User(String name, String nif, String gender, Fechas birthday){
+    public User(String name, String apellidos, String nif, String gender, String email, String pass){
         this.name = name;
+        this.apellidos=apellidos;
         this.nif = nif;
         this.gender = gender;
-        this.birthday = birthday.getBirthdayStr();
+        this.email = email;
+        this.password = pass;
     }
     
     public String getNombre(){
@@ -32,5 +35,6 @@ public class User{
         if (user.equals(name) && (this.password).equals(password)) return true;
         else return false;
     }
+   
     
 }
