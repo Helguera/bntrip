@@ -102,6 +102,11 @@ public class ControladorAlojamientoWindow {
             String n1 = aR.getNombre();
             String n2 = aS.getNombre();       
             if(n1.equals(n2) && fR.getFechaInicio()==fS.getFechaInicio() && fR.getFechaFin() == fS.getFechaFin()){
+            String n1 = aR.getNombre();
+            String n2 = aS.getNombre();       
+            if(n1.equals(n2)){
+                // Ya esta en la lista de deseados
+                // Posible opcion de borrar de deseado desde aqui
                 return false;
             }
         }
