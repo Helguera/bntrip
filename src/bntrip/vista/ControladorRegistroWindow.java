@@ -80,8 +80,8 @@ public class ControladorRegistroWindow {
                 miModelo.setEmail(usuario);
                 miModelo.setLoged("Correo");
                 Main.logeado();
-            }else miVista.setRecoveryLabelText("Error, ¿no recuerda su contraseña?");
-        }else miVista.setRecoveryLabelText("Error, ¿no recuerda su contraseña?");
+            }else miVista.setRecoveryLabelText("Error, ha introducido algun dato incorrecto :(");
+        }else miVista.setRecoveryLabelText("Error, ha introducido algun dato incorrecto :(");
     }
     
     public void procesaRegistro (String nombre, String apellidos, String nif, String email, String pass, String sexo){
