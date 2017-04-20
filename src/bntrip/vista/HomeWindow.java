@@ -12,8 +12,10 @@ import javax.swing.SpinnerModel;
 import javax.swing.SpinnerNumberModel;
 
 /**
- *
- * @author javier
+ * Practica 2 - Interaccion Persona Computadora
+ * @date 2017 April
+ * @author  Helguera Lopez, Javier   - javhelg
+ *          Velasco Gil, Alvaro      - alvvela
  */
 public class HomeWindow extends javax.swing.JFrame {
     private ControladorHomeWindow miControlador;
@@ -41,19 +43,19 @@ public class HomeWindow extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        noresultado = new javax.swing.JLabel();
+        labelNoResultado = new javax.swing.JLabel();
         PanelMenu = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel6 = new javax.swing.JPanel();
+        panelMenuSuperior = new javax.swing.JPanel();
+        panelLogoPerfil = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jComboBox2 = new javax.swing.JComboBox();
-        jSlider2 = new javax.swing.JSlider();
-        jSpinner1 = new javax.swing.JSpinner(model);
-        jPanel4 = new javax.swing.JPanel();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
-        jDateChooser3 = new com.toedter.calendar.JDateChooser();
-        mapa = new javax.swing.JPanel();
+        comboTipoAlojamiento = new javax.swing.JComboBox();
+        sliderPrecio = new javax.swing.JSlider();
+        spinerHuespedes = new javax.swing.JSpinner(model);
+        panelFechas = new javax.swing.JPanel();
+        dateChooserEntrada = new com.toedter.calendar.JDateChooser();
+        dateChooserSalida = new com.toedter.calendar.JDateChooser();
+        panelMenuMapa = new javax.swing.JPanel();
         Murcia = new javax.swing.JRadioButton();
         Barcelona = new javax.swing.JRadioButton();
         Cadiz = new javax.swing.JRadioButton();
@@ -65,18 +67,18 @@ public class HomeWindow extends javax.swing.JFrame {
         Madrid = new javax.swing.JRadioButton();
         foto = new javax.swing.JLabel();
         PanelAlojamientos = new javax.swing.JPanel();
-        aloj1 = new javax.swing.JButton();
-        aloj2 = new javax.swing.JButton();
-        aloj3 = new javax.swing.JButton();
-        aloj4 = new javax.swing.JButton();
-        aloj5 = new javax.swing.JButton();
-        aloj6 = new javax.swing.JButton();
-        aloj7 = new javax.swing.JButton();
-        aloj8 = new javax.swing.JButton();
+        botonAlojamiento1 = new javax.swing.JButton();
+        botonAlojamiento2 = new javax.swing.JButton();
+        botonAlojamiento3 = new javax.swing.JButton();
+        botonAlojamiento4 = new javax.swing.JButton();
+        botonAlojamiento5 = new javax.swing.JButton();
+        botonAlojamiento6 = new javax.swing.JButton();
+        botonAlojamiento7 = new javax.swing.JButton();
+        botonAlojamiento8 = new javax.swing.JButton();
 
-        noresultado.setFont(new java.awt.Font("Ubuntu", 1, 30)); // NOI18N
-        noresultado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/lupa.png"))); // NOI18N
-        noresultado.setText("No hay resultados");
+        labelNoResultado.setFont(new java.awt.Font("Ubuntu", 1, 30)); // NOI18N
+        labelNoResultado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/lupa.png"))); // NOI18N
+        labelNoResultado.setText("No hay resultados");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("bntrip");
@@ -90,12 +92,12 @@ public class HomeWindow extends javax.swing.JFrame {
 
         PanelMenu.setLayout(new java.awt.GridLayout(2, 0));
 
-        jPanel3.setLayout(new java.awt.GridLayout(5, 0));
+        panelMenuSuperior.setLayout(new java.awt.GridLayout(5, 0));
 
-        jPanel6.setBackground(new java.awt.Color(196, 237, 228));
+        panelLogoPerfil.setBackground(new java.awt.Color(196, 237, 228));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logolittle.png"))); // NOI18N
-        jPanel6.add(jLabel6);
+        panelLogoPerfil.add(jLabel6);
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/profile.png"))); // NOI18N
         jButton1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -104,73 +106,73 @@ public class HomeWindow extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel6.add(jButton1);
+        panelLogoPerfil.add(jButton1);
 
-        jPanel3.add(jPanel6);
+        panelMenuSuperior.add(panelLogoPerfil);
 
-        jComboBox2.setBackground(new java.awt.Color(196, 237, 228));
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Cualquiera", "Casa Entera", "Habitacion Privada", "Habitacion Compartida" }));
-        jComboBox2.setBorder(javax.swing.BorderFactory.createTitledBorder("Tipo de Alojamiento"));
-        jComboBox2.addItemListener(new java.awt.event.ItemListener() {
+        comboTipoAlojamiento.setBackground(new java.awt.Color(196, 237, 228));
+        comboTipoAlojamiento.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Cualquiera", "Casa Entera", "Habitacion Privada", "Habitacion Compartida" }));
+        comboTipoAlojamiento.setBorder(javax.swing.BorderFactory.createTitledBorder("Tipo de Alojamiento"));
+        comboTipoAlojamiento.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                jComboBox2ItemStateChanged(evt);
+                comboTipoAlojamientoItemStateChanged(evt);
             }
         });
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+        comboTipoAlojamiento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
+                comboTipoAlojamientoActionPerformed(evt);
             }
         });
-        jPanel3.add(jComboBox2);
+        panelMenuSuperior.add(comboTipoAlojamiento);
 
-        jSlider2.setBackground(new java.awt.Color(196, 237, 228));
-        jSlider2.setFont(new java.awt.Font("Bitstream Charter", 1, 10)); // NOI18N
-        jSlider2.setMaximum(200);
-        jSlider2.setMinorTickSpacing(25);
-        jSlider2.setPaintLabels(true);
-        jSlider2.setPaintTicks(true);
-        jSlider2.setValue(200);
-        jSlider2.setBorder(javax.swing.BorderFactory.createTitledBorder("Precio Maximo"));
-        jSlider2.setMaximumSize(new java.awt.Dimension(32767, 40));
-        jSlider2.setMinimumSize(new java.awt.Dimension(42, 40));
-        jSlider2.setPreferredSize(new java.awt.Dimension(210, 40));
-        jSlider2.addChangeListener(new javax.swing.event.ChangeListener() {
+        sliderPrecio.setBackground(new java.awt.Color(196, 237, 228));
+        sliderPrecio.setFont(new java.awt.Font("Bitstream Charter", 1, 10)); // NOI18N
+        sliderPrecio.setMaximum(200);
+        sliderPrecio.setMinorTickSpacing(25);
+        sliderPrecio.setPaintLabels(true);
+        sliderPrecio.setPaintTicks(true);
+        sliderPrecio.setValue(200);
+        sliderPrecio.setBorder(javax.swing.BorderFactory.createTitledBorder("Precio Maximo"));
+        sliderPrecio.setMaximumSize(new java.awt.Dimension(32767, 40));
+        sliderPrecio.setMinimumSize(new java.awt.Dimension(42, 40));
+        sliderPrecio.setPreferredSize(new java.awt.Dimension(210, 40));
+        sliderPrecio.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                jSlider2StateChanged(evt);
+                sliderPrecioStateChanged(evt);
             }
         });
-        jPanel3.add(jSlider2);
+        panelMenuSuperior.add(sliderPrecio);
 
-        jSpinner1.setToolTipText("Numero de Huespedes");
-        jSpinner1.setBorder(javax.swing.BorderFactory.createTitledBorder("Huespedes"));
-        jSpinner1.addChangeListener(new javax.swing.event.ChangeListener() {
+        spinerHuespedes.setToolTipText("Numero de Huespedes");
+        spinerHuespedes.setBorder(javax.swing.BorderFactory.createTitledBorder("Huespedes"));
+        spinerHuespedes.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                jSpinner1StateChanged(evt);
+                spinerHuespedesStateChanged(evt);
             }
         });
-        jPanel3.add(jSpinner1);
+        panelMenuSuperior.add(spinerHuespedes);
 
-        jPanel4.setLayout(new java.awt.GridLayout(1, 2));
+        panelFechas.setLayout(new java.awt.GridLayout(1, 2));
 
-        jDateChooser2.setBackground(new java.awt.Color(196, 237, 228));
-        jDateChooser2.setBorder(javax.swing.BorderFactory.createTitledBorder("Fecha Entrada"));
-        jDateChooser2.addMouseListener(new java.awt.event.MouseAdapter() {
+        dateChooserEntrada.setBackground(new java.awt.Color(196, 237, 228));
+        dateChooserEntrada.setBorder(javax.swing.BorderFactory.createTitledBorder("Fecha Entrada"));
+        dateChooserEntrada.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jDateChooser2MouseClicked(evt);
+                dateChooserEntradaMouseClicked(evt);
             }
         });
-        jPanel4.add(jDateChooser2);
+        panelFechas.add(dateChooserEntrada);
 
-        jDateChooser3.setBackground(new java.awt.Color(196, 237, 228));
-        jDateChooser3.setBorder(javax.swing.BorderFactory.createTitledBorder("Fecha Salida"));
-        jPanel4.add(jDateChooser3);
+        dateChooserSalida.setBackground(new java.awt.Color(196, 237, 228));
+        dateChooserSalida.setBorder(javax.swing.BorderFactory.createTitledBorder("Fecha Salida"));
+        panelFechas.add(dateChooserSalida);
 
-        jPanel3.add(jPanel4);
+        panelMenuSuperior.add(panelFechas);
 
-        PanelMenu.add(jPanel3);
+        PanelMenu.add(panelMenuSuperior);
 
-        mapa.setBackground(new java.awt.Color(196, 237, 228));
-        mapa.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        panelMenuMapa.setBackground(new java.awt.Color(196, 237, 228));
+        panelMenuMapa.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         buttonGroup1.add(Murcia);
         Murcia.setBorder(javax.swing.BorderFactory.createCompoundBorder());
@@ -179,7 +181,7 @@ public class HomeWindow extends javax.swing.JFrame {
                 MurciaMouseClicked(evt);
             }
         });
-        mapa.add(Murcia, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, -1, -1));
+        panelMenuMapa.add(Murcia, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, -1, -1));
 
         buttonGroup1.add(Barcelona);
         Barcelona.setBorder(javax.swing.BorderFactory.createCompoundBorder());
@@ -188,7 +190,7 @@ public class HomeWindow extends javax.swing.JFrame {
                 BarcelonaMouseClicked(evt);
             }
         });
-        mapa.add(Barcelona, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, -1, -1));
+        panelMenuMapa.add(Barcelona, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, -1, -1));
 
         buttonGroup1.add(Cadiz);
         Cadiz.setBorder(javax.swing.BorderFactory.createCompoundBorder());
@@ -197,7 +199,7 @@ public class HomeWindow extends javax.swing.JFrame {
                 CadizMouseClicked(evt);
             }
         });
-        mapa.add(Cadiz, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, -1, -1));
+        panelMenuMapa.add(Cadiz, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, -1, -1));
 
         buttonGroup1.add(Cualquiera);
         Cualquiera.setSelected(true);
@@ -207,23 +209,23 @@ public class HomeWindow extends javax.swing.JFrame {
                 CualquieraMouseClicked(evt);
             }
         });
-        mapa.add(Cualquiera, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, -1, -1));
+        panelMenuMapa.add(Cualquiera, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel3.setText("Barcelona");
-        mapa.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, -1, -1));
+        panelMenuMapa.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel2.setText("Madrid");
-        mapa.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, -1, -1));
+        panelMenuMapa.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel4.setText("Cadiz");
-        mapa.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, -1, -1));
+        panelMenuMapa.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel5.setText("Murcia");
-        mapa.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, -1, -1));
+        panelMenuMapa.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, -1, -1));
 
         buttonGroup1.add(Madrid);
         Madrid.setBorder(javax.swing.BorderFactory.createCompoundBorder());
@@ -232,245 +234,265 @@ public class HomeWindow extends javax.swing.JFrame {
                 MadridMouseClicked(evt);
             }
         });
-        mapa.add(Madrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, -1, -1));
+        panelMenuMapa.add(Madrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, -1, -1));
 
         foto.setBackground(new java.awt.Color(196, 237, 228));
         foto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mapa.png"))); // NOI18N
-        mapa.add(foto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 270));
+        panelMenuMapa.add(foto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 270));
 
-        PanelMenu.add(mapa);
+        PanelMenu.add(panelMenuMapa);
 
         getContentPane().add(PanelMenu, java.awt.BorderLayout.LINE_START);
 
         PanelAlojamientos.setBackground(new java.awt.Color(244, 247, 247));
 
-        aloj1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj1.png"))); // NOI18N
-        aloj1.setToolTipText("<html><img src=\""+getClass().getResource("/images/Tips/tip1.png")+"\"></html>");
-        aloj1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        aloj1.addActionListener(new java.awt.event.ActionListener() {
+        botonAlojamiento1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj1.png"))); // NOI18N
+        botonAlojamiento1.setToolTipText("<html><img src=\""+getClass().getResource("/images/Tips/tip1.png")+"\"></html>");
+        botonAlojamiento1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        botonAlojamiento1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aloj1ActionPerformed(evt);
+                botonAlojamiento1ActionPerformed(evt);
             }
         });
-        PanelAlojamientos.add(aloj1);
+        PanelAlojamientos.add(botonAlojamiento1);
 
-        aloj2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj2.png"))); // NOI18N
-        aloj2.setToolTipText("<html><img src=\""+getClass().getResource("/images/Tips/tip2.png")+"\"></html>");
-        aloj2.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        aloj2.addActionListener(new java.awt.event.ActionListener() {
+        botonAlojamiento2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj2.png"))); // NOI18N
+        botonAlojamiento2.setToolTipText("<html><img src=\""+getClass().getResource("/images/Tips/tip2.png")+"\"></html>");
+        botonAlojamiento2.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        botonAlojamiento2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aloj2ActionPerformed(evt);
+                botonAlojamiento2ActionPerformed(evt);
             }
         });
-        PanelAlojamientos.add(aloj2);
+        PanelAlojamientos.add(botonAlojamiento2);
 
-        aloj3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj3.png"))); // NOI18N
-        aloj3.setToolTipText("<html><img src=\""+getClass().getResource("/images/Tips/tip3.png")+"\"></html>");
-        aloj3.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        aloj3.addActionListener(new java.awt.event.ActionListener() {
+        botonAlojamiento3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj3.png"))); // NOI18N
+        botonAlojamiento3.setToolTipText("<html><img src=\""+getClass().getResource("/images/Tips/tip3.png")+"\"></html>");
+        botonAlojamiento3.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        botonAlojamiento3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aloj3ActionPerformed(evt);
+                botonAlojamiento3ActionPerformed(evt);
             }
         });
-        PanelAlojamientos.add(aloj3);
+        PanelAlojamientos.add(botonAlojamiento3);
 
-        aloj4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj4.png"))); // NOI18N
-        aloj4.setToolTipText("<html><img src=\""+getClass().getResource("/images/Tips/tip4.png")+"\"></html>");
-        aloj4.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        aloj4.addActionListener(new java.awt.event.ActionListener() {
+        botonAlojamiento4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj4.png"))); // NOI18N
+        botonAlojamiento4.setToolTipText("<html><img src=\""+getClass().getResource("/images/Tips/tip4.png")+"\"></html>");
+        botonAlojamiento4.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        botonAlojamiento4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aloj4ActionPerformed(evt);
+                botonAlojamiento4ActionPerformed(evt);
             }
         });
-        PanelAlojamientos.add(aloj4);
+        PanelAlojamientos.add(botonAlojamiento4);
 
-        aloj5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj5.png"))); // NOI18N
-        aloj5.setToolTipText("<html><img src=\""+getClass().getResource("/images/Tips/tip5.png")+"\"></html>");
-        aloj5.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        aloj5.addActionListener(new java.awt.event.ActionListener() {
+        botonAlojamiento5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj5.png"))); // NOI18N
+        botonAlojamiento5.setToolTipText("<html><img src=\""+getClass().getResource("/images/Tips/tip5.png")+"\"></html>");
+        botonAlojamiento5.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        botonAlojamiento5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aloj5ActionPerformed(evt);
+                botonAlojamiento5ActionPerformed(evt);
             }
         });
-        PanelAlojamientos.add(aloj5);
+        PanelAlojamientos.add(botonAlojamiento5);
 
-        aloj6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj6.png"))); // NOI18N
-        aloj6.setToolTipText("<html><img src=\""+getClass().getResource("/images/Tips/tip6.png")+"\"></html>");
-        aloj6.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        aloj6.addActionListener(new java.awt.event.ActionListener() {
+        botonAlojamiento6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj6.png"))); // NOI18N
+        botonAlojamiento6.setToolTipText("<html><img src=\""+getClass().getResource("/images/Tips/tip6.png")+"\"></html>");
+        botonAlojamiento6.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        botonAlojamiento6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aloj6ActionPerformed(evt);
+                botonAlojamiento6ActionPerformed(evt);
             }
         });
-        PanelAlojamientos.add(aloj6);
+        PanelAlojamientos.add(botonAlojamiento6);
 
-        aloj7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj7.png"))); // NOI18N
-        aloj7.setToolTipText("<html><img src=\""+getClass().getResource("/images/Tips/tip7.png")+"\"></html>");
-        aloj7.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        aloj7.addActionListener(new java.awt.event.ActionListener() {
+        botonAlojamiento7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj7.png"))); // NOI18N
+        botonAlojamiento7.setToolTipText("<html><img src=\""+getClass().getResource("/images/Tips/tip7.png")+"\"></html>");
+        botonAlojamiento7.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        botonAlojamiento7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aloj7ActionPerformed(evt);
+                botonAlojamiento7ActionPerformed(evt);
             }
         });
-        PanelAlojamientos.add(aloj7);
+        PanelAlojamientos.add(botonAlojamiento7);
 
-        aloj8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj8.png"))); // NOI18N
-        aloj8.setToolTipText("<html><img src=\""+getClass().getResource("/images/Tips/tip8.png")+"\"></html>");
-        aloj8.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        aloj8.addActionListener(new java.awt.event.ActionListener() {
+        botonAlojamiento8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aloj8.png"))); // NOI18N
+        botonAlojamiento8.setToolTipText("<html><img src=\""+getClass().getResource("/images/Tips/tip8.png")+"\"></html>");
+        botonAlojamiento8.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        botonAlojamiento8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aloj8ActionPerformed(evt);
+                botonAlojamiento8ActionPerformed(evt);
             }
         });
-        PanelAlojamientos.add(aloj8);
+        PanelAlojamientos.add(botonAlojamiento8);
 
         getContentPane().add(PanelAlojamientos, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened		
+         // TODO add your handling code here:		
+     }//GEN-LAST:event_formWindowOpened
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         miControlador.procesaInicioSesion();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void aloj2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj2ActionPerformed
-        Alojamiento a2 = new Alojamiento("a2", "Barcelona", 200, "Habitacion Privada", 2);
-        a2.setImagenes("/images/room/aloj20.png","/images/room/aloj21.png","/images/room/aloj22.png");
-        miControlador.seleccionaAlojamiento(a2);
-        miControlador.procesaAlojamientoWindow();
-        
-        
-        if (jDateChooser2.getDate()!=null && jDateChooser3.getDate()!=null){
-        miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
-        }
-        //this.setVisible(false);
-    }//GEN-LAST:event_aloj2ActionPerformed
-
-    private void aloj1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj1ActionPerformed
+    private void botonAlojamiento1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAlojamiento1ActionPerformed
         Alojamiento a1 = new Alojamiento("a1", "Madrid", 65, "Habitacion Privada", 2);
         a1.setImagenes("/images/room/aloj10.png","/images/room/aloj11.png","/images/room/aloj12.png");
         miControlador.seleccionaAlojamiento(a1);
         miControlador.procesaAlojamientoWindow();
         
         // DEJA PONER CALENDARIO NULO, HAY QUE HACER DESPUES QUE NO TE DEJE RESERVAR
-        if (jDateChooser2.getDate()!=null & jDateChooser3.getDate()!=null){
-        miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
+        if (dateChooserEntrada.getDate()!=null & dateChooserSalida.getDate()!=null){
+        miControlador.setFechas(dateChooserEntrada.getDate().toString(), dateChooserSalida.getDate().toString());
         }
-    }//GEN-LAST:event_aloj1ActionPerformed
+    }//GEN-LAST:event_botonAlojamiento1ActionPerformed
 
-    private void aloj3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj3ActionPerformed
+    private void botonAlojamiento2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAlojamiento2ActionPerformed
+        Alojamiento a2 = new Alojamiento("a2", "Barcelona", 200, "Habitacion Privada", 2);
+        a2.setImagenes("/images/room/aloj20.png","/images/room/aloj21.png","/images/room/aloj22.png");
+        miControlador.seleccionaAlojamiento(a2);
+        miControlador.procesaAlojamientoWindow();
+        
+        
+        if (dateChooserEntrada.getDate()!=null && dateChooserSalida.getDate()!=null){
+        miControlador.setFechas(dateChooserEntrada.getDate().toString(), dateChooserSalida.getDate().toString());
+        }
+        //this.setVisible(false);
+    }//GEN-LAST:event_botonAlojamiento2ActionPerformed
+
+    private void botonAlojamiento3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAlojamiento3ActionPerformed
         Alojamiento a3 = new Alojamiento("a3", "Cadiz", 30, "Casa Entera", 4);
         a3.setImagenes("/images/room/aloj30.png","/images/room/aloj31.png","/images/room/aloj32.png");
         miControlador.seleccionaAlojamiento(a3);
         miControlador.procesaAlojamientoWindow();
-        if (jDateChooser2.getDate()!=null & jDateChooser3.getDate()!=null){
-        miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
+        if (dateChooserEntrada.getDate()!=null & dateChooserSalida.getDate()!=null){
+        miControlador.setFechas(dateChooserEntrada.getDate().toString(), dateChooserSalida.getDate().toString());
         }
-    }//GEN-LAST:event_aloj3ActionPerformed
+    }//GEN-LAST:event_botonAlojamiento3ActionPerformed
 
-    private void aloj5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj5ActionPerformed
-        Alojamiento a5 = new Alojamiento("a5", "Murcia", 150, "Casa Entera", 3);
-        a5.setImagenes("/images/room/aloj50.png","/images/room/aloj51.png","/images/room/aloj52.png");
-        miControlador.seleccionaAlojamiento(a5);
-        miControlador.procesaAlojamientoWindow();
-        if (jDateChooser2.getDate()!=null & jDateChooser3.getDate()!=null){
-        miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
-        }
-    }//GEN-LAST:event_aloj5ActionPerformed
-
-    private void jSlider2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider2StateChanged
-        // TODO add your handling code here:
-        String name;
-        miControlador.actualizarTodo(jComboBox2.getSelectedItem().toString(), jSlider2.getValue(), (int)jSpinner1.getValue(), getCiudad());
-    }//GEN-LAST:event_jSlider2StateChanged
-
-    private void jComboBox2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox2ItemStateChanged
-        // TODO add your handling code here:
-        miControlador.actualizarTodo(jComboBox2.getSelectedItem().toString(), jSlider2.getValue(), (int)jSpinner1.getValue(), getCiudad());
-    }//GEN-LAST:event_jComboBox2ItemStateChanged
-
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
-
-    private void jSpinner1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner1StateChanged
-        // TODO add your handling code here:
-        miControlador.actualizarTodo(jComboBox2.getSelectedItem().toString(), jSlider2.getValue(), (int)jSpinner1.getValue(), getCiudad());
-    }//GEN-LAST:event_jSpinner1StateChanged
-
-    private void MadridMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MadridMouseClicked
-        // TODO add your handling code here:
-        miControlador.actualizarTodo(jComboBox2.getSelectedItem().toString(), jSlider2.getValue(), (int)jSpinner1.getValue(), "Madrid");
-    }//GEN-LAST:event_MadridMouseClicked
-
-    private void CadizMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CadizMouseClicked
-        // TODO add your handling code here:
-        miControlador.actualizarTodo(jComboBox2.getSelectedItem().toString(), jSlider2.getValue(), (int)jSpinner1.getValue(), "Cadiz");
-    }//GEN-LAST:event_CadizMouseClicked
-
-    private void MurciaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MurciaMouseClicked
-        // TODO add your handling code here:
-        miControlador.actualizarTodo(jComboBox2.getSelectedItem().toString(), jSlider2.getValue(), (int)jSpinner1.getValue(), "Murcia");
-    }//GEN-LAST:event_MurciaMouseClicked
-
-    private void BarcelonaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BarcelonaMouseClicked
-        // TODO add your handling code here:
-        miControlador.actualizarTodo(jComboBox2.getSelectedItem().toString(), jSlider2.getValue(), (int)jSpinner1.getValue(), "Barcelona");
-    }//GEN-LAST:event_BarcelonaMouseClicked
-
-    private void CualquieraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CualquieraMouseClicked
-        // TODO add your handling code here:
-        miControlador.actualizarTodo(jComboBox2.getSelectedItem().toString(), jSlider2.getValue(), (int)jSpinner1.getValue(), "Cualquiera");
-    }//GEN-LAST:event_CualquieraMouseClicked
-
-    private void jDateChooser2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jDateChooser2MouseClicked
-    }//GEN-LAST:event_jDateChooser2MouseClicked
-
-    private void aloj4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj4ActionPerformed
+    private void botonAlojamiento4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAlojamiento4ActionPerformed
         Alojamiento a4 = new Alojamiento("a4", "Cadiz", 65, "Habitacion Privada", 2);
         a4.setImagenes("/images/room/aloj40.png","/images/room/aloj41.png","/images/room/aloj42.png");
         miControlador.seleccionaAlojamiento(a4);
         miControlador.procesaAlojamientoWindow();
-        if (jDateChooser2.getDate()!=null & jDateChooser3.getDate()!=null){
-        miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
+        if (dateChooserEntrada.getDate()!=null & dateChooserSalida.getDate()!=null){
+        miControlador.setFechas(dateChooserEntrada.getDate().toString(), dateChooserSalida.getDate().toString());
         }
-    }//GEN-LAST:event_aloj4ActionPerformed
+    }//GEN-LAST:event_botonAlojamiento4ActionPerformed
 
-    private void aloj6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj6ActionPerformed
+    private void botonAlojamiento5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAlojamiento5ActionPerformed
+        Alojamiento a5 = new Alojamiento("a5", "Murcia", 150, "Casa Entera", 3);
+        a5.setImagenes("/images/room/aloj50.png","/images/room/aloj51.png","/images/room/aloj52.png");
+        miControlador.seleccionaAlojamiento(a5);
+        miControlador.procesaAlojamientoWindow();
+        if (dateChooserEntrada.getDate()!=null & dateChooserSalida.getDate()!=null){
+        miControlador.setFechas(dateChooserEntrada.getDate().toString(), dateChooserSalida.getDate().toString());
+        }
+    }//GEN-LAST:event_botonAlojamiento5ActionPerformed
+
+    private void botonAlojamiento6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAlojamiento6ActionPerformed
         Alojamiento a6 = new Alojamiento("a6", "Madrid", 35, "Habitacion Compartida", 2);
         a6.setImagenes("/images/room/aloj60.png","/images/room/aloj61.png","/images/room/aloj62.png");
         miControlador.seleccionaAlojamiento(a6);
         miControlador.procesaAlojamientoWindow();
-        if (jDateChooser2.getDate()!=null & jDateChooser3.getDate()!=null){
-        miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
+        if (dateChooserEntrada.getDate()!=null & dateChooserSalida.getDate()!=null){
+        miControlador.setFechas(dateChooserEntrada.getDate().toString(), dateChooserSalida.getDate().toString());
         }
-    }//GEN-LAST:event_aloj6ActionPerformed
+    }//GEN-LAST:event_botonAlojamiento6ActionPerformed
 
-    private void aloj7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj7ActionPerformed
+    private void botonAlojamiento7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAlojamiento7ActionPerformed
         Alojamiento a7 = new Alojamiento("a7", "Barcelona", 200, "Habitacion Compartida", 1);
         a7.setImagenes("/images/room/aloj70.png","/images/room/aloj71.png","/images/room/aloj72.png");
         miControlador.seleccionaAlojamiento(a7);
         miControlador.procesaAlojamientoWindow();
-        if (jDateChooser2.getDate()!=null & jDateChooser3.getDate()!=null){
-        miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
+        if (dateChooserEntrada.getDate()!=null & dateChooserSalida.getDate()!=null){
+        miControlador.setFechas(dateChooserEntrada.getDate().toString(), dateChooserSalida.getDate().toString());
         }
-    }//GEN-LAST:event_aloj7ActionPerformed
+    }//GEN-LAST:event_botonAlojamiento7ActionPerformed
 
-    private void aloj8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aloj8ActionPerformed
+    private void botonAlojamiento8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAlojamiento8ActionPerformed
         Alojamiento a8 = new Alojamiento("a8", "Murcia", 30, "Habitacion Privada", 1);
         a8.setImagenes("/images/room/aloj80.png","/images/room/aloj81.png","/images/room/aloj82.png");
         miControlador.seleccionaAlojamiento(a8);
         miControlador.procesaAlojamientoWindow();
-        if (jDateChooser2.getDate()!=null & jDateChooser3.getDate()!=null){
-        miControlador.setFechas(jDateChooser2.getDate().toString(), jDateChooser3.getDate().toString());
+        if (dateChooserEntrada.getDate()!=null & dateChooserSalida.getDate()!=null){
+        miControlador.setFechas(dateChooserEntrada.getDate().toString(), dateChooserSalida.getDate().toString());
         }
-    }//GEN-LAST:event_aloj8ActionPerformed
+    }//GEN-LAST:event_botonAlojamiento8ActionPerformed
 
-    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+
+    /************************************
+     *                                  *
+     *         OPCIONES DEL MENU        *
+     *                                  *
+     * **********************************/
+
+
+    
+    // Funcionalidad a los botones del menú de actualizar los alojamientos disponibles en funcion de lo seleccionado.
+     
+    private void sliderPrecioStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliderPrecioStateChanged
+        miControlador.actualizarTodo(comboTipoAlojamiento.getSelectedItem().toString(), sliderPrecio.getValue(), (int)spinerHuespedes.getValue(), getCiudad());
+    }//GEN-LAST:event_sliderPrecioStateChanged
+
+    private void comboTipoAlojamientoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_comboTipoAlojamientoItemStateChanged
+        miControlador.actualizarTodo(comboTipoAlojamiento.getSelectedItem().toString(), sliderPrecio.getValue(), (int)spinerHuespedes.getValue(), getCiudad());
+    }//GEN-LAST:event_comboTipoAlojamientoItemStateChanged
+
+    private void comboTipoAlojamientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboTipoAlojamientoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_formWindowOpened
+    }//GEN-LAST:event_comboTipoAlojamientoActionPerformed
+
+    private void spinerHuespedesStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spinerHuespedesStateChanged
+        // TODO add your handling code here:
+        miControlador.actualizarTodo(comboTipoAlojamiento.getSelectedItem().toString(), sliderPrecio.getValue(), (int)spinerHuespedes.getValue(), getCiudad());
+    }//GEN-LAST:event_spinerHuespedesStateChanged
+
     
-    
+    // Funcionalidad de actualizar los alojamientos en funcion del boton clickado del mapa.
+     
+    private void MadridMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MadridMouseClicked
+        // TODO add your handling code here:
+        miControlador.actualizarTodo(comboTipoAlojamiento.getSelectedItem().toString(), sliderPrecio.getValue(), (int)spinerHuespedes.getValue(), "Madrid");
+    }//GEN-LAST:event_MadridMouseClicked
+
+    private void CadizMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CadizMouseClicked
+        // TODO add your handling code here:
+        miControlador.actualizarTodo(comboTipoAlojamiento.getSelectedItem().toString(), sliderPrecio.getValue(), (int)spinerHuespedes.getValue(), "Cadiz");
+    }//GEN-LAST:event_CadizMouseClicked
+
+    private void MurciaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MurciaMouseClicked
+        // TODO add your handling code here:
+        miControlador.actualizarTodo(comboTipoAlojamiento.getSelectedItem().toString(), sliderPrecio.getValue(), (int)spinerHuespedes.getValue(), "Murcia");
+    }//GEN-LAST:event_MurciaMouseClicked
+
+    private void BarcelonaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BarcelonaMouseClicked
+        // TODO add your handling code here:
+        miControlador.actualizarTodo(comboTipoAlojamiento.getSelectedItem().toString(), sliderPrecio.getValue(), (int)spinerHuespedes.getValue(), "Barcelona");
+    }//GEN-LAST:event_BarcelonaMouseClicked
+
+    private void CualquieraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CualquieraMouseClicked
+        // TODO add your handling code here:
+        miControlador.actualizarTodo(comboTipoAlojamiento.getSelectedItem().toString(), sliderPrecio.getValue(), (int)spinerHuespedes.getValue(), "Cualquiera");
+    }//GEN-LAST:event_CualquieraMouseClicked
+
+    private void dateChooserEntradaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dateChooserEntradaMouseClicked
+    }//GEN-LAST:event_dateChooserEntradaMouseClicked
+
+    /********************************
+     *                              *
+     *    --- FUNCIONES CREADAS --- *
+     *                              *
+     * ******************************/
+
+     /**
+      * Metodo que desactiva los alojamientos.
+      * @param matriz: MAtriz del mismo tamano que alojamientos totales donde el 1 desactiva.
+      */
     public void activaAlojamientos(int[] matriz){
         Component [] botones = PanelAlojamientos.getComponents();
         for(int i = 0; i < botones.length; i++){
@@ -479,6 +501,9 @@ public class HomeWindow extends javax.swing.JFrame {
         }
     }
     
+    /**
+     * Metodo que pone visibles todos los alojamientos.
+     */
     public void activaTodo(){
         Component [] botones = PanelAlojamientos.getComponents();
         PanelAlojamientos.removeAll();
@@ -488,6 +513,12 @@ public class HomeWindow extends javax.swing.JFrame {
         }
     }
     
+    /**
+     * Metodo utilizado para que se actualice la ventana con los
+     * cambios realizados.
+     * Se utiliza tras haber realizado algun cambio en la 
+     * visibilidad de los alojamientos.
+     */
     public void repaint_home(){
         PanelAlojamientos.repaint();
         setSize(getSize().width+1,getSize().height+1);
@@ -496,19 +527,31 @@ public class HomeWindow extends javax.swing.JFrame {
         repaint();
     }
     
+    /**
+     * Metodo que devuelve la ciudad seleccionada.
+     * @return ciudad [String] 
+     */
     public String getCiudad(){
-        if(Murcia.isSelected()) return "Murcia";
+        if(Murcia.isSelected()){ return "Murcia";}
         if(Cadiz.isSelected()) return "Cadiz";
         if(Barcelona.isSelected()) return "Barcelona";
         if(Madrid.isSelected()) return "Madrid";
         return "Cualquiera";
     }
     
+    /**
+     * Metodo que abre el panel del usuario.
+     */
     public void abreUsuario(){
         UserWindow ventana_usuario = new UserWindow(miModelo);
         ventana_usuario.setVisible(true);
     }
     
+    /**
+     * Metodo que devuelve true o false en funcion de si queda algun
+     * alojamiento visible,
+     * @return 
+     */
     public boolean getHayAlojamientos(){
         Component [] botones = PanelAlojamientos.getComponents();
         for(int i=0; i<botones.length; i++){
@@ -517,14 +560,21 @@ public class HomeWindow extends javax.swing.JFrame {
         return false;
     }
     
+    /**
+     * Metodo que informa con un label de que no hay ningun alojamiento
+     * con esas caracteristicas.
+     */
     public void noAlojamientos(){
-       PanelAlojamientos.add(noresultado);
+       PanelAlojamientos.add(labelNoResultado);
        PanelAlojamientos.repaint();
        repaint_home();
     }
-    
+   
+    /**
+     * Metodo que elimina el label de que no hay alojamientos con esas caracteristicas.
+     */
     public void eliminaEtiqueta(){
-        PanelAlojamientos.remove(noresultado);
+        PanelAlojamientos.remove(labelNoResultado);
     }
    
 
@@ -536,31 +586,31 @@ public class HomeWindow extends javax.swing.JFrame {
     private javax.swing.JRadioButton Murcia;
     private javax.swing.JPanel PanelAlojamientos;
     private javax.swing.JPanel PanelMenu;
-    private javax.swing.JButton aloj1;
-    private javax.swing.JButton aloj2;
-    private javax.swing.JButton aloj3;
-    private javax.swing.JButton aloj4;
-    private javax.swing.JButton aloj5;
-    private javax.swing.JButton aloj6;
-    private javax.swing.JButton aloj7;
-    private javax.swing.JButton aloj8;
+    private javax.swing.JButton botonAlojamiento1;
+    private javax.swing.JButton botonAlojamiento2;
+    private javax.swing.JButton botonAlojamiento3;
+    private javax.swing.JButton botonAlojamiento4;
+    private javax.swing.JButton botonAlojamiento5;
+    private javax.swing.JButton botonAlojamiento6;
+    private javax.swing.JButton botonAlojamiento7;
+    private javax.swing.JButton botonAlojamiento8;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JComboBox comboTipoAlojamiento;
+    private com.toedter.calendar.JDateChooser dateChooserEntrada;
+    private com.toedter.calendar.JDateChooser dateChooserSalida;
     private javax.swing.JLabel foto;
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox jComboBox2;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
-    private com.toedter.calendar.JDateChooser jDateChooser3;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JSlider jSlider2;
-    private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JPanel mapa;
-    private javax.swing.JLabel noresultado;
+    private javax.swing.JLabel labelNoResultado;
+    private javax.swing.JPanel panelFechas;
+    private javax.swing.JPanel panelLogoPerfil;
+    private javax.swing.JPanel panelMenuMapa;
+    private javax.swing.JPanel panelMenuSuperior;
+    private javax.swing.JSlider sliderPrecio;
+    private javax.swing.JSpinner spinerHuespedes;
     // End of variables declaration//GEN-END:variables
 }
