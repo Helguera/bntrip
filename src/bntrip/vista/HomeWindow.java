@@ -13,7 +13,7 @@ import javax.swing.SpinnerNumberModel;
 
 /**
  * Practica 2 - Interaccion Persona Computadora
- * @date 2017 April
+ * @date 2017 April.
  * @author  Helguera Lopez, Javier   - javhelg
  *          Velasco Gil, Alvaro      - alvvela
  */
@@ -84,6 +84,11 @@ public class HomeWindow extends javax.swing.JFrame {
         setTitle("bntrip");
         setMinimumSize(new java.awt.Dimension(697, 626));
         setPreferredSize(new java.awt.Dimension(735, 626));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         PanelMenu.setLayout(new java.awt.GridLayout(2, 0));
 
@@ -326,10 +331,10 @@ public class HomeWindow extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
-    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened		
-         // TODO add your handling code here:		
-     }//GEN-LAST:event_formWindowOpened
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt){
+        
+    }
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         miControlador.procesaInicioSesion();
