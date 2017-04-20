@@ -114,6 +114,9 @@ public class Modelo {
         almacenDeseado.setDeseado(aS, fechas);
     }
     
+    public void removeDeseado(Alojamiento aS){
+        almacenDeseado.removeDeseado(aS);
+    }
     
     public Deseado getAlmacenDeseado(){
         return almacenDeseado;

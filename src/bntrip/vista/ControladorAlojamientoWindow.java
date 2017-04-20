@@ -30,10 +30,27 @@ public class ControladorAlojamientoWindow {
         return miModelo.getLoged();
     }
     
-    /**
-     * HAY QUE HACER EN MODELO LA POSIBILIDAD DE RESERVAR,
-     * CON EL ALOJAMIENTO SELECCIONADO QUE YA TIENE
-     */
+    
+    public boolean setEstadoDeseado(){
+        Deseado almacenDeseado = miModelo.getAlmacenDeseado();
+        Alojamiento aS = miModelo.getAlojamientoSeleccionado();
+        Fechas fS = miModelo.getFechas();
+        
+        for (int i = 0; i<almacenDeseado.getSize(); i++){
+            Alojamiento aD = almacenDeseado.getAlojamientoDeseado(i);
+            Fechas fD = almacenDeseado.getFechasDeseada(i);
+            String n1 = aD.getNombre();
+            String n2 = aS.getNombre();       
+            if(n1.equals(n2) && fD.getFechaInicio()==fS.getFechaInicio() && fD.getFechaFin() == fS.getFechaFin()){
+                miVista.setImagenDeseado("/images/deseado_ok.png");
+                return true;
+            }
+        }
+        miVista.setImagenDeseado("/images/deseado_no.png");
+        return false;
+    }
+    
+    
     public boolean setReservado(Alojamiento aS){
         
         Fechas f = miModelo.getFechas();
@@ -96,21 +113,18 @@ public class ControladorAlojamientoWindow {
         
         Deseado almacenDeseado = miModelo.getAlmacenDeseado();
         for (int i = 0; i<almacenDeseado.getSize(); i++){
-            Alojamiento aR = almacenDeseado.getAlojamientoDeseado(i);
-            Fechas fR = almacenDeseado.getFechasDeseada(i);
+            Alojamiento aD = almacenDeseado.getAlojamientoDeseado(i);
+            Fechas fD = almacenDeseado.getFechasDeseada(i);
             Fechas fS = miModelo.getFechas();
-            String n1 = aR.getNombre();
+            String n1 = aD.getNombre();
             String n2 = aS.getNombre();       
-            if(n1.equals(n2) && fR.getFechaInicio()==fS.getFechaInicio() && fR.getFechaFin() == fS.getFechaFin()){
-            String n1 = aR.getNombre();
-            String n2 = aS.getNombre();       
-            if(n1.equals(n2)){
-                // Ya esta en la lista de deseados
-                // Posible opcion de borrar de deseado desde aqui
+            if(n1.equals(n2) && fD.getFechaInicio()==fS.getFechaInicio() && fD.getFechaFin() == fS.getFechaFin()){
+                miModelo.removeDeseado(aD);
+                miVista.setImagenDeseado("/images/deseado_no.png");
                 return false;
             }
         }
-            
+       
         miModelo.setDeseado(aS);
         miVista.setImagenDeseado("/images/deseado_ok.png");
             

@@ -38,6 +38,8 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         // NUmero de huespedes
         labelHuespedes.setIcon(new javax.swing.ImageIcon(getClass().getResource(getIconoHuesped())));
         setTitle(alojamiento.getCiudad()+" - "+alojamiento.getTipoHabitacion());
+        //Establecemos el icono si ese sitio y fechas ya están deseados
+        miControlador.setEstadoDeseado();
     }
 
     /**
@@ -63,6 +65,11 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(410, 340));
         setMinimumSize(new java.awt.Dimension(410, 340));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         jPanel1.setLayout(new java.awt.BorderLayout());
 
@@ -114,7 +121,6 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         });
         jPanelButtons.add(ButtonReservar);
 
-        ButtonDeseado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/deseado_no.png"))); // NOI18N
         ButtonDeseado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ButtonDeseadoActionPerformed(evt);
@@ -153,6 +159,11 @@ public class AlojamientoWindow extends javax.swing.JFrame {
     private void ButtonDeseadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonDeseadoActionPerformed
         Boolean b = miControlador.setDeseado(alojamiento);
     }//GEN-LAST:event_ButtonDeseadoActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        Boolean b = miControlador.setEstadoDeseado();
+        
+    }//GEN-LAST:event_formWindowOpened
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
