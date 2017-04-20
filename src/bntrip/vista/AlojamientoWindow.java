@@ -114,7 +114,12 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         });
         jPanelButtons.add(ButtonReservar);
 
-        ButtonDeseado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/deseado.png"))); // NOI18N
+        ButtonDeseado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/deseado_no.png"))); // NOI18N
+        ButtonDeseado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonDeseadoActionPerformed(evt);
+            }
+        });
         jPanelButtons.add(ButtonDeseado);
 
         jPanel1.add(jPanelButtons, java.awt.BorderLayout.PAGE_START);
@@ -145,6 +150,10 @@ public class AlojamientoWindow extends javax.swing.JFrame {
     //System.out.println("chaskis");
     }//GEN-LAST:event_ButtonReservarActionPerformed
 
+    private void ButtonDeseadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonDeseadoActionPerformed
+        Boolean b = miControlador.setDeseado(alojamiento);
+    }//GEN-LAST:event_ButtonDeseadoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonImagen;
@@ -172,6 +181,11 @@ public class AlojamientoWindow extends javax.swing.JFrame {
     public void setImagenReserva(String str){
         ButtonReservar.setIcon(new javax.swing.ImageIcon(getClass().getResource(str)));
         ButtonReservar.setText("");
+    }
+    
+    public void setImagenDeseado(String str){
+        ButtonDeseado.setIcon(new javax.swing.ImageIcon(getClass().getResource(str)));
+        ButtonDeseado.setText("");
     }
     
     public void setImagenAlojamiento(String str){

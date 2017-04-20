@@ -340,6 +340,12 @@ public class HomeWindow extends javax.swing.JFrame {
         miControlador.procesaInicioSesion();
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    /************************************
+     *                                  *
+     *          ALOJAMIENTOS            *
+     *                                  *
+     * **********************************/
+    
     private void botonAlojamiento1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAlojamiento1ActionPerformed
         Alojamiento a1 = new Alojamiento("a1", "Madrid", 65, "Habitacion Privada", 2);
         a1.setImagenes("/images/room/aloj10.png","/images/room/aloj11.png","/images/room/aloj12.png");

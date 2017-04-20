@@ -13,8 +13,10 @@ import java.io.FileReader;
 import java.util.ArrayList;
 
 /**
- *
- * @author alvaro
+ * Practica 2 - Interaccion Persona Computadora
+ * @date 2017 April
+ * @author  Helguera Lopez, Javier   - javhelg
+ *          Velasco Gil, Alvaro      - alvvela
  */
 public class RegistroWindow extends javax.swing.JFrame {
 
@@ -128,7 +130,7 @@ public class RegistroWindow extends javax.swing.JFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(27, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)

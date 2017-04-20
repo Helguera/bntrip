@@ -7,6 +7,7 @@ package bntrip.vista;
 
 import bntrip.modelo.Modelo;
 import bntrip.util.Alojamiento;
+import bntrip.util.Deseado;
 import bntrip.util.Reserva;
 
 /**
@@ -138,7 +139,10 @@ public class UserWindow extends javax.swing.JFrame {
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
         cargarReservados();
+        cargarDeseados();
+        
         labelConexion.setIcon(new javax.swing.ImageIcon(getClass().getResource(miControlador.getIconoPerfil())));
+        
         if(miControlador.getLoged().equals("Correo")){
             try{
                 labelConexion.setText(miModelo.getEmail()); 
@@ -175,14 +179,27 @@ public class UserWindow extends javax.swing.JFrame {
     private java.awt.List listaDeseado;
     private java.awt.List listaReserva;
     // End of variables declaration//GEN-END:variables
-
+    
+    private void cargarDeseados(){
+        Deseado d = miControlador.getDeseado();
+        for (int i=0; i<d.getSize(); i++){
+            Alojamiento a = d.getAlojamientoDeseado(i); 
+            int dias = d.getFechasDeseada(i).getDiasReservados();
+            int precio = dias*((int)a.getPrecio());
+            String fechaEntrada = d.getFechasDeseada(i).getFechaInicioStr();
+            String fechaFin = d.getFechasDeseada(i).getFechaFinStr();
+            if (dias==1) listaDeseado.add(d.getAlojamientoDeseado(i).getCiudad() + ", " + precio + "€, " + d.getFechasDeseada(i).getDiasReservados() + " dia.");
+            else listaDeseado.add(d.getAlojamientoDeseado(i).getCiudad() + ", " + precio + "€, " + d.getFechasDeseada(i).getDiasReservados() + " dias.");
+        } 
+    }
 
     private void cargarReservados(){
         Reserva r = miControlador.getReserva();
         for (int i=0; i<r.getSize(); i++){
             Alojamiento a = r.getAlojamientoReservado(i);
             int precio = r.getFechasReservadas(i).getDiasReservados()*((int)a.getPrecio());
-            listaReserva.add(r.getAlojamientoReservado(i).getCiudad() + ", " + precio + "€, " + r.getNumHuespedes(i));
+            if (r.getNumHuespedes(i)==1) listaReserva.add(r.getAlojamientoReservado(i).getCiudad() + ", " + precio + "€, " + r.getNumHuespedes(i) + " BnTripero");
+            else listaReserva.add(r.getAlojamientoReservado(i).getCiudad() + ", " + precio + "€, " + r.getNumHuespedes(i) + " BnTriperos");
         } 
     }
 }
