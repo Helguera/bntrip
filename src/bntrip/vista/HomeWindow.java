@@ -84,11 +84,6 @@ public class HomeWindow extends javax.swing.JFrame {
         setTitle("bntrip");
         setMinimumSize(new java.awt.Dimension(697, 626));
         setPreferredSize(new java.awt.Dimension(735, 626));
-        addWindowListener(new java.awt.event.WindowAdapter() {
-            public void windowOpened(java.awt.event.WindowEvent evt) {
-                formWindowOpened(evt);
-            }
-        });
 
         PanelMenu.setLayout(new java.awt.GridLayout(2, 0));
 
