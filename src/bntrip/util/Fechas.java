@@ -9,8 +9,10 @@ import static java.lang.Integer.parseInt;
 import java.util.Date;
 
 /**
- *
- * @author alvaro velasco & javier helguera
+ * Practica 2 - Interaccion Persona Computadora
+ * @date    2017 April.
+ * @author  Helguera Lopez, Javier   - javhelg
+ * @author  Velasco Gil, Alvaro      - alvvela
  */
 public class Fechas {
     

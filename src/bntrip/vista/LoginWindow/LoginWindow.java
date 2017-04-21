@@ -8,8 +8,10 @@ package bntrip.vista.LoginWindow;
 import bntrip.modelo.Modelo;
 
 /**
- *
- * @author javier
+ * Practica 2 - Interaccion Persona Computadora
+ * @date    2017 April.
+ * @author  Helguera Lopez, Javier   - javhelg
+ * @author  Velasco Gil, Alvaro      - alvvela
  */
 public class LoginWindow extends javax.swing.JFrame {
     private ControladorLoginWindow miControlador;

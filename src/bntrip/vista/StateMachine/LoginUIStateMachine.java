@@ -11,8 +11,10 @@ import bntrip.modelo.Modelo;
 import javax.swing.JFrame;
 
 /**
- *
- * @author javier
+ * Practica 2 - Interaccion Persona Computadora
+ * @date    2017 April.
+ * @author  Helguera Lopez, Javier   - javhelg
+ * @author  Velasco Gil, Alvaro      - alvvela
  */
 public class LoginUIStateMachine {
     private JFrame currentState;

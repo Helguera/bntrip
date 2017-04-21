@@ -12,9 +12,9 @@ import bntrip.vista.LoginWindow.LoginWindow;
 
 /**
  * Practica 2 - Interaccion Persona Computadora
- * @date 2017 April
+ * @date    2017 April.
  * @author  Helguera Lopez, Javier   - javhelg
- *          Velasco Gil, Alvaro      - alvvela
+ * @author  Velasco Gil, Alvaro      - alvvela
  */
 public class Main {
     private static HomeUIStateMachine  homeStateMachine;
@@ -41,7 +41,6 @@ public class Main {
         }
         
         modelo = new Modelo();
-        if (modelo == null) System.out.println("VAYA VAYA con el main que esta graciosete...");
         homeStateMachine = new HomeUIStateMachine(modelo);
         
     }

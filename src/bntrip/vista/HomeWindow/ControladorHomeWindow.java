@@ -13,9 +13,9 @@ import com.toedter.calendar.JDateChooser;
 
 /**
  * Practica 2 - Interaccion Persona Computadora
- * @date 2017 April
+ * @date    2017 April.
  * @author  Helguera Lopez, Javier   - javhelg
- *          Velasco Gil, Alvaro      - alvvela
+ * @author  Velasco Gil, Alvaro      - alvvela
  */
 public class ControladorHomeWindow {
     

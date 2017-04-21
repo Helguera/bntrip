@@ -13,8 +13,10 @@ import bntrip.util.Reserva;
 import java.awt.List;
 
 /**
- *
- * @author javier
+ * Practica 2 - Interaccion Persona Computadora
+ * @date    2017 April.
+ * @author  Helguera Lopez, Javier   - javhelg
+ * @author  Velasco Gil, Alvaro      - alvvela
  */
 public class ControladorUserWindow {
      private UserWindow miVista;

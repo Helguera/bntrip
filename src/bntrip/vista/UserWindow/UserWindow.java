@@ -11,8 +11,10 @@ import bntrip.util.Deseado;
 import bntrip.util.Reserva;
 
 /**
- *
- * @author javier
+ * Practica 2 - Interaccion Persona Computadora
+ * @date    2017 April.
+ * @author  Helguera Lopez, Javier   - javhelg
+ * @author  Velasco Gil, Alvaro      - alvvela
  */
 public class UserWindow extends javax.swing.JFrame {
     private ControladorUserWindow miControlador;

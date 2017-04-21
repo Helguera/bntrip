@@ -13,8 +13,10 @@ import bntrip.util.Reserva;
 import java.util.ArrayList;
 
 /**
- *
- * @author alvaro
+ * Practica 2 - Interaccion Persona Computadora
+ * @date    2017 April.
+ * @author  Helguera Lopez, Javier   - javhelg
+ * @author  Velasco Gil, Alvaro      - alvvela
  */
 public class ControladorAlojamientoWindow {
     

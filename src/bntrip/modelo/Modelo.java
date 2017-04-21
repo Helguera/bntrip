@@ -13,10 +13,13 @@ import bntrip.util.User;
 import java.util.ArrayList;
 
 /**
- *
- * @author javier
+ * Practica 2 - Interaccion Persona Computadora
+ * @date    2017 April.
+ * @author  Helguera Lopez, Javier   - javhelg
+ * @author  Velasco Gil, Alvaro      - alvvela
  */
 public class Modelo {
+    
     private String email;
     private String isloged;
     private Reserva almacenReserva ;
@@ -69,8 +72,6 @@ public class Modelo {
     }
     
     public int getHuespedes(){
-        System.out.println((int)almacen.get(2));
-        System.out.print("EASIFONIDFONS");
         if((int)almacen.get(2)==0){
             return 1;
         }
@@ -83,8 +84,6 @@ public class Modelo {
         }
         return (String) almacen.get(3);
     }
-    
-    
     
     public String getLoged(){
         return isloged;
