@@ -152,6 +152,7 @@ public class HomeWindow extends javax.swing.JFrame {
             }
         });
         panelMenuSuperior.add(sliderPrecio);
+        sliderPrecio.getAccessibleContext().setAccessibleName("Precio Máximo");
 
         spinerHuespedes.setToolTipText("Numero de Huespedes");
         spinerHuespedes.setBorder(javax.swing.BorderFactory.createTitledBorder("Huespedes"));
@@ -161,6 +162,7 @@ public class HomeWindow extends javax.swing.JFrame {
             }
         });
         panelMenuSuperior.add(spinerHuespedes);
+        spinerHuespedes.getAccessibleContext().setAccessibleName("Huéspedes");
 
         panelFechas.setLayout(new java.awt.GridLayout(1, 2));
 
@@ -211,7 +213,7 @@ public class HomeWindow extends javax.swing.JFrame {
                 MurciaMouseClicked(evt);
             }
         });
-        panelMenuMapa.add(Murcia, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, -1, -1));
+        panelMenuMapa.add(Murcia, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, -1, -1));
 
         buttonGroup1.add(Barcelona);
         Barcelona.setBorder(javax.swing.BorderFactory.createCompoundBorder());
@@ -220,7 +222,7 @@ public class HomeWindow extends javax.swing.JFrame {
                 BarcelonaMouseClicked(evt);
             }
         });
-        panelMenuMapa.add(Barcelona, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, -1, -1));
+        panelMenuMapa.add(Barcelona, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, -1, -1));
 
         buttonGroup1.add(Cadiz);
         Cadiz.setBorder(javax.swing.BorderFactory.createCompoundBorder());
@@ -229,7 +231,7 @@ public class HomeWindow extends javax.swing.JFrame {
                 CadizMouseClicked(evt);
             }
         });
-        panelMenuMapa.add(Cadiz, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, -1, -1));
+        panelMenuMapa.add(Cadiz, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, -1, -1));
 
         buttonGroup1.add(Cualquiera);
         Cualquiera.setSelected(true);
@@ -239,23 +241,23 @@ public class HomeWindow extends javax.swing.JFrame {
                 CualquieraMouseClicked(evt);
             }
         });
-        panelMenuMapa.add(Cualquiera, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, -1, -1));
+        panelMenuMapa.add(Cualquiera, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel3.setText("Barcelona");
-        panelMenuMapa.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, -1, -1));
+        panelMenuMapa.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel2.setText("Madrid");
-        panelMenuMapa.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, -1, -1));
+        panelMenuMapa.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel4.setText("Cadiz");
-        panelMenuMapa.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, -1, -1));
+        panelMenuMapa.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel5.setText("Murcia");
-        panelMenuMapa.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, -1, -1));
+        panelMenuMapa.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 190, -1, -1));
 
         buttonGroup1.add(Madrid);
         Madrid.setBorder(javax.swing.BorderFactory.createCompoundBorder());
@@ -264,11 +266,11 @@ public class HomeWindow extends javax.swing.JFrame {
                 MadridMouseClicked(evt);
             }
         });
-        panelMenuMapa.add(Madrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, -1, -1));
+        panelMenuMapa.add(Madrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, 20, 20));
 
         foto.setBackground(new java.awt.Color(196, 237, 228));
         foto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mapa.png"))); // NOI18N
-        panelMenuMapa.add(foto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 270));
+        panelMenuMapa.add(foto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 290, 270));
 
         PanelMenu.add(panelMenuMapa);
 
