@@ -29,7 +29,9 @@ public class ControladorUserWindow {
      
      public void procesaLogout(){
         miModelo.reboot();
-        Main.logout();
+        miVista.dispose();
+        Main.getStateMachineHome().close();
+        Main.getStateMachineHome().start();
     }
      
      /**
@@ -91,5 +93,10 @@ public class ControladorUserWindow {
             if (r.getNumHuespedes(i)==1) listaReserva.add(r.getAlojamientoReservado(i).getCiudad() + ", " + precio + "€, " + r.getNumHuespedes(i) + " BnTripero");
             else listaReserva.add(r.getAlojamientoReservado(i).getCiudad() + ", " + precio + "€, " + r.getNumHuespedes(i) + " BnTriperos");
         } 
+    }
+    
+    public void procesaCierre(){
+        Main.getStateMachineHome().close();
+        Main.getStateMachineHome().start();
     }
 }

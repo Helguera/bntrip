@@ -9,6 +9,7 @@ import bntrip.main.Main;
 import bntrip.modelo.Modelo;
 import bntrip.util.Alojamiento;
 import bntrip.util.Fechas;
+import com.toedter.calendar.JDateChooser;
 
 /**
  * Practica 2 - Interaccion Persona Computadora
@@ -47,7 +48,16 @@ public class ControladorHomeWindow {
     public void procesaInicioSesion(){
         if (miModelo == null) System.out.println("VAYA VAYA");
         else if(miModelo.getLoged().equals("")) this.procesaLogin();
-        else miVista.abreUsuario();
+        else{
+            miVista.abreUsuario();
+            miVista.setVisible(false);
+        }
+    }
+    
+    public void setFechasMinimas(JDateChooser entrada, JDateChooser salida){
+        
+        
+        
     }
     
     /**

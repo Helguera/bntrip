@@ -58,6 +58,9 @@ public class UserWindow extends javax.swing.JFrame {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
             }
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
         });
 
         jPanel1.setBackground(new java.awt.Color(196, 237, 228));
@@ -131,7 +134,6 @@ public class UserWindow extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         miControlador.procesaLogout();
-        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void listaReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaReservaActionPerformed
@@ -172,6 +174,12 @@ public class UserWindow extends javax.swing.JFrame {
         listaDeseado.removeAll();
         cargarDeseados();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        // TODO add your handling code here:
+        miControlador.procesaCierre();
+        
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments

@@ -8,6 +8,8 @@ package bntrip.vista;
 import bntrip.modelo.Modelo;
 import bntrip.util.Alojamiento;
 import java.awt.Component;
+import java.util.Calendar;
+import java.util.Date;
 import javax.swing.SpinnerModel;
 import javax.swing.SpinnerNumberModel;
 
@@ -30,6 +32,13 @@ public class HomeWindow extends javax.swing.JFrame {
         miControlador = new ControladorHomeWindow(this, miModelo);
         this.setLocationRelativeTo(null);
         this.miModelo = miModelo;
+        
+        Calendar actual = Calendar.getInstance();
+        Date prueba = actual.getTime();
+        dateChooserEntrada.setMinSelectableDate(prueba);
+        dateChooserEntrada.getDateEditor().setEnabled(false);
+        dateChooserSalida.getDateEditor().setEnabled(false);
+        dateChooserSalida.setMinSelectableDate(prueba);
     }
     
 
@@ -160,11 +169,31 @@ public class HomeWindow extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 dateChooserEntradaMouseClicked(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                dateChooserEntradaMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                dateChooserEntradaMouseEntered(evt);
+            }
+        });
+        dateChooserEntrada.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                dateChooserEntradaPropertyChange(evt);
+            }
         });
         panelFechas.add(dateChooserEntrada);
 
         dateChooserSalida.setBackground(new java.awt.Color(196, 237, 228));
         dateChooserSalida.setBorder(javax.swing.BorderFactory.createTitledBorder("Fecha Salida"));
+        dateChooserSalida.setEnabled(false);
+        dateChooserSalida.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dateChooserSalidaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                dateChooserSalidaMouseEntered(evt);
+            }
+        });
         panelFechas.add(dateChooserSalida);
 
         panelMenuSuperior.add(panelFechas);
@@ -488,7 +517,40 @@ public class HomeWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_CualquieraMouseClicked
 
     private void dateChooserEntradaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dateChooserEntradaMouseClicked
+
+        
+        
+    
     }//GEN-LAST:event_dateChooserEntradaMouseClicked
+
+    private void dateChooserSalidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dateChooserSalidaMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dateChooserSalidaMouseClicked
+
+    private void dateChooserEntradaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dateChooserEntradaMouseEntered
+        
+    }//GEN-LAST:event_dateChooserEntradaMouseEntered
+
+    private void dateChooserEntradaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dateChooserEntradaMouseExited
+
+    }//GEN-LAST:event_dateChooserEntradaMouseExited
+
+    private void dateChooserSalidaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dateChooserSalidaMouseEntered
+        // TODO add your handling code here:
+
+        dateChooserSalida.setMinSelectableDate(dateChooserEntrada.getDate());
+    }//GEN-LAST:event_dateChooserSalidaMouseEntered
+
+    private void dateChooserEntradaPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_dateChooserEntradaPropertyChange
+        // TODO add your handling code here:
+        if (dateChooserEntrada.getDate() == null){
+       
+        }else{
+            dateChooserSalida.setEnabled(true);
+            dateChooserSalida.setDate(dateChooserEntrada.getDate());
+            dateChooserSalida.getDateEditor().setEnabled(false);
+        }
+    }//GEN-LAST:event_dateChooserEntradaPropertyChange
 
     /********************************
      *                              *
