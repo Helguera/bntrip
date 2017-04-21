@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bntrip.vista;
+package bntrip.vista.RegistroWindow;
 
 import bntrip.modelo.Modelo;
 import java.awt.Color;
@@ -68,7 +68,6 @@ public class RegistroWindow extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
 
         setTitle("Accede a BnTrip");
-        setPreferredSize(new java.awt.Dimension(700, 550));
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {

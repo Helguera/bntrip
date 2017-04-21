@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bntrip.vista;
+package bntrip.vista.AlojamientoWindow;
 
 import bntrip.modelo.Modelo;
 import bntrip.util.Alojamiento;
@@ -63,7 +63,6 @@ public class AlojamientoWindow extends javax.swing.JFrame {
         ButtonDeseado = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(410, 340));
         setMinimumSize(new java.awt.Dimension(410, 340));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {

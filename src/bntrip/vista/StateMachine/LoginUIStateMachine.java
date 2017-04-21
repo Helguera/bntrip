@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bntrip.vista;
+package bntrip.vista.StateMachine;
 
+import bntrip.vista.RegistroWindow.RegistroWindow;
+import bntrip.vista.LoginWindow.LoginWindow;
 import bntrip.modelo.Modelo;
 import javax.swing.JFrame;
 

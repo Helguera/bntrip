@@ -5,9 +5,9 @@
  */
 package bntrip.main;
 import bntrip.modelo.Modelo;
-import bntrip.vista.HomeUIStateMachine;
-import bntrip.vista.LoginUIStateMachine;
-import bntrip.vista.LoginWindow;
+import bntrip.vista.StateMachine.HomeUIStateMachine;
+import bntrip.vista.StateMachine.LoginUIStateMachine;
+import bntrip.vista.LoginWindow.LoginWindow;
 
 
 /**

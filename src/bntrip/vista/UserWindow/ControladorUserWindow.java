@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bntrip.vista;
+package bntrip.vista.UserWindow;
 
 import bntrip.main.Main;
 import bntrip.modelo.Modelo;
