@@ -78,18 +78,21 @@ public class ControladorUserWindow {
             Alojamiento a = d.getAlojamientoDeseado(i); 
             int dias = d.getFechasDeseada(i).getDiasReservados();
             int precio = dias*((int)a.getPrecio());
+
             if (dias==1) listaDeseado.add(d.getAlojamientoDeseado(i).getCiudad() + ", " + precio + "€, " + d.getFechasDeseada(i).getDiasReservados() + " dia.");
             else listaDeseado.add(d.getAlojamientoDeseado(i).getCiudad() + ", " + precio + "€, " + d.getFechasDeseada(i).getDiasReservados() + " dias.");
         } 
     }
     
-    
+    /**
+     * Metodo que borra de la lista de Deseados el elemento seleccionado de la lista.
+     * @param listaDeseado
+     * @return 
+     */
     public boolean removeDeseado(List listaDeseado){
         try{
             Deseado deseados = miModelo.getAlmacenDeseado();
-            System.out.print("Tamaño: "+deseados.getSize()+" borramos el "+ listaDeseado.getSelectedIndex() + " quedan ");
             deseados.removeDeseado(listaDeseado.getSelectedIndex());    
-            System.out.println(deseados.getSize());
             return true;
         }catch(Exception e){
             return false; 

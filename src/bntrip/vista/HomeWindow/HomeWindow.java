@@ -395,11 +395,10 @@ public class HomeWindow extends javax.swing.JFrame {
         Alojamiento a1 = new Alojamiento("a1", "Madrid", 65, "Habitacion Privada", 2);
         a1.setImagenes("/images/room/aloj10.png","/images/room/aloj11.png","/images/room/aloj12.png");
         miControlador.seleccionaAlojamiento(a1);
-        miControlador.procesaAlojamientoWindow();
-        
         // DEJA PONER CALENDARIO NULO, HAY QUE HACER DESPUES QUE NO TE DEJE RESERVAR
         if (dateChooserEntrada.getDate()!=null & dateChooserSalida.getDate()!=null){
-        miControlador.setFechas(dateChooserEntrada.getDate().toString(), dateChooserSalida.getDate().toString());
+        miControlador.setFechas(dateChooserEntrada.getDate().toString(), dateChooserSalida.getDate().toString());        
+        miControlador.procesaAlojamientoWindow();
         }
     }//GEN-LAST:event_botonAlojamiento1ActionPerformed
 
@@ -408,7 +407,6 @@ public class HomeWindow extends javax.swing.JFrame {
         a2.setImagenes("/images/room/aloj20.png","/images/room/aloj21.png","/images/room/aloj22.png");
         miControlador.seleccionaAlojamiento(a2);
         miControlador.procesaAlojamientoWindow();
-        
         
         if (dateChooserEntrada.getDate()!=null && dateChooserSalida.getDate()!=null){
         miControlador.setFechas(dateChooserEntrada.getDate().toString(), dateChooserSalida.getDate().toString());
@@ -674,8 +672,6 @@ public class HomeWindow extends javax.swing.JFrame {
    
 
     private void inicializaSegunModelo(){
-        System.out.println(miModelo.getHuespedes());
-        System.out.println(miModelo.getPrecio());
         switch(miControlador.getCiudad()){
             case "Cualquiera":  Cualquiera.setSelected(true);   break;
             case "Madrid":      Madrid.setSelected(true);       break;

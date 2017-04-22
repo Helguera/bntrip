@@ -29,7 +29,6 @@ public class ControladorHomeWindow {
      */
     public ControladorHomeWindow(HomeWindow miVista, Modelo miModelo){
         this.miVista = miVista;
-        if (miModelo == null) System.out.println("VAYA VAYA con el constructor");
         this.miModelo = miModelo;
     }
     
@@ -46,8 +45,7 @@ public class ControladorHomeWindow {
      * registrado o no.
      */
     public void procesaInicioSesion(){
-        if (miModelo == null) System.out.println("VAYA VAYA");
-        else if(miModelo.getLoged().equals("")) this.procesaLogin();
+        if(miModelo.getLoged().equals("")) this.procesaLogin();
         else{
             miVista.abreUsuario();
             miVista.setVisible(false);
@@ -244,15 +242,27 @@ public class ControladorHomeWindow {
         return miModelo.getPrecio();
     }
     
-    
+    /**
+     * Metodo que devuelve el numero de huespedes seleccionados.
+     * @return numero de huespdes.
+     */
     public int getHuespedesSelected(){
         return miModelo.getHuespedes();
     }
     
+    /**
+     * Metodo que devuelve la ciudad seleccionada.
+     * @return 
+     */
     public String getCiudad(){
         return miModelo.getCiudad();
     }
     
+    
+    /**
+     * Metodo que devuelve el tipo de alojamiento seleccionado.
+     * @return Tipo de alojamiento.
+     */
     public String getTipo(){
         return miModelo.getTipo();
     }

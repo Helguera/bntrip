@@ -38,14 +38,6 @@ public class ControladorLoginWindow {
         this.miModelo = miModelo;
         procesaInicio();
     }
-
-    public void procesaAyuda(){
-        
-    }
-    
-    public void procesaRecupera(){
-        
-    }
     
     /**
      * Procesa el registro de un usuario
@@ -112,18 +104,25 @@ public class ControladorLoginWindow {
     }
     
     /**
-     * 
+     * MEtodo que devuelve un String con el nombre del medio con el que se ha realizado el inicio de sesion.
      * @return 
      */
     public String isLoged(){
         return miModelo.getLoged();
     }
     
+    /**
+     * Procesa el inicio de sesion, indicandole el medio utilizado.
+     * @param str 
+     */
     public void setLogeado(String str){
         miModelo.setLoged(str);
         Main.logeado();
     } 
     
+    /**
+     * Metodo que procesa el cierre de sesion.
+     */
     public void procesaLogout(){
         Main.logout();
     }

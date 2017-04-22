@@ -52,12 +52,23 @@ public class Alojamiento {
     public int getMaxHuespedes(){
         return maxHuespedes;
     }
+    
+    /**
+     * Metodo que establece 3 imagenes a un alojamiento.
+     * @param image1 - direccion de la imagen.
+     * @param image2 - direccion de la imagen.
+     * @param image3 - direccion de la imagen.
+     */
     public void setImagenes(String image1, String image2, String image3){
         imagenes.add(image1);
         imagenes.add(image2);
         imagenes.add(image3);
     }
     
+    /**
+     * Metodo que devuelve la direccion de la imagen siguiente.
+     * @return image - direccion de la siguiente imagen.
+     */
     public String getImagen(){
         String image = imagenes.get(0);
         imagenes.remove(0);
@@ -65,6 +76,10 @@ public class Alojamiento {
         return image;
     }
     
+    /**
+     * Metodo que devuelve el nombre del alojamiento.
+     * @return nombre
+     */
     public String getNombre(){
         return nombre;
     }

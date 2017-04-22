@@ -33,11 +33,18 @@ public class ControladorAlojamientoWindow {
         this.miModelo = miModelo;
     }
     
+    /**
+     * Devuelve el nombre del medio con el que está registrado.
+     * @return String
+     */
     public String isLoged(){
         return miModelo.getLoged();
     }
     
-    
+    /**
+     * Metodo que cambia el boton de deseado dependiendo de si ya está deseado o no.
+     * @return boolean
+     */
     public boolean setEstadoDeseado(){
         Deseado almacenDeseado = miModelo.getAlmacenDeseado();
         Alojamiento aS = miModelo.getAlojamientoSeleccionado();
@@ -57,7 +64,11 @@ public class ControladorAlojamientoWindow {
         return false;
     }
     
-    
+    /**
+     * Metodo que intenta realizar una reserva, indicando si puede realizarse con exito o no.
+     * @param alojamientoSeleccionado [Alojamiento]
+     * @return boolean
+     */
     public boolean setReservado(Alojamiento aS){
         
         Fechas f = miModelo.getFechas();
@@ -73,7 +84,6 @@ public class ControladorAlojamientoWindow {
         }
         
         if (f!=null && miModelo.getHuespedes()!=0){
-            System.out.println("INICIO: " + f.getFechaInicio() + "\t FIN: "+ f.getFechaFin());
             
             if ((miModelo.getFechas().getFechaInicio())>(miModelo.getFechas().getFechaFin())) {
                 setImagenBoton("/images/reserva_fechanovalida.png/");
@@ -104,6 +114,11 @@ public class ControladorAlojamientoWindow {
     }
     
     
+    /**
+     * MEtodo que dado un alojamiento, y teniendo unas fechas, lo guarda como deseado.
+     * @param alojamientoSeleccionado [Alojamiento]
+     * @return boolean
+     */
     public boolean setDeseado(Alojamiento aS){
         Fechas f = miModelo.getFechas();
         
@@ -139,16 +154,27 @@ public class ControladorAlojamientoWindow {
     }
     
     
+    /**
+     * Pasandole una URL de una imagen, la coloc como icono.
+     * @param url 
+     */
     private void setImagenBoton(String url){
         miVista.setImagenAlojamiento(url);
     }
     
     
+    /**
+     * Metodo que devuelve el alojamiento guardado en el modelo.
+     * @return Alojamiento
+     */
     public Alojamiento getAlojamiento(){
         return miModelo.getAlojamientoSeleccionado();
     }
     
-    
+    /**
+     * MEtodo que obtiene las fechas seleccionadas guardadas en el modelo.
+     * @return Fechas.
+     */
     public Fechas getFechas(){
         Fechas f = miModelo.getFechas();
         return f;

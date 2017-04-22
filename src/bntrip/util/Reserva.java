@@ -46,7 +46,7 @@ public class Reserva{
     }
     
     /**
-     * 
+     * Método que realiza la reserva de un alojamiento para una fecha y un número de huespedes determinado.
      * @param alojamiento
      * @param fechas
      * @param numHuespedes 
@@ -81,6 +81,10 @@ public class Reserva{
         return huespedes.size();
     }
     
+    /**
+     * Elimina todos los datos sobre una reserva, dado el número de reserva.
+     * @param index 
+     */
     public void removeReservado(int index){
         if (index>0 && index<alojamientos.size()){
             alojamientos.remove(index);
@@ -90,7 +94,7 @@ public class Reserva{
     }
     
     /**
-     * Elimina la fecha, el numero de huespedes, y el alojamiento introducido.
+     * Dado un alojamiento, elimina la fecha, el numero de huespedes, y el alojamiento introducido.
      * @param alojamiento 
      */
     public void removeReservado(Alojamiento alojamiento){

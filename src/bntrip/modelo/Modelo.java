@@ -209,7 +209,7 @@ public class Modelo {
     }
     
     /**
-     * Reinicia los parametros de isLoged, almacenReserva y almacenDeseado
+     * Reinicia los atributos del Modelo.
      */
     public void reboot(){
         isloged = "";
@@ -218,18 +218,34 @@ public class Modelo {
         fechas = new Fechas();    
     }
     
+    /**
+     * Almacena el usuario.
+     * @param usuario [User]
+     */
     public void setUsuario(User usuario){
         this.usuario=usuario;
     }
     
+    /**
+     * Devuelve el usuario de tipo User.
+     * @return 
+     */
     public User getUsuario(){
         return usuario;
     }
     
+    /**
+     * Selecciona el email con el que se ha iniciado sesion.
+     * @param email 
+     */
     public void setEmail(String email){
         this.email = email;
     }
     
+    /**
+     * Deveulve el email con el que se ha iniciado sesion.
+     * @return 
+     */
     public String getEmail(){
         return email;
     }    

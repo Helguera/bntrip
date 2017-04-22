@@ -50,13 +50,18 @@ public class Main {
          *      *** Para poder iniciar sesion con correo primero tienes que haberte creado una cuenta (los datos se guardan en un .txt)***
          *      
          *      n=0 -> Ejecucion "por defecto", todas las funcionalidades disponibles
-         *      n=1 -> Ejecucion "Google", usuario registrado con Google
-         *      n=2 -> Ejecucion "Facebook", usuario registrado con Facebook
-         *      n=3 -> Logeado con Google, destinos sólo en Madrid, de 1 huésped y Habitacion Privada
-         *      n=4 -> Logeado con Facebook, destinos solo en Murcia, de menos de 200€ y Casa Entera
-         *      n=5 -> Sin estar logeado, 3 Huespedes en Cadiz, para cualquier alojamiento.
-         *      n=6 -> Estando logeado con Google, reserva hecha en Barcelona
-         *      n=7 -> Estando logeado con Facebook, alojamiento deseado en Barcelona
+         *      n=1 -> Ejecucion "Google", muestra predeterminado y usuario registrado con Google
+         *      n=2 -> Ejecucion "Facebook", muestra predeterminado y usuario registrado con Facebook
+         *      n=3 -> Logeado con Google, muestra: destinos sólo en Madrid, de 1 huésped y Habitacion Privada
+         *      n=4 -> Logeado con Facebook, muestra: destinos solo en Murcia, de menos de 200€ y Casa Entera
+         *      n=5 -> Sin estar logeado, muestra: 3 Huespedes en Cadiz, para cualquier alojamiento.
+         *      n=6 -> Estando logeado con Google, reserva hecha en Barcelona para 2 personas. (29Jun al 30Jun)
+         *              - Puede verla desde el panel de usuario. (icono de perfil)
+         *      n=7 -> Estando logeado con Correo, alojamiento deseado en Barcelona para un dia.
+         *              - Puede verlo desde el panel de usuario. (icono de perfil)
+         *              - Si da click al alojamiento, seleccionando 29Jun2017 al 30Jun2017, se ve quue ya le sale
+         *                  como alojamiento Deseado, ya que el corazón está en rojo. Si lo vuelve a clickar, elimina la reserva.
+         *                  Esto está realizado para que sea más intuitivo para el usuario.
          */
         
         
@@ -88,26 +93,28 @@ public class Main {
                 modelo.setHuespedes(3);
                 break;
             case "6":
-                //Aqui va el ejemplo de una reserva
-                
+                Alojamiento a2 = new Alojamiento("a2", "Barcelona", 200, "Casa Entera", 2);
+                Fechas f1 = new Fechas("Sat Apr 29 18:23:58 CEST 2017", "Sat Apr 30 18:23:58 CEST 2017");  
                 modelo.setLoged("Google");
-                
-                Alojamiento prueba = new Alojamiento("Prueba", "Barcelona", 200, "Casa Entera", 2);
-                modelo.selectAlojamiento(prueba);
-                //Fechas fechas = new Fechas("Sat Apr 22 16:57:55 CEST 2017", "Sat Apr 28 16:57:55 CEST 2017");
-                //Reserva reserva = new Reserva(prueba, fechas ,2);
-                modelo.setReserva(prueba);
+                modelo.selectAlojamiento(a2);
+                modelo.setFechas(f1);
+                modelo.setHuespedes(2);
+                modelo.setReserva(a2);
                 modelo.setLoged("Google");
                 modelo.setCiudad("Barcelona");
                 break;
-            case "7":
-                //Aqui va el ejemplo de un deseado
-                modelo.setLoged("Facebook");
-                
-                
+            case "7":               
+                Alojamiento a7 = new Alojamiento("a7", "Barcelona", 200, "Habitacion Compartida", 1);
+                Fechas f2 = new Fechas("Sat Jun 29 18:23:58 CEST 2017", "Sat Jun 30 18:23:58 CEST 2017");
+                modelo.setLoged("Correo");
+                modelo.setFechas(f2);
+                modelo.setDeseado(a7);
+                modelo.setHuespedes(1);
+                modelo.setCiudad("Barcelona");
+                modelo.setTipo("Habitacion Compartida");
                 break;
             default:
-                JOptionPane.showMessageDialog(null, "Ejecuta el programa con un argumento entre 0 y 6 (Ambos inclusive)", "Error", 0);
+                JOptionPane.showMessageDialog(null, "Ejecuta el programa con un argumento entre 0 y 7 (Ambos inclusive)", "Error", 0);
                 System.exit(0);
                 
         }

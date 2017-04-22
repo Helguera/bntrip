@@ -197,7 +197,7 @@ public class LoginWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_botonEntrarActionPerformed
 
     private void textFieldEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldEmailActionPerformed
-        //miControlador.procesaLogin(textFieldEmail.getText(), new String(passwordField.getPassword()));
+
     }//GEN-LAST:event_textFieldEmailActionPerformed
 
     private void passwordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldActionPerformed

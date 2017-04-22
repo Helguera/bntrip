@@ -69,9 +69,14 @@ public class Fechas {
             this.inicioStr_Date = date;
             this.inicioStr = date2String(date);
         }
-        else System.out.println("OJO CUIDADO QUE EL INICIO ES NULO!");
     }
     
+    /**
+     * Metodo que devuelve un formato de fecha mas simple al pasarle una fecha Date en formato String.
+     * Devuelve un int, útil para comprobar diferencias de dias.
+     * @param d - Date to String.
+     * @return [int] -> yyyymmdd;
+     */
     private int generaFecha(String d){
         String year = d.substring(25, 29);
         String mes = d.substring(3, 7);
@@ -93,14 +98,23 @@ public class Fechas {
             }
         return parseInt(date);
     }
+    
+    /**
+     * Metodo que establece una fecha final.
+     * @param date -> Tipo Date pasado a String.
+     */
     public void setFinal(String date){
         if (date!=null && this.inicio!=0 && (generaFecha(date)>=inicio)){
             fin = generaFecha(date);
             finStr = date2String(date);
             finStr_Date = date;
-        } else System.out.println("OJO CUIDADO QUE LAS FECHAS NO SON CORRECTAS!");
+        }
     }
     
+    /**
+     * Metodo que devuelve la diferencia de dias entre la FechaInicio y la FechaFinal.
+     * @return dias reservados [int]
+     */
     public int getDiasReservados(){
         if (inicio!=0 && fin!=0) return (fin-inicio);
         else return 0;
@@ -141,12 +155,10 @@ public class Fechas {
     /**
      * Convierte la fecha al estilo dd/mm.
      * @param Fecha estilo Date (String largo).
-     * @return "dd/mm/aa".
+     * @return "dd/mm".
      */
     private String date2String(String date){
-        System.out.println(date);
         String fecha = ("" + date.substring(8, 10) + "/" + date.substring(4, 7));
-        System.out.println(fecha);
         return fecha;
     }
 }
