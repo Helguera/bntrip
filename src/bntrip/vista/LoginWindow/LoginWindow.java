@@ -36,54 +36,52 @@ public class LoginWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        PanelIniciaSesion = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        PanelBotones = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         botonGoogle = new javax.swing.JButton();
         botonFb = new javax.swing.JButton();
-        PanelRegistrate = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jButton1 = new javax.swing.JButton();
+
+        jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(350, 350));
-        setResizable(false);
+        setAutoRequestFocus(false);
+        setBackground(new java.awt.Color(244, 247, 247));
+        setPreferredSize(new java.awt.Dimension(250, 355));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 formWindowClosing(evt);
             }
         });
-        getContentPane().setLayout(new java.awt.GridLayout(3, 1));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        PanelIniciaSesion.setLayout(new java.awt.GridLayout(1, 1));
-
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/iniciasesion.png"))); // NOI18N
-        jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        PanelIniciaSesion.add(jLabel3);
-
-        getContentPane().add(PanelIniciaSesion);
-
-        PanelBotones.setMinimumSize(new java.awt.Dimension(450, 350));
-
-        botonGoogle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/google.png"))); // NOI18N
+        botonGoogle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/inicia_google.png"))); // NOI18N
         botonGoogle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonGoogleActionPerformed(evt);
             }
         });
-        PanelBotones.add(botonGoogle);
+        getContentPane().add(botonGoogle, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 286, 200, 30));
 
-        botonFb.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/facebook.png"))); // NOI18N
+        botonFb.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/inicia_fb.png"))); // NOI18N
         botonFb.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonFbActionPerformed(evt);
             }
         });
-        PanelBotones.add(botonFb);
+        getContentPane().add(botonFb, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 246, 200, 30));
 
-        getContentPane().add(PanelBotones);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/registrate_verde.png"))); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Sawasdee", 1, 15)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 99, 3));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("- O REGÍSTRATE AQUÍ -");
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
@@ -95,9 +93,36 @@ public class LoginWindow extends javax.swing.JFrame {
                 jLabel1MouseEntered(evt);
             }
         });
-        PanelRegistrate.add(jLabel1);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 200, -1));
 
-        getContentPane().add(PanelRegistrate);
+        jPanel1.setBackground(new java.awt.Color(192, 237, 228));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flecha30x30.png"))); // NOI18N
+        jLabel3.setToolTipText("Atrás");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Sawasdee", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(100, 104, 105));
+        jLabel4.setText("INICIA SESIÓN");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, 30));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 50));
+        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 200, 30));
+
+        jLabel5.setFont(new java.awt.Font("Sawasdee", 1, 15)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("CONTRASEÑA");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 120, 30));
+
+        jLabel6.setFont(new java.awt.Font("Sawasdee", 1, 15)); // NOI18N
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("E-MAIL:");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 67, 70, 40));
+        getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 200, 30));
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/inicia_correo.png"))); // NOI18N
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 206, 200, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -115,10 +140,6 @@ public class LoginWindow extends javax.swing.JFrame {
         miControlador.procesaLogout();
     }//GEN-LAST:event_formWindowClosing
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-        miControlador.procesaRegistro();
-    }//GEN-LAST:event_jLabel1MouseClicked
-
     private void jLabel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseEntered
         // TODO add your handling code here:
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/registrate_verde2.png")));
@@ -129,16 +150,25 @@ public class LoginWindow extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/registrate_verde.png")));
     }//GEN-LAST:event_jLabel1MouseExited
 
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        miControlador.procesaRegistro();
+    }//GEN-LAST:event_jLabel1MouseClicked
+
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel PanelBotones;
-    private javax.swing.JPanel PanelIniciaSesion;
-    private javax.swing.JPanel PanelRegistrate;
     private javax.swing.JButton botonFb;
     private javax.swing.JButton botonGoogle;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 
 }

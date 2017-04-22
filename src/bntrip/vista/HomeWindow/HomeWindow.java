@@ -110,6 +110,7 @@ public class HomeWindow extends javax.swing.JFrame {
         panelLogoPerfil.add(jLabel6);
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/profile.png"))); // NOI18N
+        jButton1.setToolTipText("Accede a tu perfil");
         jButton1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
