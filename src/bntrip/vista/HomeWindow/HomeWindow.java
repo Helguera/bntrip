@@ -221,7 +221,7 @@ public class HomeWindow extends javax.swing.JFrame {
 
         buttonGroup1.add(Cualquiera);
         Cualquiera.setSelected(true);
-        Cualquiera.setText("Cualquier CIudad");
+        Cualquiera.setText("Cualquier Ciudad");
         Cualquiera.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CualquieraMouseClicked(evt);

@@ -22,6 +22,11 @@ public class ControladorUserWindow {
      private UserWindow miVista;
      private Modelo miModelo;
      
+     /**
+      * Constructor del controlador de la clase UserWindow
+      * @param miVista
+      * @param miModelo 
+      */
      public ControladorUserWindow(UserWindow miVista, Modelo miModelo){
             this.miVista = miVista;
             this.miModelo = miModelo;
@@ -63,6 +68,10 @@ public class ControladorUserWindow {
         return miModelo.getLoged();
     }
     
+    /**
+     * Carga la lista de reservas deseados para que sea visible por el usuario
+     * @param listaDeseado 
+     */
     public void cargarListaDeseados(List listaDeseado){    
         Deseado d = getDeseado();
         for (int i=0; i<d.getSize(); i++){
@@ -74,7 +83,7 @@ public class ControladorUserWindow {
         } 
     }
     
-     
+    
     public boolean removeDeseado(List listaDeseado){
         try{
             Deseado deseados = miModelo.getAlmacenDeseado();
@@ -87,6 +96,10 @@ public class ControladorUserWindow {
         }
     }
     
+    /**
+     * Carga la lista de deseados para que sea visible por el usuario
+     * @param listaReserva 
+     */
     public void cargarListaReservados(List listaReserva){
         Reserva r = getReserva();
         for (int i=0; i<r.getSize(); i++){

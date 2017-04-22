@@ -17,11 +17,19 @@ public class Deseado {
     ArrayList<Alojamiento>  deseados;
     ArrayList<Fechas>       fechas;
     
+    /**
+     * Constructor de la clase Deseado (tiene sobrecarga de constructores)
+     */
     public Deseado(){
         deseados =  new ArrayList<Alojamiento>();
         fechas =    new ArrayList<Fechas>();
     }
     
+    /**
+     * Constructor de la clase Deseado
+     * @param alojamiento
+     * @param fechas 
+     */
     public Deseado(Alojamiento alojamiento, Fechas fechas){
         deseados    =   new ArrayList<Alojamiento>();
         this.fechas =   new ArrayList<Fechas>();

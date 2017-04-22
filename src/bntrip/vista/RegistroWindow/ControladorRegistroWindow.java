@@ -29,6 +29,11 @@ public class ControladorRegistroWindow {
     private ArrayList<String> users;
     private ArrayList<String> pass;
     
+    /**
+     * Constructor del Controlador para la clase RegistroWindow
+     * @param miVista
+     * @param miModelo 
+     */
     public ControladorRegistroWindow(RegistroWindow miVista, Modelo miModelo){
         this.miVista = miVista;
         this.miModelo = miModelo;
@@ -39,6 +44,9 @@ public class ControladorRegistroWindow {
         Main.logout();
     }
     
+    /**
+     * Procesa el inicio, extrae los datos del fichero data.txt o lo genera si no existe
+     */
     private void procesaInicio(){
         fichero = new File("./.data.txt");
         
@@ -74,6 +82,11 @@ public class ControladorRegistroWindow {
         return false;
     }
     
+    /**
+     * Procesa el login de un usuario, comprueba los datos introducidos con los que hay en el fichero .data.txt
+     * @param usuario
+     * @param pass 
+     */
     public void procesaLogin(String usuario, String pass){
         int posicion;
         if(users.contains(usuario)){
@@ -85,6 +98,15 @@ public class ControladorRegistroWindow {
         }else miVista.setRecoveryLabelText("Error, ha introducido algun dato incorrecto :(");
     }
     
+    /**
+     * Añade los datos de un usuario al fichero .data.txt para que pueda logearse siempre que quiera
+     * @param nombre
+     * @param apellidos
+     * @param nif
+     * @param email
+     * @param pass
+     * @param sexo 
+     */
     public void procesaRegistro (String nombre, String apellidos, String nif, String email, String pass, String sexo){
         User usuario = new User(nombre, apellidos, nif, sexo, email, pass);
         miModelo.setUsuario(usuario);

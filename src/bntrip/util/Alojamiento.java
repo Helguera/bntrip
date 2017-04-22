@@ -22,6 +22,14 @@ public class Alojamiento {
     String nombre;
     ArrayList<String> imagenes;
     
+    /**
+     * Constructor de la clase Alojamiento
+     * @param nombre
+     * @param ciudad
+     * @param precio
+     * @param tipoHabitacion
+     * @param maxHuespedes 
+     */
     public Alojamiento(String nombre, String ciudad, double precio, String tipoHabitacion, int maxHuespedes){
         this.nombre = nombre;
         this.ciudad = ciudad;

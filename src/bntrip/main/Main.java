@@ -120,27 +120,42 @@ public class Main {
         
     }
     
-    
+    /**
+     * 
+     * @return LoginUIStateMachine 
+     */
     public static LoginUIStateMachine getStateMachineLogin() {
         return loginStateMachine;
     }
     
-    
+    /**
+     * 
+     * @return HomeUIStateMachine 
+     */
     public static HomeUIStateMachine getStateMachineHome() {
         return homeStateMachine;
     }
     
+    /**
+     * Permite hacer logout, cierra la maquina de estados del login y abre la del home
+     */
     public static void logout() {
         loginStateMachine.close();
         homeStateMachine.close();
         homeStateMachine.start();
     }
 
+    /**
+     * Abre la maquina de estado de login para poder hacer login
+     */
     public static void logeate() {
         homeStateMachine.close();
         loginStateMachine = new LoginUIStateMachine(modelo);
     }
     
+    /**
+     * Una vez el usuario se ha logeado, reabre la maquina de estado Home
+     */
     public static void logeado(){
         loginStateMachine.close();
         homeStateMachine.close();

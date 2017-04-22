@@ -27,7 +27,12 @@ public class ControladorLoginWindow {
  private File fichero;
  private ArrayList<String> users;
  private ArrayList<String> pass;
- 
+    
+    /**
+     * Constructor del controlador para la clase LoginWindow
+     * @param miVista
+     * @param miModelo 
+     */
     public ControladorLoginWindow(LoginWindow miVista, Modelo miModelo){
         this.miVista = miVista;
         this.miModelo = miModelo;
@@ -42,10 +47,19 @@ public class ControladorLoginWindow {
         
     }
     
+    /**
+     * Procesa el registro de un usuario
+     */
     public void procesaRegistro(){
         Main.getStateMachineLogin().registro();
     }
     
+    /**
+     * Procesa el incio de sesion de un usuario
+     * @param usuario
+     * @param password
+     * @return 
+     */
     public boolean procesaInicioSesion(String usuario, String password){
         if(users.contains(usuario)){
             if(this.pass.get(users.indexOf(usuario)).equals(password)){
@@ -56,6 +70,9 @@ public class ControladorLoginWindow {
         }else return false;
     }
     
+    /**
+     * Procesa el inicio de sesion de un usuario
+     */
     private void procesaInicio(){
         fichero = new File("./.data.txt"); 
         users = new ArrayList<String>();
@@ -82,6 +99,11 @@ public class ControladorLoginWindow {
         }
     }
     
+    /**
+     * Devuelve si un numero es par o no xD
+     * @param numero
+     * @return boolean
+     */
     private boolean par(int numero){
         if (numero%2==0){
             return true;
@@ -89,7 +111,10 @@ public class ControladorLoginWindow {
         return false;
     }
     
-    
+    /**
+     * 
+     * @return 
+     */
     public String isLoged(){
         return miModelo.getLoged();
     }

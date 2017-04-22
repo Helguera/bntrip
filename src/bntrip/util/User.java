@@ -20,6 +20,15 @@ public class User{
     private String email;
     private String password;
     
+    /**
+     * Constructor de la clase Usuario
+     * @param name
+     * @param apellidos
+     * @param nif
+     * @param gender
+     * @param email
+     * @param pass 
+     */
     public User(String name, String apellidos, String nif, String gender, String email, String pass){
         this.name = name;
         this.apellidos=apellidos;
@@ -33,6 +42,12 @@ public class User{
         return name;
     }
     
+    /**
+     * Metodo para iniciar sesion a un determinado usuario
+     * @param user
+     * @param password
+     * @return 
+     */
     public boolean iniciaSesion(String user, String password){
         if (user.equals(name) && (this.password).equals(password)) return true;
         else return false;

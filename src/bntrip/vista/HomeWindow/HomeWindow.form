@@ -245,7 +245,7 @@
                   <ComponentRef name="buttonGroup1"/>
                 </Property>
                 <Property name="selected" type="boolean" value="true"/>
-                <Property name="text" type="java.lang.String" value="Cualquier CIudad"/>
+                <Property name="text" type="java.lang.String" value="Cualquier Ciudad"/>
               </Properties>
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="CualquieraMouseClicked"/>

@@ -27,6 +27,9 @@ public class Fechas {
     private String finStr_Date;
     private String birthday;
     
+    /**
+     * Constructor de la clase Fechas
+     */
     public Fechas(){
         inicio = 0;
         fin = 0;

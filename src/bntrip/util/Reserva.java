@@ -19,12 +19,21 @@ public class Reserva{
     ArrayList<Fechas>       fechas;
     ArrayList<Integer>      huespedes;
     
+    /**
+     * Constructor de la clase Reserva
+     */
     public Reserva(){
         alojamientos =  new ArrayList<Alojamiento>();
         fechas       =    new ArrayList<Fechas>();
         huespedes   =   new ArrayList<Integer>();
     }
     
+    /**
+     * Constructor de la clase Reserva
+     * @param alojamiento
+     * @param fechas
+     * @param numHuespedes 
+     */
     public Reserva(Alojamiento alojamiento, Fechas fechas, int numHuespedes){
         alojamientos    =   new ArrayList<Alojamiento>();
         this.fechas =   new ArrayList<Fechas>();
@@ -36,6 +45,12 @@ public class Reserva{
         }
     }
     
+    /**
+     * 
+     * @param alojamiento
+     * @param fechas
+     * @param numHuespedes 
+     */
     public void setReserva(Alojamiento alojamiento, Fechas fechas, int numHuespedes){
         if (alojamiento!= null & fechas!=null && numHuespedes<=alojamiento.getMaxHuespedes()){
             alojamientos.add(alojamiento);

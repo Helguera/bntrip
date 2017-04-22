@@ -23,6 +23,11 @@ public class ControladorAlojamientoWindow {
     private AlojamientoWindow miVista;
     private Modelo miModelo;
 
+    /**
+     * Controlador de la clase Alojamiento
+     * @param miVista
+     * @param miModelo 
+     */
     public ControladorAlojamientoWindow(AlojamientoWindow miVista, Modelo miModelo) {
         this.miVista = miVista;
         this.miModelo = miModelo;
