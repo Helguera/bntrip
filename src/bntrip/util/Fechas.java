@@ -17,9 +17,12 @@ import java.util.Date;
 public class Fechas {
     
     private int inicio;
+    private Date dateInicio;
     private String inicioStr_Date;
     private String inicioStr;
+    
     private int fin;
+    private Date dateFin;
     private String finStr;
     private String finStr_Date;
     private String birthday;
@@ -58,6 +61,7 @@ public class Fechas {
     
     public void setInicio(String date){
         if (date!=null){
+            dateInicio = new Date();
             this.inicio = generaFecha(date);
             this.inicioStr_Date = date;
             this.inicioStr = date2String(date);
@@ -121,6 +125,14 @@ public class Fechas {
 
     public int getFechaFin(){
         return fin;
+    }
+    
+    public Date getDateInicio(){
+        return dateInicio;
+    }
+    
+    public Date getDateFin(){
+        return dateFin;
     }
     
     /**

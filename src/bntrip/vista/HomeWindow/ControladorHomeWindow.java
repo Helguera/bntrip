@@ -54,12 +54,6 @@ public class ControladorHomeWindow {
         }
     }
     
-    public void setFechasMinimas(JDateChooser entrada, JDateChooser salida){
-        
-        
-        
-    }
-    
     /**
      * Abre una ventana con información sobre el alojamiento seleccionado.
      */
@@ -225,4 +219,37 @@ public class ControladorHomeWindow {
     }
     
     
+    /**
+     * Devuelve el indice del tipo de habitacion guardado en modelo.
+     * @return [int]    0 - Cualquiera
+     *                  1 - Casa Entera
+     *                  2 - Habitacion Privada
+     *                  3 - Habitacion Compartida.
+     */
+    public int getTipoSelectedIndex(){
+        switch(miModelo.getTipo()){
+            case "Cualquiera":              return 0;
+            case "Casa Entera":             return 1;
+            case "Habitacion Privada":      return 2;
+            case "Habitacion Compartida":   return 3;
+        }
+        return 0;
+    }
+    
+    /**
+     * Devuelve un entero con el precio almacenado en el modelo.
+     * @return int precio
+     */
+    public int getValorSelected(){
+        return miModelo.getPrecio();
+    }
+    
+    
+    public int getHuespedesSelected(){
+        return miModelo.getHuespedes();
+    }
+    
+    public String getCiudad(){
+        return miModelo.getCiudad();
+    }
 }

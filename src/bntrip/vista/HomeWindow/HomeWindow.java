@@ -34,6 +34,8 @@ public class HomeWindow extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         this.miModelo = miModelo;
         
+        inicializaSegunModelo();
+        
         Calendar actual = Calendar.getInstance();
         Date prueba = actual.getTime();
         dateChooserEntrada.setMinSelectableDate(prueba);
@@ -57,8 +59,8 @@ public class HomeWindow extends javax.swing.JFrame {
         PanelMenu = new javax.swing.JPanel();
         panelMenuSuperior = new javax.swing.JPanel();
         panelLogoPerfil = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        labelLogo = new javax.swing.JLabel();
+        botonPerfil = new javax.swing.JButton();
         comboTipoAlojamiento = new javax.swing.JComboBox();
         sliderPrecio = new javax.swing.JSlider();
         spinerHuespedes = new javax.swing.JSpinner(model);
@@ -66,15 +68,15 @@ public class HomeWindow extends javax.swing.JFrame {
         dateChooserEntrada = new com.toedter.calendar.JDateChooser();
         dateChooserSalida = new com.toedter.calendar.JDateChooser();
         panelMenuMapa = new javax.swing.JPanel();
-        Murcia = new javax.swing.JRadioButton();
-        Barcelona = new javax.swing.JRadioButton();
-        Cadiz = new javax.swing.JRadioButton();
         Cualquiera = new javax.swing.JRadioButton();
+        Madrid = new javax.swing.JRadioButton();
+        Barcelona = new javax.swing.JRadioButton();
+        Murcia = new javax.swing.JRadioButton();
+        Cadiz = new javax.swing.JRadioButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        Madrid = new javax.swing.JRadioButton();
         foto = new javax.swing.JLabel();
         PanelAlojamientos = new javax.swing.JPanel();
         botonAlojamiento1 = new javax.swing.JButton();
@@ -106,18 +108,18 @@ public class HomeWindow extends javax.swing.JFrame {
 
         panelLogoPerfil.setBackground(new java.awt.Color(196, 237, 228));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logolittle.png"))); // NOI18N
-        panelLogoPerfil.add(jLabel6);
+        labelLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logolittle.png"))); // NOI18N
+        panelLogoPerfil.add(labelLogo);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/profile.png"))); // NOI18N
-        jButton1.setToolTipText("Accede a tu perfil");
-        jButton1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        botonPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/profile.png"))); // NOI18N
+        botonPerfil.setToolTipText("Accede a tu perfil");
+        botonPerfil.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        botonPerfil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                botonPerfilActionPerformed(evt);
             }
         });
-        panelLogoPerfil.add(jButton1);
+        panelLogoPerfil.add(botonPerfil);
 
         panelMenuSuperior.add(panelLogoPerfil);
 
@@ -207,14 +209,24 @@ public class HomeWindow extends javax.swing.JFrame {
         panelMenuMapa.setBackground(new java.awt.Color(196, 237, 228));
         panelMenuMapa.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        buttonGroup1.add(Murcia);
-        Murcia.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        Murcia.addMouseListener(new java.awt.event.MouseAdapter() {
+        buttonGroup1.add(Cualquiera);
+        Cualquiera.setSelected(true);
+        Cualquiera.setText("Cualquier CIudad");
+        Cualquiera.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                MurciaMouseClicked(evt);
+                CualquieraMouseClicked(evt);
             }
         });
-        panelMenuMapa.add(Murcia, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, -1, -1));
+        panelMenuMapa.add(Cualquiera, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
+
+        buttonGroup1.add(Madrid);
+        Madrid.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        Madrid.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MadridMouseClicked(evt);
+            }
+        });
+        panelMenuMapa.add(Madrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, 20, 20));
 
         buttonGroup1.add(Barcelona);
         Barcelona.setBorder(javax.swing.BorderFactory.createCompoundBorder());
@@ -225,6 +237,15 @@ public class HomeWindow extends javax.swing.JFrame {
         });
         panelMenuMapa.add(Barcelona, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, -1, -1));
 
+        buttonGroup1.add(Murcia);
+        Murcia.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        Murcia.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MurciaMouseClicked(evt);
+            }
+        });
+        panelMenuMapa.add(Murcia, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, -1, -1));
+
         buttonGroup1.add(Cadiz);
         Cadiz.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         Cadiz.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -233,16 +254,6 @@ public class HomeWindow extends javax.swing.JFrame {
             }
         });
         panelMenuMapa.add(Cadiz, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, -1, -1));
-
-        buttonGroup1.add(Cualquiera);
-        Cualquiera.setSelected(true);
-        Cualquiera.setText("Cualquier CIudad");
-        Cualquiera.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CualquieraMouseClicked(evt);
-            }
-        });
-        panelMenuMapa.add(Cualquiera, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel3.setText("Barcelona");
@@ -259,15 +270,6 @@ public class HomeWindow extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel5.setText("Murcia");
         panelMenuMapa.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 190, -1, -1));
-
-        buttonGroup1.add(Madrid);
-        Madrid.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        Madrid.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                MadridMouseClicked(evt);
-            }
-        });
-        panelMenuMapa.add(Madrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, 20, 20));
 
         foto.setBackground(new java.awt.Color(196, 237, 228));
         foto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mapa.png"))); // NOI18N
@@ -369,9 +371,9 @@ public class HomeWindow extends javax.swing.JFrame {
         
     }
     
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void botonPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPerfilActionPerformed
         miControlador.procesaInicioSesion();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_botonPerfilActionPerformed
 
     /************************************
      *                                  *
@@ -651,6 +653,23 @@ public class HomeWindow extends javax.swing.JFrame {
     }
    
 
+    private void inicializaSegunModelo(){
+        
+        comboTipoAlojamiento.setSelectedIndex(miControlador.getTipoSelectedIndex());
+        sliderPrecio.setValue(miControlador.getValorSelected());
+        spinerHuespedes.setValue(miControlador.getHuespedesSelected());
+        
+        switch(miControlador.getCiudad()){
+            case "Cualquiera":  Cualquiera.setSelected(true);   break;
+            case "Madrid":      Madrid.setSelected(true);       break;
+            case "Barcelona":   Barcelona.setSelected(true);    break;
+            case "Murcia":      Murcia.setSelected(true);       break;
+            case "Cadiz":       Cadiz.setSelected(true);        break;
+        }
+        
+    }
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton Barcelona;
     private javax.swing.JRadioButton Cadiz;
@@ -667,17 +686,17 @@ public class HomeWindow extends javax.swing.JFrame {
     private javax.swing.JButton botonAlojamiento6;
     private javax.swing.JButton botonAlojamiento7;
     private javax.swing.JButton botonAlojamiento8;
+    private javax.swing.JButton botonPerfil;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JComboBox comboTipoAlojamiento;
     private com.toedter.calendar.JDateChooser dateChooserEntrada;
     private com.toedter.calendar.JDateChooser dateChooserSalida;
     private javax.swing.JLabel foto;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel labelLogo;
     private javax.swing.JLabel labelNoResultado;
     private javax.swing.JPanel panelFechas;
     private javax.swing.JPanel panelLogoPerfil;
