@@ -252,4 +252,8 @@ public class ControladorHomeWindow {
     public String getCiudad(){
         return miModelo.getCiudad();
     }
+    
+    public String getTipo(){
+        return miModelo.getTipo();
+    }
 }

@@ -8,6 +8,7 @@ import bntrip.modelo.Modelo;
 import bntrip.vista.StateMachine.HomeUIStateMachine;
 import bntrip.vista.StateMachine.LoginUIStateMachine;
 import bntrip.vista.LoginWindow.LoginWindow;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -40,7 +41,62 @@ public class Main {
             java.util.logging.Logger.getLogger(LoginWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         
+        /**
+         * CASOS DISPONIBLES DE EJECUCION (n=argumento):
+         *      *** Se recomienda ejecutar con argumento=0, para ver la aplicacion al completo***
+         *      *** Para poder iniciar sesion con correo primero tienes que haberte creado una cuenta (los datos se guardan en un txt)***
+         *      
+         *      n=0 -> Ejecucion "por defecto", todas las funcionalidades disponibles
+         *      n=1 -> Ejecucion "Google", usuario registrado con Google
+         *      n=2 -> Ejecucion "Facebook", usuario registrado con Facebook
+         *      n=3 -> Logeado con Google, destinos sólo en Madrid, de 1 huésped y Habitacion Privada
+         *      n=4 -> Logeado con Facebook, destinos solo en Murcia, de menos de 200€ y Casa Entera
+         *      n=5 -> Sin estar logeado, 3 Huespedes en Cadiz, para cualquier alojamiento.
+         *      n=6 -> Sin estar logeado, alo
+         */
+        
+        
         modelo = new Modelo();
+        try{
+            switch(args[0]){
+            case "0":   
+                break;
+            case "1":   
+                modelo.setLoged("Google");
+                break;
+            case "2":
+                modelo.setLoged("Facebook");
+                break;
+            case "3":   
+                modelo.setLoged("Google");
+                modelo.setCiudad("Madrid");
+                modelo.setHuespedes(1);
+                modelo.setTipo("Habitacion Privada");
+                break;
+            case "4":   
+                modelo.setLoged("Facebook");
+                modelo.setCiudad("Murcia");
+                modelo.setPrecio(200);
+                modelo.setTipo("Casa Entera");
+                break;
+            case "5":
+                modelo.setCiudad("Cadiz");
+                modelo.setHuespedes(3);
+                break;
+            case "6":
+                modelo.setLoged("Google");
+                modelo.setCiudad("Barcelona");
+                break;
+            default:
+                JOptionPane.showMessageDialog(null, "Ejecuta el programa con un argumento entre 0 y 6 (Ambos inclusive)", "Error", 0);
+                System.exit(0);
+                
+        }
+        }catch(Exception f){
+            JOptionPane.showMessageDialog(null, "Ejecuta el programa con un argumento entre 0 y 6 (Ambos inclusive)", "Error", 0);
+            System.exit(0);
+        }
+        
         homeStateMachine = new HomeUIStateMachine(modelo);
         
     }

@@ -154,6 +154,11 @@ public class HomeWindow extends javax.swing.JFrame {
                 sliderPrecioStateChanged(evt);
             }
         });
+        sliderPrecio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                sliderPrecioMouseClicked(evt);
+            }
+        });
         panelMenuSuperior.add(sliderPrecio);
         sliderPrecio.getAccessibleContext().setAccessibleName("Precio Máximo");
 
@@ -162,6 +167,11 @@ public class HomeWindow extends javax.swing.JFrame {
         spinerHuespedes.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 spinerHuespedesStateChanged(evt);
+            }
+        });
+        spinerHuespedes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                spinerHuespedesMouseClicked(evt);
             }
         });
         panelMenuSuperior.add(spinerHuespedes);
@@ -482,11 +492,13 @@ public class HomeWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_sliderPrecioStateChanged
 
     private void comboTipoAlojamientoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_comboTipoAlojamientoItemStateChanged
-        miControlador.actualizarTodo(comboTipoAlojamiento.getSelectedItem().toString(), sliderPrecio.getValue(), (int)spinerHuespedes.getValue(), getCiudad());
+        //miControlador.actualizarTodo(comboTipoAlojamiento.getSelectedItem().toString(), sliderPrecio.getValue(), (int)spinerHuespedes.getValue(), getCiudad());
     }//GEN-LAST:event_comboTipoAlojamientoItemStateChanged
 
     private void comboTipoAlojamientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboTipoAlojamientoActionPerformed
         // TODO add your handling code here:
+        miControlador.actualizarTodo(comboTipoAlojamiento.getSelectedItem().toString(), sliderPrecio.getValue(), (int)spinerHuespedes.getValue(), getCiudad());
+        
     }//GEN-LAST:event_comboTipoAlojamientoActionPerformed
 
     private void spinerHuespedesStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spinerHuespedesStateChanged
@@ -557,6 +569,14 @@ public class HomeWindow extends javax.swing.JFrame {
             dateChooserSalida.getDateEditor().setEnabled(false);
         }
     }//GEN-LAST:event_dateChooserEntradaPropertyChange
+
+    private void spinerHuespedesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_spinerHuespedesMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_spinerHuespedesMouseClicked
+
+    private void sliderPrecioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sliderPrecioMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sliderPrecioMouseClicked
 
     /********************************
      *                              *
@@ -654,11 +674,8 @@ public class HomeWindow extends javax.swing.JFrame {
    
 
     private void inicializaSegunModelo(){
-        
-        comboTipoAlojamiento.setSelectedIndex(miControlador.getTipoSelectedIndex());
-        sliderPrecio.setValue(miControlador.getValorSelected());
-        spinerHuespedes.setValue(miControlador.getHuespedesSelected());
-        
+        System.out.println(miModelo.getHuespedes());
+        System.out.println(miModelo.getPrecio());
         switch(miControlador.getCiudad()){
             case "Cualquiera":  Cualquiera.setSelected(true);   break;
             case "Madrid":      Madrid.setSelected(true);       break;
@@ -667,6 +684,11 @@ public class HomeWindow extends javax.swing.JFrame {
             case "Cadiz":       Cadiz.setSelected(true);        break;
         }
         
+        comboTipoAlojamiento.setSelectedIndex(miControlador.getTipoSelectedIndex());
+        spinerHuespedes.setValue(miControlador.getHuespedesSelected());
+        sliderPrecio.setValue(miControlador.getValorSelected());
+ 
+        miControlador.actualizarTodo(miControlador.getTipo(), miControlador.getValorSelected(), miControlador.getHuespedesSelected(), miControlador.getCiudad());
     }
     
     
