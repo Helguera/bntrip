@@ -48,7 +48,7 @@ public class ControladorLoginWindow {
     
     public boolean procesaInicioSesion(String usuario, String password){
         if(users.contains(usuario)){
-            if(this.pass.get(users.indexOf(usuario)).equals(pass)){
+            if(this.pass.get(users.indexOf(usuario)).equals(password)){
                 miModelo.setEmail(usuario);
                 miModelo.setLoged("Correo");
                 return true;
