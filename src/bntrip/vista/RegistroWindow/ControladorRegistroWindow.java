@@ -32,13 +32,14 @@ public class ControladorRegistroWindow {
     public ControladorRegistroWindow(RegistroWindow miVista, Modelo miModelo){
         this.miVista = miVista;
         this.miModelo = miModelo;
+        procesaInicio();
     }
     
     public void procesaCancelar(){
         Main.logout();
     }
     
-    public void procesaInicio(){
+    private void procesaInicio(){
         fichero = new File("./.data.txt");
         
         
@@ -66,7 +67,7 @@ public class ControladorRegistroWindow {
         }
     }
     
-    public boolean par(int numero){
+    private boolean par(int numero){
         if (numero%2==0){
             return true;
         }

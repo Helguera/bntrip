@@ -53,7 +53,7 @@ public class LoginWindow extends javax.swing.JFrame {
 
         jLabel2.setText("jLabel2");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
         setBackground(new java.awt.Color(244, 247, 247));
         setPreferredSize(new java.awt.Dimension(250, 355));
@@ -157,7 +157,7 @@ public class LoginWindow extends javax.swing.JFrame {
                 botonEntrarActionPerformed(evt);
             }
         });
-        getContentPane().add(botonEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 206, 200, 30));
+        getContentPane().add(botonEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 200, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
