@@ -49,7 +49,7 @@ public class LoginUIStateMachine {
         });
     }
     
-    public void help() {
+    public void registro() {
        //currentState.setVisible(false); // si se desea ocultar
        currentState.dispose();   // si se desea destruir
        

@@ -7,6 +7,13 @@ package bntrip.vista.LoginWindow;
 
 import bntrip.main.Main;
 import bntrip.modelo.Modelo;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.util.ArrayList;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 /**
  * Practica 2 - Interaccion Persona Computadora
  * @date    2017 April.
@@ -17,9 +24,14 @@ public class ControladorLoginWindow {
  LoginWindow miVista;
  Modelo miModelo;
  
+ private File fichero;
+ private ArrayList<String> users;
+ private ArrayList<String> pass;
+ 
     public ControladorLoginWindow(LoginWindow miVista, Modelo miModelo){
         this.miVista = miVista;
         this.miModelo = miModelo;
+        procesaInicio();
     }
 
     public void procesaAyuda(){
@@ -30,22 +42,53 @@ public class ControladorLoginWindow {
         
     }
     
-    public void procesaLogin(){
-        Main.logeate();
+    public void procesaRegistro(){
+        Main.getStateMachineLogin().registro();
     }
     
-    public void procesaRegistro(){
-        //Main.getStateMachineLogin().registroW();
-        Main.getStateMachineLogin().help();
+    public boolean procesaInicioSesion(String usuario, String password){
+        if(users.contains(usuario)){
+            if(this.pass.get(users.indexOf(usuario)).equals(pass)){
+                miModelo.setEmail(usuario);
+                miModelo.setLoged("Correo");
+                return true;
+            }else return false;
+        }else return false;
     }
-    /**
-    public void procesaInicio(){
-        if(miModelo.getLoged().equals("")){
-            this.procesaLogin();
-        }else{
-            //abrir vantana de usuario
+    
+    private void procesaInicio(){
+        fichero = new File("./.data.txt"); 
+        users = new ArrayList<String>();
+        pass = new ArrayList<String>();
+        try{
+            FileReader fr = new FileReader(fichero);
+            BufferedReader br = new BufferedReader(fr);
+            String linea;
+            int i = 1;
+
+		while ((linea = br.readLine()) != null) {
+			if(par(i)){
+                            pass.add(linea);
+                        }else users.add(linea);
+                        i++;
+		}
+        }catch(Exception e){
+            try{
+                FileWriter fw = new FileWriter(fichero);
+            }catch(Exception f){
+                
+            }
+            
         }
-    }**/
+    }
+    
+    private boolean par(int numero){
+        if (numero%2==0){
+            return true;
+        }
+        return false;
+    }
+    
     
     public String isLoged(){
         return miModelo.getLoged();
